@@ -1,0 +1,578 @@
+// global import
+@import "./global.scss";
+
+// not alowing to select the text
+*::selection {
+  background-color: transparent;
+}
+// poping hiden content
+span.HidenWords::selection {
+  background: #a688fa;
+  color: rgb(0, 0, 0);
+}
+// Font-Face
+@include font-face("Alatsi", "../fonts/Alatsi-Regular.ttf");
+@include font-face("inter-italic", "../fonts/Inter-Italic.ttf");
+// 3 BIG CONTAINER
+body {
+  @include element-size(100vh);
+  @include padding(0px);
+  @include margin(0px);
+  @include flex(row, center, center);
+  overflow: hidden;
+  background: $bodybg-color;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+main {
+  @include padding(15px);
+  @include element-size(90vh, 70vw);
+  background-color: $mainbg-color;
+  border-radius: 60px;
+  box-sizing: border-box;
+}
+section.homeHolder {
+  @include flex(row, center, center);
+  @include element-size(100%, 100%);
+  @include position(relative);
+  background: $homeHolderbg-color;
+  border-radius: 60px;
+}
+// Toggled light icon positions
+body {
+  #tialDark {
+    @include position(absolute, 30.87px, auto, auto, 50px);
+    @include element-size(225px, 225px);
+    transform: rotate(-0.68deg);
+  }
+
+  #vsDark {
+    @include position(absolute, auto, auto, 190px, 10px);
+    @include element-size(151.19px, 161.84px);
+    transform: rotate(-11.37deg);
+  }
+
+  #vsWhite {
+    @include position(absolute, auto, auto, 10px, 50px);
+    @include element-size(232px, 217px);
+    transform: rotate(14.13deg);
+  }
+
+  #apicloud {
+    @include position(absolute, 30.62px, 50px);
+    @include element-size(195px, 218px);
+    transform: rotate(-49.48deg);
+  }
+
+  #js {
+    @include position(absolute, auto, 22px, 14px, auto);
+    @include element-size(291px, 267px);
+    transform: rotate(19.34deg);
+  }
+
+  #tailWhite {
+    @include position(absolute, 105px, -70px);
+    @include element-size(123.44px, 111.12px);
+    transform: rotate(40.88deg);
+  }
+
+  #github {
+    @include position(absolute, auto, 25px, 41px);
+    @include element-size(67.6px, 70px);
+    transform: rotate(19deg);
+  }
+
+  #html {
+    @include position(absolute, auto, auto, -36px, -36.6px);
+    @include element-size(105.15px, 93.58px);
+    transform: rotate(73.95deg);
+  }
+
+  #css {
+    @include position(absolute, -40.2px, -40px);
+    @include element-size(123px, 109px);
+    transform: rotate(9.41deg);
+  }
+}
+
+// Toggled darkmode icon positions
+body.alternate {
+  #tialDark {
+    @include position(absolute, auto, 22px, 14px, auto);
+    @include element-size(225px, 225px);
+    transform: rotate(-0.68deg);
+  }
+
+  #vsDark {
+    @include position(absolute, 205.6px, 50px);
+    @include element-size(151.19px, 161.84px);
+    transform: rotate(-11.37deg);
+  }
+  #vsWhite {
+    @include position(absolute, 30.62px, 50px);
+    @include element-size(232px, 217px);
+    transform: rotate(14.13deg);
+  }
+
+  #apicloud {
+    @include position(absolute, auto, auto, 40px, 35px);
+    @include element-size(195px, 218px);
+    transform: rotate(-49.48deg);
+  }
+
+  #js {
+    @include position(absolute, 12.9px, auto, auto, 40px);
+    @include element-size(291px, 267px);
+    transform: rotate(19.34deg);
+  }
+
+  #github {
+    @include position(absolute, auto, auto, 41px, 20px);
+    @include element-size(67.6px, 70px);
+    transform: rotate(-30deg);
+  }
+
+  #html {
+    @include position(absolute, -36px, auto, auto, -36.6px);
+    @include element-size(105.15px, 93.58px);
+    transform: rotate(0deg);
+  }
+
+  #css {
+    @include position(absolute, auto, -40px, -50.2px, auto);
+    @include element-size(123px, 109px);
+    transform: rotate(-50.41deg);
+  }
+
+  #tailWhite {
+    @include position(absolute, 105px, -70px, auto, auto);
+    @include element-size(123.44px, 111.12px);
+    transform: rotate(40.88deg);
+  }
+}
+header {
+  @include position(relative);
+  @include flex(column, start, center);
+  @include element-size(100%, 40%);
+}
+// DEFAULT PFP
+div.pfp {
+  @include position(relative);
+  @include margin(50px, 0, 0, 0);
+  @include flex(row, center, center);
+
+  img#PImg1 {
+    @include element-size(150px, 150px);
+    @include padding(20px);
+    background-color: $pfpbg-color;
+    border-radius: 50%;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+      background-color 0.5s ease, color 0.5s ease;
+  }
+}
+//  DEFAULT Home text Article
+article {
+  @include position(relative);
+  @include element-size(auto, 100%);
+  h1 {
+    @include text($h1-color, "Alatsi", normal, 400, 48px);
+    @include margin(30px, 0, 15px);
+    text-align: center;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  p {
+    @include position(relative);
+    @include text($p-color, "inter-italic", normal, 400, 32px);
+    text-align: center;
+    z-index: 1;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+}
+// DEFAULT NAV BUTTONS
+div.nav-btns {
+  @include position(relative);
+  @include flex(row, space-around, center);
+  @include element-size(auto, 100%);
+  a.con-btn {
+    @include text($con-btn-color, "Alatsi", normal, normal, 24px, 53px);
+    @include element-size(57px, 151px);
+    @include margin(10px, 0);
+    background-color: $con-btnBg-color;
+    text-align: center;
+    border-radius: 20px;
+    z-index: 1;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  a.abt-btn {
+    @include text($abt-btn-color, "Alatsi", normal, normal, 24px, 53px);
+    @include position(relative);
+    @include element-size(57px, 151px);
+    @include margin(10px, 0);
+    background-color: $abt-btnBg-color;
+    text-align: center;
+    border-radius: 20px;
+    z-index: 1;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+}
+span.copyright {
+  @include position(absolute, auto, auto, 10px, auto);
+  @include text(innherit, "Alatsi", normal, 400, 24px, 31px);
+}
+
+//ANIMATION
+
+a.con-btn:hover,
+a.abt-btn:hover {
+  @include animation(buttonHover, 0.3s, ease-in-out);
+}
+
+a.con-btn:active,
+a.abt-btn:active {
+  @include animation(buttonClick, 0.3s, ease-in-out);
+}
+
+@keyframes buttonHover {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes buttonClick {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#tialDark,
+#vsDark,
+#vsWhite,
+#apicloud,
+#js,
+#tailWhite,
+#github,
+#html,
+#css {
+  &:hover {
+    transform: scale(1.1) rotate(10deg);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+      background-color 0.3s ease-in-out;
+  }
+}
+
+img#PImg1:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+img#PImg1:active {
+  transform: scale(0.9);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+// PHONE VERSION DEFAULT
+@media only screen and (max-width: 600px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    @include element-size(95%, 85%);
+    @include position(absolute, 25px, auto, auto, auto);
+  }
+  // Home text Article
+  article {
+    h1 {
+      margin: 30px 0 0;
+      line-height: 25px;
+      font-size: 26px;
+    }
+    p {
+      @include text($p-color, "inter-italic", normal, 500, 18px, 20px);
+    }
+  }
+
+  // Nav Buttons
+  div.nav-btns {
+    justify-content: space-between;
+
+    a.abt-btn {
+      @include element-size(40px, 100px);
+      font-size: 16px;
+    line-height: 35px;
+    }
+    a.con-btn {
+      @include element-size(40px, 100px);
+      font-size: 16px;
+      line-height: 35px;
+    }
+  }
+  span.copyright {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  header {
+    width: 70%;
+  }
+  // PFP
+  div.pfp{
+  img#PImg1 {
+    @include element-size(84px, 82px);
+  }
+}
+// Toggled To Light icon positions
+  body{
+  #css {
+    @include element-size(54px, 52px);
+    top: -16.2px;
+    right: 16px;
+  }
+  #html {
+    @include element-size(54px, 52px);
+    left: -16.6px;
+    bottom:-16px;
+  }
+  #tialDark {
+    @include element-size(80.15px, 79.17px);
+    left: 10px;
+  }
+  #apicloud {
+    @include element-size(80px, 88.26px);
+    right: 10px;
+  }
+  #js {
+    @include element-size(80px, 79.78px);
+    right: 10px;
+  }
+  #vsWhite {
+    @include element-size(81.09px, 75.21px);
+    left: 40px;
+  }
+  #vsDark {
+    @include element-size(81.09px, 75.21px);
+    bottom: 70px;
+  }
+  #tailWhite {
+    @include element-size(60px, 54.01px);
+    top: 50px;
+    right: -25px;
+  }
+  #github {
+    @include element-size(40px, 40px);
+    right: -5px;
+    bottom: 40px;
+  }
+}
+}
+// Phone Version Dark Mode Icon Only
+@media only screen and (max-width: 600px) {
+  // Toggled To Dark Mode icon positions
+  body.alternate {
+    #css {
+      @include element-size(54px, 52px);
+      @include position(absolute, auto, -20px, -10.8px, auto);
+      transform: rotate(-50.41deg);
+    }
+    #html {
+      @include element-size(54px, 52px);
+      @include position(absolute, -10px, auto, auto, -16.6px);
+      transform: rotate(0deg);
+    }
+    #tialDark {
+      @include element-size(80.15px, 79.17px);
+      @include position(absolute, auto, 22px, 14px, auto);
+      transform: rotate(-0.68deg);
+    }
+    #apicloud {
+      @include element-size(80px, 88.26px);
+      @include position(absolute, auto, auto, 25px, 25px);
+      transform: rotate(-49.48deg);
+    }
+    #js {
+      @include element-size(80px, 79.78px);
+      @include position(absolute, 12.9px, auto, auto, 20px);
+      transform: rotate(19.34deg);
+    }
+    #vsWhite {
+      @include element-size(81.09px, 75.21px);
+      @include position(absolute, 30.62px, 27px);
+      transform: rotate(14.13deg);
+    }
+    #vsDark {
+      @include element-size(81.09px, 75.21px);
+      @include position(absolute, 70.6px, 14px);
+      transform: rotate(-11.37deg);
+    }
+    #tailWhite {
+      @include element-size(60px, 54.01px);
+      @include position(absolute, 50px, auto, auto, -25px);
+    }
+    #github {
+      @include element-size(40px, 40px);
+      @include position(absolute, auto, auto, 41px, 0px);
+      transform: rotate(-30deg);
+    }
+  }
+}
+
+// TABLET VERSION DEFAULT
+
+@media only screen and (max-width: 1300px) and (min-width: 601px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    @include element-size(95%, 85%);
+    @include position(absolute, 25px, auto, auto, auto);
+  }
+  // Home text Article
+  article {
+    width: 75%;
+    h1 {
+      margin: 30px 0 0;
+      line-height: 25px;
+      font-size: 30px;
+    }
+    p {
+      @include text($p-color, "inter-italic", normal, 500, 25px, 28px);
+    }
+  }
+
+  // Nav Buttons
+  div.nav-btns {
+    justify-content: space-around;
+    column-gap: 25px;
+
+    a.abt-btn {
+      @include element-size(60px, 135px);
+      font-size: 22px;
+      line-height: 55px;
+    }
+    a.con-btn {
+      @include element-size(60px, 135px);
+      font-size: 22px;
+      line-height: 55px;
+    }
+  }
+  span.copyright {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  header {
+    width: 60%;
+  }
+  // PFP
+  div.pfp{
+  img#PImg1 {
+    @include element-size(104px, 102px);
+  }
+}
+// Toggled To Light icon positions
+  body{
+  #css {
+    @include element-size(84px, 82px);
+    top: -16.2px;
+    right: -35px;
+  }
+  #html {
+    @include element-size(74px, 72px);
+    bottom:-20px;
+    left: -32.6px;
+  }
+  #tialDark {
+    @include element-size(120.15px, 119.17px);
+    left: 15px;
+  }
+  #apicloud {
+    @include element-size(100px, 108.26px);
+    right: 15px;
+  }
+  #js {
+    @include element-size(110px, 109.78px);
+    right: 15px;
+  }
+  #vsWhite {
+    @include element-size(111.09px, 105.21px);
+    left: 45px;
+  }
+  #vsDark {
+    @include element-size(101.09px, 95.21px);
+    bottom: 75px;
+  }
+  #tailWhite {
+    @include element-size(70px, 64.01px);
+    top: 55px;
+    right: -60px;
+  }
+  #github {
+    @include element-size(60px, 60px);
+    right: -25px;
+    bottom: 50px;
+  }
+}
+}
+
+// Tabled Version Dark Mode Icon Only
+@media only screen and (max-width: 1300px) and (min-width: 601px) {
+  // Toggled To Dark Mode icon positions
+  body.alternate {
+    #css {
+       @include element-size(84px, 82px);
+      @include position(absolute, auto, -42px,-23.8px, auto);
+      transform: rotate(-50.41deg);
+    }
+    #html {
+      @include element-size(74px, 72px);
+      @include position(absolute, -10px, auto, auto, -34.6px);
+      transform: rotate(0deg);
+    }
+    #tialDark {
+      @include element-size(120.15px, 119.17px);
+      @include position(absolute, auto, 22px, 14px, auto);
+      transform: rotate(-0.68deg);
+    }
+    #apicloud {
+      @include element-size(100px, 108.26px);
+      @include position(absolute, auto, auto, 25px, 25px);
+      transform: rotate(-49.48deg);
+    }
+    #js {
+      @include element-size(110px, 109.78px);
+      @include position(absolute, 12.9px, auto, auto, 20px);
+      transform: rotate(19.34deg);
+    }
+    #vsWhite {
+      @include element-size(111.09px, 105.21px);
+      @include position(absolute, 30.62px, 27px);
+      transform: rotate(14.13deg);
+    }
+    #vsDark {
+      @include element-size(101.09px, 95.21px);
+      @include position(absolute, 90.6px, 10px);
+      transform: rotate(-11.37deg);
+    }
+    #tailWhite {
+      @include element-size(70px, 64.01px);
+      @include position(absolute, 50px, auto, auto, -50px);
+    }
+    #github {
+      @include element-size(60px, 60px);
+      @include position(absolute, auto, auto, 41px, 0px);
+      transform: rotate(-30deg);
+    }
+  }
+}
+

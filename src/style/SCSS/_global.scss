@@ -1,0 +1,130 @@
+:root {
+    --bodybg-color: #fffffff2;
+    --mainbg-color:#ececec;
+    --homeHolderbg-color: linear-gradient(103.01deg, #2f0ec5 0%, #0eaac5 50%, #0ec554 100%);
+    --pfpbg-color:#ffffff;
+    --h1-color:#000000;
+    --p-color: #000000ad;
+    --con-btnBg-color: #000000;
+    --con-btn-color: #ffffff;
+    --abt-btnBg-color: #ffffff;
+    --abt-btn-color: #000000;
+    --mainbg2-color: #ffffff;
+    --homeHolderbg2-color:#dededea6;
+    --containerbg-color:#ffffff;
+    --IconBg-color: #f3f3f3;
+    --Icons-color:#000000d3;
+    --navbg-color: #ffffff;
+    --nav-color: #00000091;
+}
+/* TODO: UPDATE THIS TO LOOK FOR DARKMODE after this go to darklight mode js */
+[data-theme="dark"] {
+    --bodybg-color: #121212f2;
+    --mainbg-color:#353535f2;
+    --homeHolderbg-color: linear-gradient(102.41deg, #DB3223 1.23%, #A723DB 51.6%, #2363DB 100%);
+    --pfpbg-color:#262230;
+    --h1-color:#ffffff;
+    --p-color: #000000ad;
+    --con-btnBg-color: #ffffff;
+    --con-btn-color: #000000;
+    --abt-btnBg-color: #000000;
+    --abt-btn-color: #ffffff;
+    --mainbg2-color: #353535f2;
+    --homeHolderbg2-color:#000000;
+    --containerbg-color:#1E1E1E;  
+    --IconBg-color: #A688FA;   
+    --Icons-color: #A688FA; 
+    --navbg-color: #353535;
+    --nav-color: #FFFFFF;
+}
+
+$bodybg-color: var(--bodybg-color);
+$mainbg-color: var(--mainbg-color);
+$homeHolderbg-color: var(--homeHolderbg-color);
+$pfpbg-color: var(--pfpbg-color);
+$h1-color: var(--h1-color);
+$p-color: var(--p-color);
+$con-btnBg-color: var(--con-btnBg-color);
+$con-btn-color: var(--con-btn-color);
+$abt-btnBg-color: var(--abt-btnBg-color);
+$abt-btn-color: var(--abt-btn-color);
+$mainbg2-color: var(--mainbg2-color);
+$homeHolderbg2-color: var(--homeHolderbg2-color);
+$containerbg-color: var(--containerbg-color);
+$IconBg-color: var(--IconBg-color);
+$Icons-color: var(--Icons-color);
+$navbg-color: var(--navbg-color);
+$nav-color: var(--nav-color);
+
+
+// MixIn
+
+// animation Mixin
+@mixin animation($name, $duration, $timing-function) {
+    animation: $name $duration $timing-function;
+  }
+  
+  // Font-Face Mixin
+  @mixin font-face($family, $src) {
+    @font-face {
+      font-family: $family;
+      src: url($src);
+      
+    }
+  }
+  
+  // Element Size Mixin
+  @mixin element-size($height: auto, $width: auto) {
+    height: $height;
+    width: $width;
+  }
+  // Text Mixin
+  @mixin text(
+    $color: inherit,
+    $family: inherit,
+    $style: normal,
+    $weight: normal,
+    $size: inherit,
+    $line-height: normal
+  ) {
+    color: $color;
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line-height;
+    text-decoration: none;
+  }
+  // Padding Mixin
+  @mixin padding($top, $right: $top, $bottom: $top, $left: $right) {
+    padding: $top $right $bottom $left;
+  }
+  
+  // Margin Mixin
+  @mixin margin($top, $right: $top, $bottom: $top, $left: $right) {
+    margin: $top $right $bottom $left;
+  }
+  
+  // Flexbox Mixin
+  @mixin flex($direction: row, $justify: start, $align: start) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }
+  
+  // Position Mixin
+  @mixin position(
+    $position: relative,
+    $top: auto,
+    $right: auto,
+    $bottom: auto,
+    $left: auto
+  ) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+  }
+  

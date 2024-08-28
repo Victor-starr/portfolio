@@ -1,0 +1,1015 @@
+:root {
+  --bodybg-color: #fffffff2;
+  --mainbg-color:#ececec;
+  --homeHolderbg-color: linear-gradient(103.01deg, #2f0ec5 0%, #0eaac5 50%, #0ec554 100%);
+  --pfpbg-color:#ffffff;
+  --h1-color:#000000;
+  --p-color: #000000ad;
+  --con-btnBg-color: #000000;
+  --con-btn-color: #ffffff;
+  --abt-btnBg-color: #ffffff;
+  --abt-btn-color: #000000;
+  --mainbg2-color: #ffffff;
+  --homeHolderbg2-color:#dededea6;
+  --containerbg-color:#ffffff;
+  --IconBg-color: #f3f3f3;
+  --Icons-color:#000000d3;
+  --navbg-color: #ffffff;
+  --nav-color: #00000091;
+}
+
+/* TODO: UPDATE THIS TO LOOK FOR DARKMODE after this go to darklight mode js */
+[data-theme=dark] {
+  --bodybg-color: #121212f2;
+  --mainbg-color:#353535f2;
+  --homeHolderbg-color: linear-gradient(102.41deg, #DB3223 1.23%, #A723DB 51.6%, #2363DB 100%);
+  --pfpbg-color:#262230;
+  --h1-color:#ffffff;
+  --p-color: #000000ad;
+  --con-btnBg-color: #ffffff;
+  --con-btn-color: #000000;
+  --abt-btnBg-color: #000000;
+  --abt-btn-color: #ffffff;
+  --mainbg2-color: #353535f2;
+  --homeHolderbg2-color:#000000;
+  --containerbg-color:#1E1E1E;
+  --IconBg-color: #A688FA;
+  --Icons-color: #A688FA;
+  --navbg-color: #353535;
+  --nav-color: #FFFFFF;
+}
+
+*::-moz-selection {
+  background-color: transparent;
+}
+
+*::selection {
+  background-color: transparent;
+}
+
+span.HidenWords::-moz-selection {
+  background: #a688fa;
+  color: rgb(0, 0, 0);
+}
+
+span.HidenWords::selection {
+  background: #a688fa;
+  color: rgb(0, 0, 0);
+}
+
+@font-face {
+  font-family: "Alatsi";
+  src: url("../fonts/Alatsi-Regular.ttf");
+}
+@font-face {
+  font-family: "inter-italic";
+  src: url("../fonts/Inter-Italic.ttf");
+}
+body {
+  height: 100vh;
+  width: auto;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  background: var(--bodybg-color);
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+main {
+  padding: 15px 15px 15px 15px;
+  height: 90vh;
+  width: 70vw;
+  background-color: var(--mainbg-color);
+  border-radius: 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section.homeHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  background: var(--homeHolderbg-color);
+  border-radius: 60px;
+}
+
+body #tialDark {
+  position: absolute;
+  top: 30.87px;
+  right: auto;
+  bottom: auto;
+  left: 50px;
+  height: 225px;
+  width: 225px;
+  -webkit-transform: rotate(-0.68deg);
+          transform: rotate(-0.68deg);
+}
+body #vsDark {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 190px;
+  left: 10px;
+  height: 151.19px;
+  width: 161.84px;
+  -webkit-transform: rotate(-11.37deg);
+          transform: rotate(-11.37deg);
+}
+body #vsWhite {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 10px;
+  left: 50px;
+  height: 232px;
+  width: 217px;
+  -webkit-transform: rotate(14.13deg);
+          transform: rotate(14.13deg);
+}
+body #apicloud {
+  position: absolute;
+  top: 30.62px;
+  right: 50px;
+  bottom: auto;
+  left: auto;
+  height: 195px;
+  width: 218px;
+  -webkit-transform: rotate(-49.48deg);
+          transform: rotate(-49.48deg);
+}
+body #js {
+  position: absolute;
+  top: auto;
+  right: 22px;
+  bottom: 14px;
+  left: auto;
+  height: 291px;
+  width: 267px;
+  -webkit-transform: rotate(19.34deg);
+          transform: rotate(19.34deg);
+}
+body #tailWhite {
+  position: absolute;
+  top: 105px;
+  right: -70px;
+  bottom: auto;
+  left: auto;
+  height: 123.44px;
+  width: 111.12px;
+  -webkit-transform: rotate(40.88deg);
+          transform: rotate(40.88deg);
+}
+body #github {
+  position: absolute;
+  top: auto;
+  right: 25px;
+  bottom: 41px;
+  left: auto;
+  height: 67.6px;
+  width: 70px;
+  -webkit-transform: rotate(19deg);
+          transform: rotate(19deg);
+}
+body #html {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -36px;
+  left: -36.6px;
+  height: 105.15px;
+  width: 93.58px;
+  -webkit-transform: rotate(73.95deg);
+          transform: rotate(73.95deg);
+}
+body #css {
+  position: absolute;
+  top: -40.2px;
+  right: -40px;
+  bottom: auto;
+  left: auto;
+  height: 123px;
+  width: 109px;
+  -webkit-transform: rotate(9.41deg);
+          transform: rotate(9.41deg);
+}
+
+body.alternate #tialDark {
+  position: absolute;
+  top: auto;
+  right: 22px;
+  bottom: 14px;
+  left: auto;
+  height: 225px;
+  width: 225px;
+  -webkit-transform: rotate(-0.68deg);
+          transform: rotate(-0.68deg);
+}
+body.alternate #vsDark {
+  position: absolute;
+  top: 205.6px;
+  right: 50px;
+  bottom: auto;
+  left: auto;
+  height: 151.19px;
+  width: 161.84px;
+  -webkit-transform: rotate(-11.37deg);
+          transform: rotate(-11.37deg);
+}
+body.alternate #vsWhite {
+  position: absolute;
+  top: 30.62px;
+  right: 50px;
+  bottom: auto;
+  left: auto;
+  height: 232px;
+  width: 217px;
+  -webkit-transform: rotate(14.13deg);
+          transform: rotate(14.13deg);
+}
+body.alternate #apicloud {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 40px;
+  left: 35px;
+  height: 195px;
+  width: 218px;
+  -webkit-transform: rotate(-49.48deg);
+          transform: rotate(-49.48deg);
+}
+body.alternate #js {
+  position: absolute;
+  top: 12.9px;
+  right: auto;
+  bottom: auto;
+  left: 40px;
+  height: 291px;
+  width: 267px;
+  -webkit-transform: rotate(19.34deg);
+          transform: rotate(19.34deg);
+}
+body.alternate #github {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 41px;
+  left: 20px;
+  height: 67.6px;
+  width: 70px;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+body.alternate #html {
+  position: absolute;
+  top: -36px;
+  right: auto;
+  bottom: auto;
+  left: -36.6px;
+  height: 105.15px;
+  width: 93.58px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+body.alternate #css {
+  position: absolute;
+  top: auto;
+  right: -40px;
+  bottom: -50.2px;
+  left: auto;
+  height: 123px;
+  width: 109px;
+  -webkit-transform: rotate(-50.41deg);
+          transform: rotate(-50.41deg);
+}
+body.alternate #tailWhite {
+  position: absolute;
+  top: 105px;
+  right: -70px;
+  bottom: auto;
+  left: auto;
+  height: 123.44px;
+  width: 111.12px;
+  -webkit-transform: rotate(40.88deg);
+          transform: rotate(40.88deg);
+}
+
+header {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 40%;
+}
+
+div.pfp {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  margin: 50px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+div.pfp img#PImg1 {
+  height: 150px;
+  width: 150px;
+  padding: 20px 20px 20px 20px;
+  background-color: var(--pfpbg-color);
+  border-radius: 50%;
+  z-index: 1;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.5s ease, color 0.5s ease, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.5s ease, color 0.5s ease;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.5s ease, color 0.5s ease, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+article {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  height: auto;
+  width: 100%;
+}
+article h1 {
+  color: var(--h1-color);
+  font-family: "Alatsi";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: normal;
+  text-decoration: none;
+  margin: 30px 0 15px 0;
+  text-align: center;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+article p {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  color: var(--p-color);
+  font-family: "inter-italic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: normal;
+  text-decoration: none;
+  text-align: center;
+  z-index: 1;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+div.nav-btns {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  width: 100%;
+}
+div.nav-btns a.con-btn {
+  color: var(--con-btn-color);
+  font-family: "Alatsi";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 53px;
+  text-decoration: none;
+  height: 57px;
+  width: 151px;
+  margin: 10px 0 10px 0;
+  background-color: var(--con-btnBg-color);
+  text-align: center;
+  border-radius: 20px;
+  z-index: 1;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+div.nav-btns a.abt-btn {
+  color: var(--abt-btn-color);
+  font-family: "Alatsi";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 53px;
+  text-decoration: none;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  height: 57px;
+  width: 151px;
+  margin: 10px 0 10px 0;
+  background-color: var(--abt-btnBg-color);
+  text-align: center;
+  border-radius: 20px;
+  z-index: 1;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+span.copyright {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 10px;
+  left: auto;
+  color: innherit;
+  font-family: "Alatsi";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  text-decoration: none;
+}
+
+a.con-btn:hover,
+a.abt-btn:hover {
+  -webkit-animation: buttonHover 0.3s ease-in-out;
+          animation: buttonHover 0.3s ease-in-out;
+}
+
+a.con-btn:active,
+a.abt-btn:active {
+  -webkit-animation: buttonClick 0.3s ease-in-out;
+          animation: buttonClick 0.3s ease-in-out;
+}
+
+@-webkit-keyframes buttonHover {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes buttonHover {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes buttonClick {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes buttonClick {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+#tialDark:hover,
+#vsDark:hover,
+#vsWhite:hover,
+#apicloud:hover,
+#js:hover,
+#tailWhite:hover,
+#github:hover,
+#html:hover,
+#css:hover {
+  -webkit-transform: scale(1.1) rotate(10deg);
+          transform: scale(1.1) rotate(10deg);
+  -webkit-transition: background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+img#PImg1:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+img#PImg1:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    height: 95%;
+    width: 85%;
+    position: absolute;
+    top: 25px;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+  article h1 {
+    margin: 30px 0 0;
+    line-height: 25px;
+    font-size: 26px;
+  }
+  article p {
+    color: var(--p-color);
+    font-family: "inter-italic";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    text-decoration: none;
+  }
+  div.nav-btns {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  div.nav-btns a.abt-btn {
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    line-height: 35px;
+  }
+  div.nav-btns a.con-btn {
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    line-height: 35px;
+  }
+  span.copyright {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  header {
+    width: 70%;
+  }
+  div.pfp img#PImg1 {
+    height: 84px;
+    width: 82px;
+  }
+  body #css {
+    height: 54px;
+    width: 52px;
+    top: -16.2px;
+    right: 16px;
+  }
+  body #html {
+    height: 54px;
+    width: 52px;
+    left: -16.6px;
+    bottom: -16px;
+  }
+  body #tialDark {
+    height: 80.15px;
+    width: 79.17px;
+    left: 10px;
+  }
+  body #apicloud {
+    height: 80px;
+    width: 88.26px;
+    right: 10px;
+  }
+  body #js {
+    height: 80px;
+    width: 79.78px;
+    right: 10px;
+  }
+  body #vsWhite {
+    height: 81.09px;
+    width: 75.21px;
+    left: 40px;
+  }
+  body #vsDark {
+    height: 81.09px;
+    width: 75.21px;
+    bottom: 70px;
+  }
+  body #tailWhite {
+    height: 60px;
+    width: 54.01px;
+    top: 50px;
+    right: -25px;
+  }
+  body #github {
+    height: 40px;
+    width: 40px;
+    right: -5px;
+    bottom: 40px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body.alternate #css {
+    height: 54px;
+    width: 52px;
+    position: absolute;
+    top: auto;
+    right: -20px;
+    bottom: -10.8px;
+    left: auto;
+    -webkit-transform: rotate(-50.41deg);
+            transform: rotate(-50.41deg);
+  }
+  body.alternate #html {
+    height: 54px;
+    width: 52px;
+    position: absolute;
+    top: -10px;
+    right: auto;
+    bottom: auto;
+    left: -16.6px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  body.alternate #tialDark {
+    height: 80.15px;
+    width: 79.17px;
+    position: absolute;
+    top: auto;
+    right: 22px;
+    bottom: 14px;
+    left: auto;
+    -webkit-transform: rotate(-0.68deg);
+            transform: rotate(-0.68deg);
+  }
+  body.alternate #apicloud {
+    height: 80px;
+    width: 88.26px;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 25px;
+    left: 25px;
+    -webkit-transform: rotate(-49.48deg);
+            transform: rotate(-49.48deg);
+  }
+  body.alternate #js {
+    height: 80px;
+    width: 79.78px;
+    position: absolute;
+    top: 12.9px;
+    right: auto;
+    bottom: auto;
+    left: 20px;
+    -webkit-transform: rotate(19.34deg);
+            transform: rotate(19.34deg);
+  }
+  body.alternate #vsWhite {
+    height: 81.09px;
+    width: 75.21px;
+    position: absolute;
+    top: 30.62px;
+    right: 27px;
+    bottom: auto;
+    left: auto;
+    -webkit-transform: rotate(14.13deg);
+            transform: rotate(14.13deg);
+  }
+  body.alternate #vsDark {
+    height: 81.09px;
+    width: 75.21px;
+    position: absolute;
+    top: 70.6px;
+    right: 14px;
+    bottom: auto;
+    left: auto;
+    -webkit-transform: rotate(-11.37deg);
+            transform: rotate(-11.37deg);
+  }
+  body.alternate #tailWhite {
+    height: 60px;
+    width: 54.01px;
+    position: absolute;
+    top: 50px;
+    right: auto;
+    bottom: auto;
+    left: -25px;
+  }
+  body.alternate #github {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 41px;
+    left: 0px;
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+}
+@media only screen and (max-width: 1300px) and (min-width: 601px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    height: 95%;
+    width: 85%;
+    position: absolute;
+    top: 25px;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+  article {
+    width: 75%;
+  }
+  article h1 {
+    margin: 30px 0 0;
+    line-height: 25px;
+    font-size: 30px;
+  }
+  article p {
+    color: var(--p-color);
+    font-family: "inter-italic";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 28px;
+    text-decoration: none;
+  }
+  div.nav-btns {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-column-gap: 25px;
+       -moz-column-gap: 25px;
+            column-gap: 25px;
+  }
+  div.nav-btns a.abt-btn {
+    height: 60px;
+    width: 135px;
+    font-size: 22px;
+    line-height: 55px;
+  }
+  div.nav-btns a.con-btn {
+    height: 60px;
+    width: 135px;
+    font-size: 22px;
+    line-height: 55px;
+  }
+  span.copyright {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  header {
+    width: 60%;
+  }
+  div.pfp img#PImg1 {
+    height: 104px;
+    width: 102px;
+  }
+  body #css {
+    height: 84px;
+    width: 82px;
+    top: -16.2px;
+    right: -35px;
+  }
+  body #html {
+    height: 74px;
+    width: 72px;
+    bottom: -20px;
+    left: -32.6px;
+  }
+  body #tialDark {
+    height: 120.15px;
+    width: 119.17px;
+    left: 15px;
+  }
+  body #apicloud {
+    height: 100px;
+    width: 108.26px;
+    right: 15px;
+  }
+  body #js {
+    height: 110px;
+    width: 109.78px;
+    right: 15px;
+  }
+  body #vsWhite {
+    height: 111.09px;
+    width: 105.21px;
+    left: 45px;
+  }
+  body #vsDark {
+    height: 101.09px;
+    width: 95.21px;
+    bottom: 75px;
+  }
+  body #tailWhite {
+    height: 70px;
+    width: 64.01px;
+    top: 55px;
+    right: -60px;
+  }
+  body #github {
+    height: 60px;
+    width: 60px;
+    right: -25px;
+    bottom: 50px;
+  }
+}
+@media only screen and (max-width: 1300px) and (min-width: 601px) {
+  body.alternate #css {
+    height: 84px;
+    width: 82px;
+    position: absolute;
+    top: auto;
+    right: -42px;
+    bottom: -23.8px;
+    left: auto;
+    -webkit-transform: rotate(-50.41deg);
+            transform: rotate(-50.41deg);
+  }
+  body.alternate #html {
+    height: 74px;
+    width: 72px;
+    position: absolute;
+    top: -10px;
+    right: auto;
+    bottom: auto;
+    left: -34.6px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  body.alternate #tialDark {
+    height: 120.15px;
+    width: 119.17px;
+    position: absolute;
+    top: auto;
+    right: 22px;
+    bottom: 14px;
+    left: auto;
+    -webkit-transform: rotate(-0.68deg);
+            transform: rotate(-0.68deg);
+  }
+  body.alternate #apicloud {
+    height: 100px;
+    width: 108.26px;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 25px;
+    left: 25px;
+    -webkit-transform: rotate(-49.48deg);
+            transform: rotate(-49.48deg);
+  }
+  body.alternate #js {
+    height: 110px;
+    width: 109.78px;
+    position: absolute;
+    top: 12.9px;
+    right: auto;
+    bottom: auto;
+    left: 20px;
+    -webkit-transform: rotate(19.34deg);
+            transform: rotate(19.34deg);
+  }
+  body.alternate #vsWhite {
+    height: 111.09px;
+    width: 105.21px;
+    position: absolute;
+    top: 30.62px;
+    right: 27px;
+    bottom: auto;
+    left: auto;
+    -webkit-transform: rotate(14.13deg);
+            transform: rotate(14.13deg);
+  }
+  body.alternate #vsDark {
+    height: 101.09px;
+    width: 95.21px;
+    position: absolute;
+    top: 90.6px;
+    right: 10px;
+    bottom: auto;
+    left: auto;
+    -webkit-transform: rotate(-11.37deg);
+            transform: rotate(-11.37deg);
+  }
+  body.alternate #tailWhite {
+    height: 70px;
+    width: 64.01px;
+    position: absolute;
+    top: 50px;
+    right: auto;
+    bottom: auto;
+    left: -50px;
+  }
+  body.alternate #github {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 41px;
+    left: 0px;
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+}/*# sourceMappingURL=home.css.map */
