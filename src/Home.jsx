@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { Link } from 'react-router-dom';
+import React, { useState,useEffect } from 'react';
 import darkTailwind from './assets/3dDarkTailwind.png';
 import vsMirc from './assets/3DVSMIRC.png';
 import vsCode from './assets/3DVSCODE.png';
@@ -11,22 +13,20 @@ import tailwind from './assets/3DTailwind.png';
 import github from './assets/3DGithub.png';
 
 function Home() {
-
-const pfp = document.getElementById('PImg1');
-let theme = localStorage.getItem('theme') || 'light';
-
+const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+useEffect(() => {
 document.documentElement.setAttribute('data-theme', theme);
 document.body.classList.toggle("alternate", theme !== 'light');
+}, [theme]);
+
 
 function toggleTheme() {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', newTheme);
+    setTheme((prevTheme) => {
+    const newTheme = prevTheme === 'dark' ? 'light' : 'dark';
     localStorage.setItem('theme', newTheme);
-    document.body.classList.toggle("alternate");
-    theme = newTheme;
-}
-
-pfp?.addEventListener('click', toggleTheme);
+    return newTheme;
+    });
+};
 
   return (
     <section className="homeHolder">
@@ -36,7 +36,7 @@ pfp?.addEventListener('click', toggleTheme);
       <img src={apiCloud} alt="" id="apicloud" />
       <img src={js} alt="" id="js" />
       <header>
-        <div className="pfp">
+        <div className="pfp" onClick={toggleTheme}>
           <img src={html} alt="" id="html" />
           <img src={memoji} alt="" id="PImg1" />
           <img src={css} alt="" id="css" />
