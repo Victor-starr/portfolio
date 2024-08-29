@@ -286,10 +286,6 @@ path#Icon-Set-Filled {
   fill: var(--Icons-color);
 }
 
-path#Icon-Set-Filled {
-  stroke: var(--Icons-color);
-}
-
 div.rightSide {
   position: relative;
   top: auto;

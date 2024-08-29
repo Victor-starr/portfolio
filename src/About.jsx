@@ -1,13 +1,8 @@
-// import { Link } from &apos;react-router-dom&apos;;
+
 import Nav from "./_Nav";
 // eslint-disable-next-line no-unused-vars
 import React,{useState,useEffect} from "react";
 import { Link } from "react-router-dom";
-import Gym from "./assets/gym.jpg";
-import Dog from "./assets/dog.jpg";
-import Trav from "./assets/trav.jpg";
-import IceSkate from "./assets/ice-skate.jpg";
-import Memoji from "./assets/Memoji.png";
 import "./style/about.css";
 
 function About() {
@@ -81,7 +76,7 @@ function About() {
         <div className="leftSide">
           <h1>About Me</h1>
           <section className="container myStory">
-            <img src={Memoji} alt="" id="GoHome" />
+            <img src="../public/Memoji.png" alt="" id="GoHome" />
             <article>
               <h2>My Story</h2>
 
@@ -285,19 +280,19 @@ function About() {
             <div className="contImg">
               <figure>
                 
-                <img src={Gym} alt="gym" />
+                <img src="../public/gym.jpg" alt="gym" />
                 <figcaption>Going gym</figcaption>
               </figure>
               <figure>
-                <img src={Dog} alt="gym" />
+                <img src="./public/dog.jpg" alt="dog" />
                 <figcaption>Take my dog</figcaption>
               </figure>
               <figure>
-                <img src={Trav} alt="gym" />
+                <img src="./public/trav.jpg" alt="trav" />
                 <figcaption>Travel</figcaption>
               </figure>
               <figure>
-                <img src={IceSkate} alt="gym" />
+                <img src="./public/ice-skate.jpg" alt="iceSkate" />
                 <figcaption>Ice Skate</figcaption>
               </figure>
             </div>

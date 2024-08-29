@@ -1,1 +1,762 @@
-/*# sourceMappingURL=education.css.map */
+:root {
+  --bodybg-color: #fffffff2;
+  --mainbg-color:#ececec;
+  --homeHolderbg-color: linear-gradient(103.01deg, #2f0ec5 0%, #0eaac5 50%, #0ec554 100%);
+  --pfpbg-color:#ffffff;
+  --h1-color:#000000;
+  --p-color: #000000ad;
+  --con-btnBg-color: #000000;
+  --con-btn-color: #ffffff;
+  --abt-btnBg-color: #ffffff;
+  --abt-btn-color: #000000;
+  --mainbg2-color: #ffffff;
+  --homeHolderbg2-color:#dededea6;
+  --containerbg-color:#ffffff;
+  --IconBg-color: #f3f3f3;
+  --Icons-color:#000000d3;
+  --navbg-color: #ffffff;
+  --nav-color: #00000091;
+}
+
+/* TODO: UPDATE THIS TO LOOK FOR DARKMODE after this go to darklight mode js */
+[data-theme=dark] {
+  --bodybg-color: #121212f2;
+  --mainbg-color:#353535f2;
+  --homeHolderbg-color: linear-gradient(102.41deg, #DB3223 1.23%, #A723DB 51.6%, #2363DB 100%);
+  --pfpbg-color:#262230;
+  --h1-color:#ffffff;
+  --p-color: #000000ad;
+  --con-btnBg-color: #ffffff;
+  --con-btn-color: #000000;
+  --abt-btnBg-color: #000000;
+  --abt-btn-color: #ffffff;
+  --mainbg2-color: #353535f2;
+  --homeHolderbg2-color:#000000;
+  --containerbg-color:#1E1E1E;
+  --IconBg-color: #A688FA;
+  --Icons-color: #A688FA;
+  --navbg-color: #353535;
+  --nav-color: #FFFFFF;
+}
+
+*::-moz-selection {
+  background-color: transparent;
+}
+
+*::selection {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 1px;
+  background-color: var(--bodybg-color);
+}
+
+span.HidenWords::-moz-selection {
+  background: #a688fa;
+  color: rgb(0, 0, 0);
+}
+
+span.HidenWords::selection {
+  background: #a688fa;
+  color: rgb(0, 0, 0);
+}
+
+@font-face {
+  font-family: "Alatsi";
+  src: url(./fonts/Alatsi-Regular.ttf);
+}
+@font-face {
+  font-family: "inter-italic";
+  src: url(./fonts/Inter-Italic-VariableFont_opsz\,wght.ttf);
+}
+body {
+  overflow: hidden;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  background-color: var(--bodybg-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+main {
+  overflow: hidden;
+  position: relative;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 70vw;
+  height: 90vh;
+  background-color: var(--mainbg2-color);
+  border-radius: 60px;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+}
+
+section.pageHolder {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--homeHolderbg2-color);
+  border-radius: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.container {
+  background-color: var(--containerbg-color);
+  border-radius: 35px;
+  padding: 15px 0 20px 20px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+}
+
+div.leftSide {
+  /* background-color: #a688fa; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+  border-radius: 60px;
+  height: 92%;
+  width: 45%;
+}
+
+div.leftSide h1 {
+  margin: 15px 0 0 0;
+  position: relative;
+  left: 50px;
+  font-family: "Alatsi";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  color: var(--h1-color);
+}
+
+.container {
+  background-color: var(--containerbg-color);
+  border-radius: 35px;
+  padding: 15px 0 20px 20px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+}
+
+section.softuniInfo {
+  position: relative;
+  width: 65%;
+  height: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+  padding: 5px 20px;
+}
+
+section.softuniInfo img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+}
+
+h2 {
+  font-family: "Alatsi";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  color: var(--h1-color);
+}
+
+path#Vector {
+  stroke: var(--Icons-color);
+}
+
+section.cetfHolder {
+  display: none;
+  padding: 0px;
+  position: relative;
+  width: 57%;
+  height: 67%;
+}
+
+section.cetfHolder img#certImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.cetfHolder {
+  opacity: 0;
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px); /* Start slightly below */
+  -webkit-transition: opacity 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+.cetfHolder.show {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0); /* Slide to its original position */
+}
+
+div.moreInfo {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+  width: 20%;
+  top: 0px;
+  right: 0px;
+  padding: 5px 10px;
+  background-color: var(--IconBg-color);
+  border-radius: 0 20px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+  z-index: 1;
+}
+
+div.moreInfo p {
+  font-family: "inter-italic";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--h1-color);
+}
+
+div.moreInfo #infoBtn {
+  fill: var(--h1-color);
+}
+
+/* I FINISHED HERE */
+div.rightSide {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 60px;
+  height: 92%;
+  width: 48%;
+  /* background-color: blue; */
+}
+
+section.content {
+  border-bottom: rgba(128, 128, 128, 0.572) 0.5px solid;
+  position: relative;
+  overflow: hidden;
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 20px;
+  height: 100%;
+  width: 85%;
+  margin-top: 20px;
+}
+
+article.container {
+  height: 250px;
+  width: 90%;
+  padding: 15px 10px;
+}
+
+section.content h2 {
+  font-family: "Alatsi";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  color: var(--h1-color);
+  margin: 5px;
+}
+
+section.content p {
+  font-family: "inter-italic";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  color: var(--h1-color);
+  margin: 5px;
+  text-align: start;
+}
+
+nav {
+  position: absolute;
+  z-index: 2;
+  border-radius: 60px 60px 0 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: var(--navbg-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+}
+
+g#Dribbble-Light-Preview,
+g#Icon-Set-Filled,
+path#Icon-Set-Filled {
+  fill: var(--Icons-color);
+}
+
+path#Icon-Set-Filled {
+  stroke: var(--Icons-color);
+}
+
+#toggleMode {
+  margin-left: 80px;
+}
+
+svg#menubar {
+  display: none;
+  margin-right: 50px;
+  z-index: 1;
+}
+
+svg#exitbar {
+  display: none;
+  margin-right: 50px;
+  z-index: 1;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 25px;
+     -moz-column-gap: 25px;
+          column-gap: 25px;
+  margin-right: 60px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: "Alatsi";
+  font-style: normal;
+  font-weight: 350;
+  font-size: 25px;
+  color: var(--nav-color);
+}
+
+/* ANIMATIONS */
+nav ul li a:hover {
+  -webkit-animation: colorAnimation 0.6s;
+          animation: colorAnimation 0.6s;
+}
+
+#toggleMode:hover {
+  -webkit-animation: circlesAnimation 3s infinite;
+          animation: circlesAnimation 3s infinite;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#toggleMode:active {
+  -webkit-animation: circlesAnimation 3s infinite;
+          animation: circlesAnimation 3s infinite;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#certImg {
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+#certImg.flip {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+@-webkit-keyframes circlesAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes circlesAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes bounceAnimation {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes bounceAnimation {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes colorAnimation {
+  0% {
+    color: var(--nav-color);
+  }
+  100% {
+    color: var(--Icons-color);
+  }
+}
+@keyframes colorAnimation {
+  0% {
+    color: var(--nav-color);
+  }
+  100% {
+    color: var(--Icons-color);
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    position: absolute;
+    top: 25px;
+    width: 85%;
+    height: 95%;
+  }
+  section.pageHolder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-y: scroll;
+    padding-top: 70px;
+  }
+  #toggleMode {
+    margin-left: 45px;
+  }
+  svg#menubar {
+    display: block;
+  }
+  svg#exitbar {
+    display: none;
+  }
+  nav ul {
+    display: none;
+  }
+  nav.phoneVrs svg#exitbar {
+    position: relative;
+    top: 50px;
+    height: 60px;
+    width: 60px;
+    display: none;
+  }
+  nav.phoneVrs ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--navbg-color);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    row-gap: 25px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+  }
+  nav.phoneVrs ul li a {
+    font-size: 45px;
+  }
+  div.leftSide {
+    height: auto;
+    width: 100%;
+  }
+  div.leftSide h1 {
+    left: 50px;
+    margin: 5px 0 6px;
+    font-size: 20px;
+  }
+  section.softuniInfo {
+    left: 30px;
+    width: 65%;
+    height: 20%;
+    padding: 15px 25px;
+  }
+  section.softuniInfo img {
+    height: 50px;
+    width: 50px;
+  }
+  section.softuniInfo h2 {
+    font-size: 15px;
+  }
+  section.cetfHolder {
+    left: 30px;
+    width: 80%;
+    height: 85%;
+  }
+  div.moreInfo {
+    padding: 10px;
+    height: auto;
+    width: auto;
+  }
+  div.moreInfo svg {
+    width: 25px;
+    height: 25px;
+  }
+  div.moreInfo p {
+    display: none;
+  }
+  div.rightSide {
+    margin: 20px 0 50px;
+    height: auto;
+    width: 100%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  section.content {
+    width: 90%;
+    height: 450px;
+    left: 20px;
+    border-bottom: solid 0.5px rgb(110, 110, 110);
+  }
+  article.container h2 {
+    font-size: 15px;
+  }
+  article.container p {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 1300px) and (min-width: 601px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    position: absolute;
+    top: 25px;
+    width: 85%;
+    height: 95%;
+  }
+  section.pageHolder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-y: scroll;
+    padding-top: 70px;
+  }
+  #toggleMode {
+    margin-left: 45px;
+  }
+  svg#menubar {
+    display: block;
+  }
+  svg#exitbar {
+    display: none;
+  }
+  nav ul {
+    display: none;
+  }
+  nav.phoneVrs svg#exitbar {
+    position: relative;
+    top: 50px;
+    height: 60px;
+    width: 60px;
+    display: none;
+  }
+  nav.phoneVrs ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--navbg-color);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    row-gap: 25px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+  }
+  nav.phoneVrs ul li a {
+    font-size: 45px;
+  }
+  div.leftSide {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  div.leftSide h1 {
+    left: 0px;
+    margin: 15px 0 6px;
+    font-size: 24px;
+  }
+  section.softuniInfo {
+    height: 50px;
+    width: 35%;
+    padding: 15px 25px;
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+  }
+  section.softuniInfo h2 {
+    font-size: 19px;
+  }
+  section.cetfHolder {
+    max-width: 500px;
+    min-width: 50%;
+    height: 90%;
+  }
+  div.moreInfo {
+    padding: 10px;
+    height: auto;
+    width: auto;
+  }
+  div.moreInfo svg {
+    width: 25px;
+    height: 25px;
+  }
+  div.moreInfo p {
+    display: none;
+  }
+  div.rightSide {
+    margin: 20px 0 100px;
+    width: 100%;
+  }
+}/*# sourceMappingURL=education.css.map */
