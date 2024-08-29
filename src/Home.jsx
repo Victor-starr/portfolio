@@ -1,6 +1,9 @@
-/* eslint-disable no-unused-vars */
+
 import { Link } from 'react-router-dom';
+// eslint-disable-next-line no-unused-vars
 import React, { useState,useEffect } from 'react';
+import './style/home.css';
+// img
 import darkTailwind from './assets/3dDarkTailwind.png';
 import vsMirc from './assets/3DVSMIRC.png';
 import vsCode from './assets/3DVSCODE.png';

@@ -1,0 +1,522 @@
+// global import
+@import "./_global.scss";
+
+*::selection {
+  background-color: transparent;
+}
+*::-webkit-scrollbar {
+  width: 1px;
+  background-color: $bodybg-color;
+}
+span.HidenWords::selection {
+  background: #a688fa;
+  color: rgb(0, 0, 0);
+}
+// Font-Face
+@include font-face("Alatsi", "../fonts/Alatsi-Regular.ttf");
+@include font-face("inter-italic", "../fonts/Inter-Italic.ttf");
+
+body {
+  @include element-size(100vh);
+  @include padding(0px);
+  @include margin(0px);
+  @include flex(row, center, center);
+  overflow: hidden;
+  background: $bodybg-color;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+main {
+  @include position(relative);
+  @include element-size(90vh, 70vw);
+  @include padding(15px);
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: $mainbg2-color;
+  border-radius: 60px;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+}
+section.pageHolder{
+  @include position(relative);
+  @include element-size(100%, 100%);
+  @include flex(row, center, end);
+  overflow-x: hidden;
+  background-color: $homeHolderbg2-color;
+  border-radius: 60px;
+}
+
+div.leftSide {
+  @include flex(column);
+  @include element-size(92%, 48%);
+  row-gap: 20px;
+  border-radius: 60px;
+  h1 {
+   @include margin(15px, 0, 0, 0);
+   @include position(relative, auto, auto, auto, 50px);
+   @include text($h1-color, "Alatsi", normal, 300, 22px);
+ }
+}
+.container {
+  @include padding(15px, 0, 20px, 20px);
+  background-color: $containerbg-color;
+  border-radius: 35px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+}
+
+section.myStory {
+  @include position(relative, auto, auto, auto, 50px);
+  @include element-size(auto, 52%);
+  img {
+    @include element-size(70px, 70px);
+    @include padding(3px);
+    background-color: $IconBg-color;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+  }
+  article {
+    width: 90%;
+    h2 {
+      @include text($h1-color, "Alatsi", normal, 300, 20px);
+      @include margin(5px);
+    }
+    p {
+      @include text($h1-color, "inter-italic", normal, 200, 15px);
+      margin-bottom: 0;
+    }
+  }
+}
+
+section.links {
+  @include position(relative, auto, auto, auto, 50px);
+  @include element-size(auto, 40%);
+  @include padding(15px, 20px);
+  h3 {
+    @include text($h1-color, "Alatsi", normal, 300, 25px);
+    @include margin(0, 0, 15px, 0);
+    text-align: center;
+  }
+  div {
+    @include flex(row, space-between, center);
+    a {
+      @include flex(row, center, center);
+      @include element-size(35px, 35px);
+      @include padding(8px);
+      border-radius: 50%;
+      box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.34);
+    }
+  }
+}
+
+g#Dribbble-Light-Preview,
+g#Icon-Set-Filled,
+path#Icon-Set-Filled {
+  fill: $Icons-color;
+}
+
+div.rightSide {
+  @include position(relative);
+  @include flex(column, space-around, center);
+  @include element-size(92%, 48%);
+  border-radius: 60px;
+}
+section.content {
+  @include position(relative);
+  @include flex(column, start, center);
+  @include element-size(50%, 85%);
+  @include margin(20px, 0, 0, 0);
+  overflow: hidden;
+  overflow-y: scroll;
+  row-gap: 20px;
+  border-bottom: rgba(128, 128, 128, 0.572) 0.5px solid;
+}
+article.container {
+  @include element-size(250px, 90%);
+}
+section.content {
+  h2 {
+    @include text($h1-color, "Alatsi", normal, 300, 20px);
+    @include margin(5px);
+  }
+  p {
+    @include text($h1-color, "inter-italic", normal, 200, 16px);
+    @include margin(5px, 0, 0, 0);
+  }
+}
+
+section.secNotCoding {
+  @include position(relative);
+  @include element-size(40%, 85%);
+  @include margin(20px, 0);
+  h4 {
+    @include text($h1-color, "Alatsi", normal, 300, 20px);
+    @include margin(5px, 0);
+  }
+}
+
+div.contImg {
+  @include flex(row, start, center);
+  @include element-size(90%);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  transition: transform 0.5s ease;
+  figure {
+    @include position(relative);
+    @include element-size(100%, 150px);
+    @include margin(0, 10px, 0, 10px);
+    overflow: hidden;
+    flex: 0 0 auto;
+    img {
+      @include element-size(100%, 100%);
+      object-fit: cover;
+      border-radius: 25px;
+      transition: filter 0.5s ease, transform 0.5s ease;
+    }
+    figcaption {
+      @include position(absolute, 12px, auto, auto, 8px);
+      @include text($h1-color, "inter-italic", normal, 800, 14px);
+      @include padding(5px, 8px);
+      background-color: $IconBg-color;
+      border-radius: 25px;
+    }
+  }
+}
+
+svg#leftArrow {
+  @include position(absolute, 50%, auto, auto, 5px);
+  @include element-size(20px, 20px);
+  @include padding(10px);
+  display: none;
+  background-color: $IconBg-color;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  border-radius: 50%;
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out, display 0.3s ease-in-out;
+}
+svg#rightArrow {
+  @include position(absolute, 50%, 5px);
+  @include element-size(20px, 20px);
+  @include padding(10px);
+  background-color: $IconBg-color;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  border-radius: 50%;
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out, display 0.3s ease-in-out;
+}
+
+svg#leftArrow path,
+svg#rightArrow path {
+  fill: black;
+}
+
+nav {
+  @include position(absolute, 0, 0);
+  @include element-size(50px, 100%);
+  @include flex(row, space-between, center);
+  @include padding(15px, 0);
+  border-radius: 60px 60px 0 0;
+  background-color: $navbg-color;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+  z-index: 2;
+  ul {
+    @include flex(row);
+    @include margin(0, 60px);
+    column-gap: 25px;
+    li {
+      list-style: none;
+      a {
+        @include text($nav-color, "Alatsi", normal, 350, 25px);
+      }
+    }
+  }
+}
+#toggleMode {
+  margin-left: 80px;
+}
+svg#menubar,
+svg#exitbar {
+  display: none;
+  @include margin(0, 50px);
+  z-index: 1;
+}
+
+/* ANIMATIONS */
+nav ul li a:hover {
+  animation: colorAnimation 0.6s;
+}
+section.myStory img:hover {
+  animation: bounceAnimation 0.5s infinite;
+}
+
+#toggleMode {
+  &:hover,
+  &:active {
+    animation: circlesAnimation 3s infinite;
+    transform: rotate(180deg);
+  }
+}
+.links div a:hover {
+  animation: bounceAnimation 0.5s infinite;
+}
+div.contImg figure img:hover {
+  filter: grayscale(0%) saturate(150%) contrast(120%);
+  transform: scale(1.1);
+}
+
+@keyframes circlesAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounceAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes colorAnimation {
+  0% {
+    color: $nav-color;
+  }
+  100% {
+    color: $Icons-color;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    @include position(absolute, 25px);
+    @include element-size(95%, 85%);
+  }
+  section.pageHolder{
+    @include flex(column, start, center);
+    @include padding(70px, 0, 0, 0);
+    overflow-y: scroll;
+  }
+  #toggleMode {
+    margin-left: 45px;
+  }
+  svg#menubar {
+    display: block;
+  }
+  svg#exitbar {
+    display: none;
+  }
+  nav ul {
+    display: none;
+  }
+  nav.phoneVrs {
+    svg#exitbar {
+      @include position(relative, 50px);
+      @include element-size(60px, 60px);
+      display: none;
+    }
+    ul {
+      @include flex(column, center, center);
+      @include position(absolute, 0, 0);
+      @include element-size(100vh, 100%);
+      @include padding(0);
+      @include margin(0);
+      background-color: $navbg-color;
+      row-gap: 25px;
+      text-align: center;
+      li a {
+        font-size: 45px;
+      }
+    }
+  }
+
+  div.leftSide {
+    @include element-size(auto, 100%);
+    h1 {
+      @include margin(5px, 0, 6px);
+      font-size: 20px;
+    }
+  }
+  section.myStory {
+    @include position(relative, auto, auto, auto, 25px);
+    @include element-size(auto, 80%);
+    left: 25px;
+    article {
+      h2 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+    img {
+      @include element-size(45px, 45px);
+    }
+  }
+  section.links {
+    @include element-size(auto, 75%);
+    left: 25px;
+    h3 {
+      font-size: 20px;
+    }
+    div {
+      a {
+        @include element-size(30px, 30px);
+        @include padding(5px);
+      }
+    }
+  }
+  svg#linkedSVG {
+    @include element-size(25px, 25px);
+  }
+  svg#mailSVG {
+    @include element-size(30px, 30px);
+  }
+  svg#pdfSVG {
+    @include element-size(27px, 27px);
+  }
+  svg#githubSVG {
+    @include element-size(30px, 30px);
+  }
+
+  div.rightSide {
+    @include element-size(auto, 100%);
+    @include margin(20px, 0, 100px);
+    align-items: start;
+  }
+  section.content {
+    @include element-size(500px, 90%);
+    left: 20px;
+    border-bottom: solid 0.5px rgb(110, 110, 110);
+    article.container {
+      h2 {
+        font-size: 15px;
+      }
+    }
+    p {
+      font-size: 13px;
+    }
+  }
+  section.secNotCoding {
+    @include element-size(50%, 80%);
+    left: 30px;
+    border-bottom: solid 0.5px rgb(110, 110, 110);
+  }
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 601px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    @include position(absolute, 25px);
+  }
+  section.pageHolder{
+    @include flex(column, start, center);
+    @include padding(70px, 0, 0, 0);
+    overflow-y: scroll;
+  }
+  #toggleMode {
+    margin-left: 45px;
+  }
+  svg#menubar {
+    display: block;
+  }
+  svg#exitbar {
+    display: none;
+  }
+  nav ul {
+    display: none;
+  }
+  nav.phoneVrs {
+    svg#exitbar {
+      @include position(relative, 50px);
+      @include element-size(60px, 60px);
+      display: none;
+    }
+    ul {
+      @include flex(column, center, center);
+      @include position(absolute, 0, auto, auto, 0);
+      @include element-size(100vh, 100%);
+      @include padding(0);
+      @include margin(0);
+      background-color: $navbg-color;
+      row-gap: 25px;
+      text-align: center;
+      li a {
+        font-size: 45px;
+      }
+    }
+  }
+  div.leftSide {
+    @include element-size(auto, 100%);
+    align-items: center;
+    h1 {
+      @include margin(15px, 0, 6px);
+      left: 0;
+      font-size: 24px;
+    }
+  }
+  section.myStory {
+    @include element-size(auto, 70%);
+    left: 0;
+    article {
+      h2 {
+        font-size: 17px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+    img {
+      @include element-size(60px, 60px);
+    }
+  }
+  section.links {
+    @include element-size(auto, 60%);
+    left: 0.01%;
+    h3 {
+      font-size: 22px;
+    }
+    div {
+      @include flex(row, center, center);
+      column-gap: 15%;
+      a {
+        @include element-size(45px, 45px);
+        @include padding(5px);
+      }
+    }
+  }
+  svg#linkedSVG {
+    @include element-size(35px, 35px);
+  }
+  svg#mailSVG {
+    @include element-size(40px, 40px);
+  }
+  svg#pdfSVG {
+    @include element-size(37px, 37px);
+  }
+  svg#githubSVG {
+    @include element-size(40px, 40px);
+  }
+
+  div.rightSide {
+    @include element-size(auto, 100%);
+    @include margin(20px, 0, 100px);
+  }
+  section.secNotCoding {
+    @include element-size(auto, 80%);
+    border-bottom: solid 0.5px rgb(110, 110, 110);
+  }
+}
