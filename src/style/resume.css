@@ -111,7 +111,7 @@ main {
   border: 1px solid rgba(0, 0, 0, 0.24);
 }
 
-section.pageHolder {
+section.pageHolderRES {
   position: relative;
   top: auto;
   right: auto;

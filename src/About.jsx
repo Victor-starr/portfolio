@@ -76,7 +76,7 @@ function About() {
         <div className="leftSide">
           <h1>About Me</h1>
           <section className="container myStory">
-            <img src="./public/Memoji.png" alt="" id="GoHome" />
+            <img src="./Memoji.png" alt="" id="GoHome" />
             <article>
               <h2>My Story</h2>
 
@@ -280,19 +280,19 @@ function About() {
             <div className="contImg">
               <figure>
                 
-                <img src="./public/gym.jpg" alt="gym" />
+                <img src="./gym.jpg" alt="gym" />
                 <figcaption>Going gym</figcaption>
               </figure>
               <figure>
-                <img src="./public/dog.jpg" alt="dog" />
+                <img src="./dog.jpg" alt="dog" />
                 <figcaption>Take my dog</figcaption>
               </figure>
               <figure>
-                <img src="./public/trav.jpg" alt="trav" />
+                <img src="./trav.jpg" alt="trav" />
                 <figcaption>Travel</figcaption>
               </figure>
               <figure>
-                <img src="./public/ice-skate.jpg" alt="iceSkate" />
+                <img src="./ice-skate.jpg" alt="iceSkate" />
                 <figcaption>Ice Skate</figcaption>
               </figure>
             </div>

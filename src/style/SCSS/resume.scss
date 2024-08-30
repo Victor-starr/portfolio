@@ -35,7 +35,7 @@ main {
   border-radius: 60px;
   border: 1px solid rgba(0, 0, 0, 0.24);
 }
-section.pageHolder{
+section.pageHolderRES{
   @include position(relative);
   @include element-size(100%, 100%);
   @include flex(row, center, end);
