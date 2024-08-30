@@ -127,8 +127,8 @@ function Nav() {
           </Link>
         </li>
         <li>
-          <Link to="#">
-            Visitors
+          <Link to="/resume">
+            Resume
           </Link>
         </li>
       </ul>

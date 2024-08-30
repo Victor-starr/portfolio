@@ -1,0 +1,122 @@
+@import "./_global.scss";
+
+*::selection {
+  background-color: transparent;
+}
+*::-webkit-scrollbar {
+  width: 1px;
+  background-color: $bodybg-color;
+}
+span.HidenWords::selection {
+  background: #a688fa;
+  color: rgb(0, 0, 0);
+}
+// Font-Face
+@include font-face("Alatsi", "../fonts/Alatsi-Regular.ttf");
+@include font-face("inter-italic", "../fonts/Inter-Italic.ttf");
+
+body {
+  @include element-size(100vh);
+  @include padding(0px);
+  @include margin(0px);
+  @include flex(row, center, center);
+  overflow: hidden;
+  background: $bodybg-color;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+main {
+  @include position(relative);
+  @include element-size(90vh, 70vw);
+  @include padding(15px);
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: $mainbg2-color;
+  border-radius: 60px;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+}
+section.pageHolder{
+  @include position(relative);
+  @include element-size(100%, 100%);
+  @include flex(row, center, end);
+  overflow: hidden;
+  background-color: $homeHolderbg2-color;
+  border-radius: 60px;
+}
+section.resumeCover{
+  @include element-size(100%,60%);
+  @include flex(column, center, center);
+  button{
+    @include position(relative,70px);
+    @include flex(row, center, center);
+    @include element-size(auto,auto);
+    @include text($h1-color,'Alatsi',normal,500,35px);
+    @include padding(15px,25px);
+    @include margin(20px);
+    background-color: $containerbg-color;
+    border-radius: 15px;
+    border: none;
+    box-shadow: -2px 5px 10px 0.5px rgba(0, 0, 0, 0.555);
+    svg{
+      @include element-size(40px,40px);
+      @include margin(0,0,0,15px);
+      fill: $Icons-color;
+    }
+  }
+  div{
+    @include position(relative,auto,auto,-25%);
+    @include element-size(80%,70%);
+    max-width:550px;
+   border: rgb(0, 0, 0) solid 2px;
+    box-shadow: 0px -5px 10px 0.5px rgba(0, 0, 0, 0.61);
+   img{
+    @include element-size(100%,100%);
+    object-fit:fill;
+  }
+  }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  section.resumeCover{
+    @include element-size(100%,100%);
+    justify-content: star;
+    button{
+      @include padding(10px,15px);
+      @include margin(10px);
+      @include text($h1-color,'Alatsi',normal,500,20px);
+      svg{
+        @include element-size(25px,25px);
+        @include margin(0,0,0,10px);
+      }
+    }
+    div{
+      @include element-size(70%,83%);
+      img{
+        @include element-size(100%,100%);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1300px) and (min-width: 601px) {
+  section.resumeCover{
+    @include element-size(100%,100%);
+    button{
+      @include padding(10px,15px);
+      @include margin(10px);
+      @include text($h1-color,'Alatsi',normal,500,24px);
+      svg{
+        @include element-size(28px,28px);
+        @include margin(0,0,0,10px);
+      }
+    }
+    div{
+      @include element-size(90%,83%);
+      img{
+        @include element-size(100%,100%);
+      }
+    }
+  }
+
+}
