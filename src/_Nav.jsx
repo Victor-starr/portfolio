@@ -112,22 +112,22 @@ function Nav() {
       </svg>
       <ul>
         <li>
-          <Link to="/">
+          <Link to="/portfolio/">
             Home
           </Link>
         </li>
         <li>
-          <Link to="/about">
+          <Link to="/portfolio/about">
             About me
           </Link>
         </li>
         <li>
-          <Link to="/education">
+          <Link to="/portfolio/education">
           Education
           </Link>
         </li>
         <li>
-          <Link to="/resume">
+          <Link to="/portfolio/resume">
             Resume
           </Link>
         </li>
