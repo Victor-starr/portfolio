@@ -1,7 +1,7 @@
 :root {
   --bodybg-color: #fffffff2;
   --mainbg-color:#ececec;
-  --homeHolderbg-color: linear-gradient(103.01deg, #2f0ec5 0%, #0eaac5 50%, #0ec554 100%);
+  --homeHolderbg-color: linear-gradient(99.54deg, #2F0EC5 -15.69%, #0EAAC5 42.16%, #0EC554 100%);
   --pfpbg-color:#ffffff;
   --h1-color:#000000;
   --p-color: #000000ad;
@@ -25,7 +25,7 @@
   --homeHolderbg-color: linear-gradient(102.41deg, #DB3223 1.23%, #A723DB 51.6%, #2363DB 100%);
   --pfpbg-color:#262230;
   --h1-color:#ffffff;
-  --p-color: #000000ad;
+  --p-color: #ffffffc5;
   --con-btnBg-color: #ffffff;
   --con-btn-color: #000000;
   --abt-btnBg-color: #000000;

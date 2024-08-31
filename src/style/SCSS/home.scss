@@ -286,10 +286,10 @@ img#PImg1:active {
 @media only screen and (max-width: 600px) {
   body {
     height: 100vh;
-  }
-  main {
-    @include element-size(95%, 85%);
-    @include position(absolute, 25px, auto, auto, auto);
+    main {
+      @include element-size(95%, 85%);
+      @include position(absolute, 25px, auto, auto, auto);
+    }
   }
   // Home text Article
   article {
@@ -299,7 +299,7 @@ img#PImg1:active {
       font-size: 26px;
     }
     p {
-      @include text($p-color, "inter-italic", normal, 500, 18px, 20px);
+      @include text($p-color, "inter-italic", normal, 400, 19px, 20px);
     }
   }
 
@@ -337,7 +337,7 @@ img#PImg1:active {
   #css {
     @include element-size(54px, 52px);
     top: -16.2px;
-    right: 16px;
+    right: -20px;
   }
   #html {
     @include element-size(54px, 52px);
@@ -350,6 +350,7 @@ img#PImg1:active {
   }
   #apicloud {
     @include element-size(80px, 88.26px);
+    top: 100px;
     right: 10px;
   }
   #js {
@@ -402,7 +403,7 @@ img#PImg1:active {
     }
     #js {
       @include element-size(80px, 79.78px);
-      @include position(absolute, 12.9px, auto, auto, 20px);
+      @include position(absolute, 110.9px, auto, auto, 10px);
       transform: rotate(19.34deg);
     }
     #vsWhite {
@@ -428,14 +429,13 @@ img#PImg1:active {
 }
 
 // TABLET VERSION DEFAULT
-
-@media only screen and (max-width: 1300px) and (min-width: 601px) {
+@media only screen and (max-width: 1300px) and (min-width: 601px) { 
   body {
     height: 100vh;
-  }
-  main {
-    @include element-size(95%, 85%);
-    @include position(absolute, 25px, auto, auto, auto);
+    main {
+      @include element-size(95%, 85%);
+      @include position(absolute, 25px, auto, auto, auto);
+    }
   }
   // Home text Article
   article {
@@ -446,7 +446,7 @@ img#PImg1:active {
       font-size: 30px;
     }
     p {
-      @include text($p-color, "inter-italic", normal, 500, 25px, 28px);
+      @include text($p-color, "inter-italic", normal, 400, 25px, 28px);
     }
   }
 
@@ -493,32 +493,32 @@ img#PImg1:active {
     left: -32.6px;
   }
   #tialDark {
-    @include element-size(120.15px, 119.17px);
+    @include element-size(140.15px, 139.17px);
     left: 15px;
   }
   #apicloud {
-    @include element-size(100px, 108.26px);
+    @include element-size(120px, 128.26px);
     right: 15px;
   }
   #js {
-    @include element-size(110px, 109.78px);
+    @include element-size(130px, 129.78px);
     right: 15px;
   }
   #vsWhite {
-    @include element-size(111.09px, 105.21px);
+    @include element-size(131.09px, 125.21px);
     left: 45px;
   }
   #vsDark {
-    @include element-size(101.09px, 95.21px);
-    bottom: 75px;
+    @include element-size(121.09px, 115.21px);
+    bottom: 100px;
   }
   #tailWhite {
-    @include element-size(70px, 64.01px);
+    @include element-size(90px, 84.01px);
     top: 55px;
     right: -60px;
   }
   #github {
-    @include element-size(60px, 60px);
+    @include element-size(70px, 70px);
     right: -25px;
     bottom: 50px;
   }
@@ -540,36 +540,36 @@ img#PImg1:active {
       transform: rotate(0deg);
     }
     #tialDark {
-      @include element-size(120.15px, 119.17px);
+      @include element-size(140.15px, 139.17px);
       @include position(absolute, auto, 22px, 14px, auto);
       transform: rotate(-0.68deg);
     }
     #apicloud {
-      @include element-size(100px, 108.26px);
+      @include element-size(120px, 128.26px);
       @include position(absolute, auto, auto, 25px, 25px);
       transform: rotate(-49.48deg);
     }
     #js {
-      @include element-size(110px, 109.78px);
+      @include element-size(130px, 129.78px);
       @include position(absolute, 12.9px, auto, auto, 20px);
       transform: rotate(19.34deg);
     }
     #vsWhite {
-      @include element-size(111.09px, 105.21px);
+      @include element-size(131.09px, 125.21px);
       @include position(absolute, 30.62px, 27px);
       transform: rotate(14.13deg);
     }
     #vsDark {
-      @include element-size(101.09px, 95.21px);
-      @include position(absolute, 90.6px, 10px);
+      @include element-size(121.09px, 115.21px);
+      @include position(absolute, 105.6px, 10px);
       transform: rotate(-11.37deg);
     }
     #tailWhite {
-      @include element-size(70px, 64.01px);
+      @include element-size(90px, 84.01px);
       @include position(absolute, 50px, auto, auto, -50px);
     }
     #github {
-      @include element-size(60px, 60px);
+      @include element-size(70px, 70px);
       @include position(absolute, auto, auto, 41px, 0px);
       transform: rotate(-30deg);
     }

@@ -41,7 +41,7 @@ function toggleTheme() {
             Most people hate <span className="HidenWords">Javascript</span>... <br />
             I am one of them.
           </p>
-          <img src='./3DTailwind.png' alt="" id="tailWhite" />
+          {/* <img src='./3DTailwind.png' alt="" id="tailWhite" /> */}
         </article>
         <div className="nav-btns">
           <Link to="/portfolio/about" className="abt-btn">About me</Link>

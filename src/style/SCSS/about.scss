@@ -5,6 +5,7 @@
   background-color: transparent;
 }
 *::-webkit-scrollbar {
+  height: 1px;
   width: 1px;
   background-color: $bodybg-color;
 }

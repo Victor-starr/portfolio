@@ -1,7 +1,7 @@
 :root {
   --bodybg-color: #fffffff2;
   --mainbg-color:#ececec;
-  --homeHolderbg-color: linear-gradient(103.01deg, #2f0ec5 0%, #0eaac5 50%, #0ec554 100%);
+  --homeHolderbg-color: linear-gradient(99.54deg, #2F0EC5 -15.69%, #0EAAC5 42.16%, #0EC554 100%);
   --pfpbg-color:#ffffff;
   --h1-color:#000000;
   --p-color: #000000ad;
@@ -25,7 +25,7 @@
   --homeHolderbg-color: linear-gradient(102.41deg, #DB3223 1.23%, #A723DB 51.6%, #2363DB 100%);
   --pfpbg-color:#262230;
   --h1-color:#ffffff;
-  --p-color: #000000ad;
+  --p-color: #ffffffc5;
   --con-btnBg-color: #ffffff;
   --con-btn-color: #000000;
   --abt-btnBg-color: #000000;
@@ -604,7 +604,7 @@ img#PImg1:active {
   body {
     height: 100vh;
   }
-  main {
+  body main {
     height: 95%;
     width: 85%;
     position: absolute;
@@ -622,8 +622,8 @@ img#PImg1:active {
     color: var(--p-color);
     font-family: "inter-italic";
     font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 400;
+    font-size: 19px;
     line-height: 20px;
     text-decoration: none;
   }
@@ -659,7 +659,7 @@ img#PImg1:active {
     height: 54px;
     width: 52px;
     top: -16.2px;
-    right: 16px;
+    right: -20px;
   }
   body #html {
     height: 54px;
@@ -675,6 +675,7 @@ img#PImg1:active {
   body #apicloud {
     height: 80px;
     width: 88.26px;
+    top: 100px;
     right: 10px;
   }
   body #js {
@@ -754,10 +755,10 @@ img#PImg1:active {
     height: 80px;
     width: 79.78px;
     position: absolute;
-    top: 12.9px;
+    top: 110.9px;
     right: auto;
     bottom: auto;
-    left: 20px;
+    left: 10px;
     -webkit-transform: rotate(19.34deg);
             transform: rotate(19.34deg);
   }
@@ -808,7 +809,7 @@ img#PImg1:active {
   body {
     height: 100vh;
   }
-  main {
+  body main {
     height: 95%;
     width: 85%;
     position: absolute;
@@ -829,7 +830,7 @@ img#PImg1:active {
     color: var(--p-color);
     font-family: "inter-italic";
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 25px;
     line-height: 28px;
     text-decoration: none;
@@ -877,39 +878,39 @@ img#PImg1:active {
     left: -32.6px;
   }
   body #tialDark {
-    height: 120.15px;
-    width: 119.17px;
+    height: 140.15px;
+    width: 139.17px;
     left: 15px;
   }
   body #apicloud {
-    height: 100px;
-    width: 108.26px;
+    height: 120px;
+    width: 128.26px;
     right: 15px;
   }
   body #js {
-    height: 110px;
-    width: 109.78px;
+    height: 130px;
+    width: 129.78px;
     right: 15px;
   }
   body #vsWhite {
-    height: 111.09px;
-    width: 105.21px;
+    height: 131.09px;
+    width: 125.21px;
     left: 45px;
   }
   body #vsDark {
-    height: 101.09px;
-    width: 95.21px;
-    bottom: 75px;
+    height: 121.09px;
+    width: 115.21px;
+    bottom: 100px;
   }
   body #tailWhite {
-    height: 70px;
-    width: 64.01px;
+    height: 90px;
+    width: 84.01px;
     top: 55px;
     right: -60px;
   }
   body #github {
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
     right: -25px;
     bottom: 50px;
   }
@@ -938,8 +939,8 @@ img#PImg1:active {
             transform: rotate(0deg);
   }
   body.alternate #tialDark {
-    height: 120.15px;
-    width: 119.17px;
+    height: 140.15px;
+    width: 139.17px;
     position: absolute;
     top: auto;
     right: 22px;
@@ -949,8 +950,8 @@ img#PImg1:active {
             transform: rotate(-0.68deg);
   }
   body.alternate #apicloud {
-    height: 100px;
-    width: 108.26px;
+    height: 120px;
+    width: 128.26px;
     position: absolute;
     top: auto;
     right: auto;
@@ -960,8 +961,8 @@ img#PImg1:active {
             transform: rotate(-49.48deg);
   }
   body.alternate #js {
-    height: 110px;
-    width: 109.78px;
+    height: 130px;
+    width: 129.78px;
     position: absolute;
     top: 12.9px;
     right: auto;
@@ -971,8 +972,8 @@ img#PImg1:active {
             transform: rotate(19.34deg);
   }
   body.alternate #vsWhite {
-    height: 111.09px;
-    width: 105.21px;
+    height: 131.09px;
+    width: 125.21px;
     position: absolute;
     top: 30.62px;
     right: 27px;
@@ -982,10 +983,10 @@ img#PImg1:active {
             transform: rotate(14.13deg);
   }
   body.alternate #vsDark {
-    height: 101.09px;
-    width: 95.21px;
+    height: 121.09px;
+    width: 115.21px;
     position: absolute;
-    top: 90.6px;
+    top: 105.6px;
     right: 10px;
     bottom: auto;
     left: auto;
@@ -993,8 +994,8 @@ img#PImg1:active {
             transform: rotate(-11.37deg);
   }
   body.alternate #tailWhite {
-    height: 70px;
-    width: 64.01px;
+    height: 90px;
+    width: 84.01px;
     position: absolute;
     top: 50px;
     right: auto;
@@ -1002,8 +1003,8 @@ img#PImg1:active {
     left: -50px;
   }
   body.alternate #github {
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
     position: absolute;
     top: auto;
     right: auto;
