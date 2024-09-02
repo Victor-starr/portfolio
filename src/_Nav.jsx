@@ -3,15 +3,31 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import sunSvg from "./assets/sun.svg";
 import moonSvg from "./assets/moon.svg";
-
 function Nav() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
+  const getInitialTheme = () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      return savedTheme;
+    }
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return prefersDarkScheme ? "dark" : "light";
+  };
+
+  const [theme, setTheme] = useState(getInitialTheme());
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    document.body.classList.toggle("alternate", theme !== "light");
+  document.documentElement.setAttribute('data-theme', theme);
+  document.body.classList.toggle("alternate", theme !== 'light');
   }, [theme]);
 
+
+function toggleTheme() {
+    setTheme((prevTheme) => {
+    const newTheme = prevTheme === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('theme', newTheme);
+    return newTheme;
+    })};
+    
   window.addEventListener('resize', () => {
     const navgig = document.querySelector("nav");
     const exitBtn = document.getElementById("exitbar");
@@ -27,13 +43,6 @@ function Nav() {
     }
 });
 
-  function toggleTheme() {
-    setTheme((prevTheme) => {
-      const newTheme = prevTheme === "dark" ? "light" : "dark";
-      localStorage.setItem("theme", newTheme);
-      return newTheme;
-    });
-  }
 
   function openSideBar() {
     const navgig = document.querySelector("nav");
@@ -60,6 +69,7 @@ function Nav() {
         onClick={toggleTheme}
         src={theme === "dark" ? sunSvg : moonSvg}
         alt="Dark/Light"
+         loading="lazy"
       />
       <svg
         id="menubar"

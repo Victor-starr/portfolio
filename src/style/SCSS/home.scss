@@ -1,19 +1,7 @@
 // global import
 @import "./global.scss";
 
-// not alowing to select the text
-*::selection {
-  background-color: transparent;
-}
-// poping hiden content
-span.HidenWords::selection {
-  background: #a688fa;
-  color: rgb(0, 0, 0);
-}
-// Font-Face
-@include font-face("Alatsi", "../fonts/Alatsi-Regular.ttf");
-@include font-face("inter-italic", "../fonts/Inter-Italic.ttf");
-// 3 BIG CONTAINER
+
 body {
   @include element-size(100vh);
   @include padding(0px);
@@ -256,7 +244,8 @@ a.abt-btn:active {
     transform: scale(1);
   }
 }
-
+body,
+body.alternate {
 #tialDark,
 #vsDark,
 #vsWhite,
@@ -270,7 +259,9 @@ a.abt-btn:active {
     transform: scale(1.1) rotate(10deg);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
       background-color 0.3s ease-in-out;
+      cursor: pointer;
   }
+}
 }
 
 img#PImg1:hover {

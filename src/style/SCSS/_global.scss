@@ -16,6 +16,7 @@
     --Icons-color:#000000d3;
     --navbg-color: #ffffff;
     --nav-color: #00000091;
+    --selector-color: #a688fa;
 }
 /* TODO: UPDATE THIS TO LOOK FOR DARKMODE after this go to darklight mode js */
 [data-theme="dark"] {
@@ -36,6 +37,7 @@
     --Icons-color: #A688FA; 
     --navbg-color: #353535;
     --nav-color: #FFFFFF;
+    --selector-color: #ffffff;
 }
 
 $bodybg-color: var(--bodybg-color);
@@ -55,6 +57,7 @@ $IconBg-color: var(--IconBg-color);
 $Icons-color: var(--Icons-color);
 $navbg-color: var(--navbg-color);
 $nav-color: var(--nav-color);
+$selecter-color: var(--selector-color);
 
 
 // MixIn
@@ -128,3 +131,32 @@ $nav-color: var(--nav-color);
     left: $left;
   }
   
+  *::selection {
+    background-color: transparent;
+  }
+  *::-webkit-scrollbar {
+    height: 1px;
+    width: 1px;
+    background-color: $bodybg-color;
+  }
+  span.HidenWords::selection {
+    background: $selecter-color;
+    color: rgb(0, 0, 0);
+  }
+  // Font-Face
+  @include font-face("Alatsi", "../fonts/Alatsi-Regular.ttf");
+  @include font-face("inter-italic", "../fonts/Inter-Italic.ttf");
+
+  .container {
+    @include padding(15px, 0, 20px, 20px);
+    background-color: $containerbg-color;
+    border-radius: 35px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+    &:hover{
+        box-shadow: -6px 0px 15px $IconBg-color;
+        cursor: pointer;
+    }
+  }
+  .cetfHolder:hover {
+    box-shadow: none;
+  }

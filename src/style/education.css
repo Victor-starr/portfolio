@@ -16,6 +16,7 @@
   --Icons-color:#000000d3;
   --navbg-color: #ffffff;
   --nav-color: #00000091;
+  --selector-color: #a688fa;
 }
 
 /* TODO: UPDATE THIS TO LOOK FOR DARKMODE after this go to darklight mode js */
@@ -37,6 +38,7 @@
   --Icons-color: #A688FA;
   --navbg-color: #353535;
   --nav-color: #FFFFFF;
+  --selector-color: #ffffff;
 }
 
 *::-moz-selection {
@@ -48,28 +50,47 @@
 }
 
 *::-webkit-scrollbar {
+  height: 1px;
   width: 1px;
   background-color: var(--bodybg-color);
 }
 
 span.HidenWords::-moz-selection {
-  background: #a688fa;
+  background: var(--selector-color);
   color: rgb(0, 0, 0);
 }
 
 span.HidenWords::selection {
-  background: #a688fa;
+  background: var(--selector-color);
   color: rgb(0, 0, 0);
 }
 
 @font-face {
   font-family: "Alatsi";
-  src: url(./fonts/Alatsi-Regular.ttf);
+  src: url("../fonts/Alatsi-Regular.ttf");
 }
 @font-face {
   font-family: "inter-italic";
-  src: url(./fonts/Inter-Italic-VariableFont_opsz\,wght.ttf);
+  src: url("../fonts/Inter-Italic.ttf");
 }
+.container {
+  padding: 15px 0 20px 20px;
+  background-color: var(--containerbg-color);
+  border-radius: 35px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+}
+.container:hover {
+  -webkit-box-shadow: -6px 0px 15px var(--IconBg-color);
+          box-shadow: -6px 0px 15px var(--IconBg-color);
+  cursor: pointer;
+}
+
+.cetfHolder:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 body {
   overflow: hidden;
   height: 100vh;
@@ -124,14 +145,6 @@ section.pageHolder {
           align-items: end;
 }
 
-.container {
-  background-color: var(--containerbg-color);
-  border-radius: 35px;
-  padding: 15px 0 20px 20px;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
-}
-
 div.leftSide {
   /* background-color: #a688fa; */
   display: -webkit-box;
@@ -156,14 +169,6 @@ div.leftSide h1 {
   font-weight: 300;
   font-size: 22px;
   color: var(--h1-color);
-}
-
-.container {
-  background-color: var(--containerbg-color);
-  border-radius: 35px;
-  padding: 15px 0 20px 20px;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
 }
 
 section.softuniInfo {
@@ -316,24 +321,38 @@ section.content {
 }
 
 article.container {
-  height: 250px;
+  position: relative;
+  height: auto;
   width: 90%;
   padding: 15px 10px;
 }
-
-section.content h2 {
+article.container h2 {
   font-family: "Alatsi";
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
   color: var(--h1-color);
-  margin: 5px;
+  margin: 8px;
 }
-
-section.content p {
+article.container span {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
   font-family: "inter-italic";
   font-style: normal;
-  font-weight: 200;
+  font-weight: 550;
+  font-size: 12px;
+  color: #200079;
+  text-align: start;
+  padding: 6px;
+  background-color: rgba(166, 136, 250, 0.6117647059);
+  border-radius: 12px;
+  border: #714bd8 solid 2px;
+}
+article.container p {
+  font-family: "inter-italic";
+  font-style: normal;
+  font-weight: 250;
   font-size: 16px;
   color: var(--h1-color);
   margin: 5px;
@@ -415,6 +434,16 @@ nav ul li a {
 nav ul li a:hover {
   -webkit-animation: colorAnimation 0.6s;
           animation: colorAnimation 0.6s;
+}
+
+div.moreInfo:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+div.moreInfo:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 #toggleMode:hover {
@@ -645,6 +674,10 @@ nav ul li a:hover {
   }
   article.container p {
     font-size: 13px;
+  }
+  article.container span {
+    top: auto;
+    bottom: 15px;
   }
 }
 @media only screen and (max-width: 1300px) and (min-width: 601px) {

@@ -1,21 +1,6 @@
 // global import
 @import "./_global.scss";
 
-*::selection {
-  background-color: transparent;
-}
-*::-webkit-scrollbar {
-  height: 1px;
-  width: 1px;
-  background-color: $bodybg-color;
-}
-span.HidenWords::selection {
-  background: #a688fa;
-  color: rgb(0, 0, 0);
-}
-// Font-Face
-@include font-face("Alatsi", "../fonts/Alatsi-Regular.ttf");
-@include font-face("inter-italic", "../fonts/Inter-Italic.ttf");
 
 body {
   @include element-size(100vh);
@@ -57,12 +42,7 @@ div.leftSide {
    @include text($h1-color, "Alatsi", normal, 300, 22px);
  }
 }
-.container {
-  @include padding(15px, 0, 20px, 20px);
-  background-color: $containerbg-color;
-  border-radius: 35px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
-}
+
 
 section.myStory {
   @include position(relative, auto, auto, auto, 50px);
@@ -83,6 +63,7 @@ section.myStory {
     p {
       @include text($h1-color, "inter-italic", normal, 200, 15px);
       margin-bottom: 0;
+      text-align: start;
     }
   }
 }
@@ -145,7 +126,7 @@ section.content {
 }
 
 section.secNotCoding {
-  @include position(relative);
+  @include position(relative,auto,0%);
   @include element-size(40%, 85%);
   @include margin(20px, 0);
   h4 {
@@ -153,6 +134,28 @@ section.secNotCoding {
     @include margin(5px, 0);
   }
 }
+section.secNotCodingHiden{
+  @include position(absolute, auto, -92%, 0);
+}
+#showSecNotCoding,
+#hideSecNotCoding{
+  @include element-size(45px,45px);
+  @include position(absolute, 50px, auto, auto, -40px);
+  @include padding(5px);
+  background-color: $containerbg-color;
+  border-radius: 15px;
+  &:hover{
+    box-shadow: -6px 0px 15px $IconBg-color;
+  }
+  
+}
+#showSecNotCoding{
+  display: block;
+}
+#hideSecNotCoding{
+  display: none;
+}
+
 
 div.contImg {
   @include flex(row, start, center);
@@ -257,6 +260,7 @@ section.myStory img:hover {
   }
 }
 .links div a:hover {
+  box-shadow: 0px 0px 15px $IconBg-color;
   animation: bounceAnimation 0.5s infinite;
 }
 div.contImg figure img:hover {
@@ -414,6 +418,12 @@ div.contImg figure img:hover {
     left: 30px;
     border-bottom: solid 0.5px rgb(110, 110, 110);
   }
+  #showSecNotCoding{
+    display: none;
+  }
+  #hideSecNotCoding{
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1300px) and (min-width: 601px) {
@@ -519,5 +529,11 @@ div.contImg figure img:hover {
   section.secNotCoding {
     @include element-size(auto, 80%);
     border-bottom: solid 0.5px rgb(110, 110, 110);
+  }
+  #showSecNotCoding{
+    display: none;
+  }
+  #hideSecNotCoding{
+    display: none;
   }
 }

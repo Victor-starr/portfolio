@@ -16,6 +16,7 @@
   --Icons-color:#000000d3;
   --navbg-color: #ffffff;
   --nav-color: #00000091;
+  --selector-color: #a688fa;
 }
 
 /* TODO: UPDATE THIS TO LOOK FOR DARKMODE after this go to darklight mode js */
@@ -37,6 +38,7 @@
   --Icons-color: #A688FA;
   --navbg-color: #353535;
   --nav-color: #FFFFFF;
+  --selector-color: #ffffff;
 }
 
 *::-moz-selection {
@@ -54,12 +56,12 @@
 }
 
 span.HidenWords::-moz-selection {
-  background: #a688fa;
+  background: var(--selector-color);
   color: rgb(0, 0, 0);
 }
 
 span.HidenWords::selection {
-  background: #a688fa;
+  background: var(--selector-color);
   color: rgb(0, 0, 0);
 }
 
@@ -71,6 +73,24 @@ span.HidenWords::selection {
   font-family: "inter-italic";
   src: url("../fonts/Inter-Italic.ttf");
 }
+.container {
+  padding: 15px 0 20px 20px;
+  background-color: var(--containerbg-color);
+  border-radius: 35px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+}
+.container:hover {
+  -webkit-box-shadow: -6px 0px 15px var(--IconBg-color);
+          box-shadow: -6px 0px 15px var(--IconBg-color);
+  cursor: pointer;
+}
+
+.cetfHolder:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 body {
   height: 100vh;
   width: auto;
@@ -173,14 +193,6 @@ div.leftSide h1 {
   text-decoration: none;
 }
 
-.container {
-  padding: 15px 0 20px 20px;
-  background-color: var(--containerbg-color);
-  border-radius: 35px;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
-}
-
 section.myStory {
   position: relative;
   top: auto;
@@ -221,6 +233,7 @@ section.myStory article p {
   line-height: normal;
   text-decoration: none;
   margin-bottom: 0;
+  text-align: start;
 }
 
 section.links {
@@ -367,7 +380,7 @@ section.content p {
 section.secNotCoding {
   position: relative;
   top: auto;
-  right: auto;
+  right: 0%;
   bottom: auto;
   left: auto;
   height: 40%;
@@ -383,6 +396,41 @@ section.secNotCoding h4 {
   line-height: normal;
   text-decoration: none;
   margin: 5px 0 5px 0;
+}
+
+section.secNotCodingHiden {
+  position: absolute;
+  top: auto;
+  right: -92%;
+  bottom: 0;
+  left: auto;
+}
+
+#showSecNotCoding,
+#hideSecNotCoding {
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  top: 50px;
+  right: auto;
+  bottom: auto;
+  left: -40px;
+  padding: 5px 5px 5px 5px;
+  background-color: var(--containerbg-color);
+  border-radius: 15px;
+}
+#showSecNotCoding:hover,
+#hideSecNotCoding:hover {
+  -webkit-box-shadow: -6px 0px 15px var(--IconBg-color);
+          box-shadow: -6px 0px 15px var(--IconBg-color);
+}
+
+#showSecNotCoding {
+  display: block;
+}
+
+#hideSecNotCoding {
+  display: none;
 }
 
 div.contImg {
@@ -581,6 +629,8 @@ section.myStory img:hover {
 }
 
 .links div a:hover {
+  -webkit-box-shadow: 0px 0px 15px var(--IconBg-color);
+          box-shadow: 0px 0px 15px var(--IconBg-color);
   -webkit-animation: bounceAnimation 0.5s infinite;
           animation: bounceAnimation 0.5s infinite;
 }
@@ -830,6 +880,12 @@ div.contImg figure img:hover {
     left: 30px;
     border-bottom: solid 0.5px rgb(110, 110, 110);
   }
+  #showSecNotCoding {
+    display: none;
+  }
+  #hideSecNotCoding {
+    display: none;
+  }
 }
 @media only screen and (max-width: 1300px) and (min-width: 601px) {
   body {
@@ -994,5 +1050,11 @@ div.contImg figure img:hover {
     height: auto;
     width: 80%;
     border-bottom: solid 0.5px rgb(110, 110, 110);
+  }
+  #showSecNotCoding {
+    display: none;
+  }
+  #hideSecNotCoding {
+    display: none;
   }
 }/*# sourceMappingURL=about.css.map */

@@ -1,7 +1,7 @@
 
 import Nav from "./_Nav";
 // eslint-disable-next-line no-unused-vars
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./style/about.css";
 
@@ -9,6 +9,10 @@ function About() {
   const [contImg, setContImg] = useState(null);
   const [leftArrow, setLeftArrow] = useState(null);
   const [rightArrow, setRightArrow] = useState(null);
+  const [secNCoding, setSecNCoding] = useState(true);
+  const hideBtn = document.getElementById("hideSecNotCoding");
+  const showBtn = document.getElementById("showSecNotCoding");
+  const secNotCoding = document.querySelector(".secNotCoding");
 
   useEffect(() => {
     setContImg(document.querySelector(".contImg"));
@@ -18,14 +22,16 @@ function About() {
 
   useEffect(() => {
     if (contImg && leftArrow && rightArrow) {
-      // Function to update arrow visibility based on scroll position and window width
       function updateArrows() {
         if (window.innerWidth < 1300) {
-          // Hide both arrows on small screens
           leftArrow.style.display = "none";
           rightArrow.style.display = "none";
+
+          secNotCoding.classList.remove("secNotCodingHiden");
+          showBtn.style.display = "none";
+          hideBtn.style.display = "none";
         } else {
-          // Show or hide arrows based on scroll position
+
           if (contImg.scrollLeft === 0) {
             leftArrow.style.opacity = "0";
             setTimeout(() => (leftArrow.style.display = "none"), 300);
@@ -35,7 +41,8 @@ function About() {
           }
 
           if (
-            contImg.scrollWidth - contImg.clientWidth === contImg.scrollLeft
+            contImg.scrollWidth - contImg.clientWidth ===
+            contImg.scrollLeft
           ) {
             rightArrow.style.opacity = "0";
             setTimeout(() => (rightArrow.style.display = "none"), 300);
@@ -45,21 +52,19 @@ function About() {
           }
         }
       }
+      
 
-      // Update arrows visibility on scroll and on window resize
       contImg.addEventListener("scroll", updateArrows);
-      window.addEventListener("resize", updateArrows); // Update on window resize
+      window.addEventListener("resize", updateArrows);
 
-      // Initial check
       updateArrows();
 
-      // Clean up event listeners
       return () => {
         contImg.removeEventListener("scroll", updateArrows);
         window.removeEventListener("resize", updateArrows);
       };
     }
-  }, [contImg, leftArrow, rightArrow]);
+  });
 
   function ScrollRight() {
     contImg.scrollBy({ left: -160, behavior: "smooth" });
@@ -69,6 +74,18 @@ function About() {
     contImg.scrollBy({ left: 160, behavior: "smooth" });
   }
 
+  function ToggleNCoding() {
+    secNotCoding.classList.toggle("secNotCodingHiden");
+    setSecNCoding(!secNCoding);
+    if (secNCoding) {
+      showBtn.style.display = "block";
+      hideBtn.style.display = "none";
+    } else {
+      showBtn.style.display = "none";
+      hideBtn.style.display = "block";
+    }
+  }
+
   return (
     <>
       <Nav />
@@ -76,25 +93,21 @@ function About() {
         <div className="leftSide">
           <h1>About Me</h1>
           <section className="container myStory">
-            <img src="./Memoji.png" alt="" id="GoHome" />
+            <img src="./Memoji.png" alt="" id="GoHome" loading="lazy"/>
             <article>
               <h2>My Story</h2>
-
               <p>
-                I&apos;m a front-end web developer. Currently still a student in
-                Softuni. Most people hate Javascript... I am one of
-                them.I&apos;m a front-end web Currently still a student in
-                Softuni. Most people hate Javascript... I am one of them.
-                <br />
-                I&apos;m a front-end web developer. Currently still a student in
-                Softuni. Most people hate Javascript... I am one of
-                them.I&apos;m a front-end web Currently still a student in
-                Softuni. Most people hate Javascript... I am one of them.
-                I&apos;m a front-end web
-                <br />
-                developer.Currently still a student in Softuni.Most people hate
-                Javascript...I am one of them.I&apos;m a front-end web
-                developer.Currently still a student.
+                My name is Victor, and I hail from the beautiful city of
+                Plovdiv, Bulgaria. I am currently a student at Software
+                University (SoftUni), specializing in front-end web application
+                development. My journey into programming began in mid-high
+                school, and it has been a fascinating adventure ever since. I
+                primarily work with JavaScript—a language that many might
+                dislike, but I genuinely love for its versatility and power. As
+                the second child in a family of three, I have always been driven
+                to carve my unique path. With only three months left until I
+                graduate, I&apos;m excited to continue my journey into the world
+                of Computer Science at a university in Europe.
               </p>
             </article>
           </section>
@@ -106,7 +119,7 @@ function About() {
                 target="_blank"
               >
                 <svg
-                id="linkedSVG"
+                  id="linkedSVG"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#fff"
                   version="1.1"
@@ -119,7 +132,11 @@ function About() {
                       stroke="none"
                       strokeWidth="1"
                     >
-                      <g id="Dribbble-Light-Preview" fill="#000" transform="translate(-180 -7479)">
+                      <g
+                        id="Dribbble-Light-Preview"
+                        fill="#000"
+                        transform="translate(-180 -7479)"
+                      >
                         <g transform="translate(56 160)">
                           <path d="M144 7339h-4v-6.999c0-1.92-.847-2.991-2.366-2.991-1.653 0-2.634 1.116-2.634 2.991V7339h-4v-13h4v1.462s1.255-2.202 4.083-2.202c2.829 0 4.917 1.726 4.917 5.298V7339zm-17.558-15.079a2.451 2.451 0 01-2.442-2.461 2.451 2.451 0 012.442-2.46 2.451 2.451 0 012.441 2.46 2.45 2.45 0 01-2.441 2.461zM124 7339h5v-13h-5v13z"></path>
                         </g>
@@ -144,7 +161,11 @@ function About() {
                       stroke="none"
                       strokeWidth="1"
                     >
-                      <g id="Icon-Set-Filled" fill="#000" transform="translate(-414 -261)">
+                      <g
+                        id="Icon-Set-Filled"
+                        fill="#000"
+                        transform="translate(-414 -261)"
+                      >
                         <path d="M430 275.916l-3.316-2.749-11.569 11.843h29.476l-11.356-11.863-3.235 2.769zm4.89-4.026l11.002 11.439a2.53 2.53 0 00.108-.695v-19.772l-11.11 9.028zM414 262.816v19.818c0 .243.045.473.108.695l11.039-11.402L414 262.816zM445 261h-30l15 12.019L445 261z"></path>
                       </g>
                     </g>
@@ -184,7 +205,7 @@ function About() {
 
               <Link to="https://github.com/Victor-starr" target="_blank">
                 <svg
-                 id="githubSVG"
+                  id="githubSVG"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#000"
                   stroke="#000"
@@ -198,7 +219,11 @@ function About() {
                       stroke="none"
                       strokeWidth="1"
                     >
-                      <g id="Icon-Set-Filled" fill="#000" transform="translate(-140 -7559)">
+                      <g
+                        id="Icon-Set-Filled"
+                        fill="#000"
+                        transform="translate(-140 -7559)"
+                      >
                         <g transform="translate(56 160)">
                           <path d="M94 7399c5.523 0 10 4.59 10 10.253 0 4.529-2.862 8.371-6.833 9.728-.507.101-.687-.219-.687-.492 0-.338.012-1.442.012-2.814 0-.956-.32-1.58-.679-1.898 2.227-.254 4.567-1.121 4.567-5.059 0-1.12-.388-2.034-1.03-2.752.104-.259.447-1.302-.098-2.714 0 0-.838-.275-2.747 1.051a9.396 9.396 0 00-2.505-.345 9.375 9.375 0 00-2.503.345c-1.911-1.326-2.751-1.051-2.751-1.051-.543 1.412-.2 2.455-.097 2.714-.639.718-1.03 1.632-1.03 2.752 0 3.928 2.335 4.808 4.556 5.067-.286.256-.545.708-.635 1.371-.57.262-2.018.715-2.91-.852 0 0-.529-.985-1.533-1.057 0 0-.975-.013-.068.623 0 0 .655.315 1.11 1.5 0 0 .587 1.83 3.369 1.21.005.857.014 1.665.014 1.909 0 .271-.184.588-.683.493-3.974-1.355-6.839-5.199-6.839-9.729 0-5.663 4.478-10.253 10-10.253"></path>
                         </g>
@@ -214,42 +239,131 @@ function About() {
         <div className="rightSide">
           <section className="content">
             <article className="container">
-              <h2>My Story</h2>
-              {/*TODO: dont forget to add <span className="HidenWords"> </span> on hiden words.  */}
+              <h2>Creative Innovator</h2>
               <p>
-                I&apos;m a front-end web developer. Currently still a student in
-                Softuni. Most people hate Javascript... I am one of
-                them.I&apos;m a front-end web Currently still a student in
-                Softuni. Most people hate Javascript... I am one of them.
+                As a front-end developer, I am driven by a passion for
+                innovation. I enjoy the challenge of transforming ideas into
+                functional, visually appealing web applications. JavaScript is
+                my primary tool, and I approach each project with curiosity and
+                a desire to learn.
               </p>
             </article>
+
             <article className="container">
-              <h2>My Story</h2>
-              {/*TODO: dont forget to add <span className="HidenWords"> </span> on hiden words.  */}
+              <h2>Designing Engaging Experiences</h2>
               <p>
-                I&apos;m a front-end web developer. Currently still a student in
-                Softuni. Most people hate Javascript... I am one of
-                them.I&apos;m a front-end web Currently still a student in
-                Softuni. Most people hate Javascript... I am one of them.
+                I strive to create digital experiences that are both efficient
+                and meaningful for users. With an eye for detail, I aim to push
+                the boundaries of what&apos;s possible in web development, as I
+                prepare for my next step in studying Computer Science in Europe.
               </p>
             </article>
+
             <article className="container">
-              <h2>My Story</h2>
-              {/*TODO: dont forget to add <span className="HidenWords"> </span> on hiden words.  */}
+              <h2>Process Enthusiast</h2>
               <p>
-                I&apos;m a front-end web developer. Currently still a student in
-                Softuni. Most people hate Javascript... I am one of
-                them.I&apos;m a front-end web Currently still a student in
-                Softuni. Most people hate Javascript... I am one of them.
+                I love the process of building from scratch. From my first lines
+                of code in my high school years, I knew programming was my path.
+                Exploring new frameworks and experimenting with JavaScript to
+                solve problems excites me.
+              </p>
+            </article>
+
+            <article className="container">
+              <h2>Passionate Problem Solver</h2>
+              <p>
+                Whether developing a new feature or refining a user interface, I
+                find joy in every step of the process. The thrill of solving
+                complex challenges keeps me motivated to continue creating and
+                learning.
               </p>
             </article>
           </section>
 
-          <section className="container secNotCoding">
-            <h4>When I am not Coding...</h4>
+          <section className="container secNotCoding secNotCodingHiden">
             <svg
-            onClick={()=> ScrollRight()}
-            id="leftArrow" 
+              onClick={ToggleNCoding}
+              id="showSecNotCoding"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                {" "}
+                <path
+                  d="M21.97 15V9C21.97 4 19.97 2 14.97 2H8.96997C3.96997 2 1.96997 4 1.96997 9V15C1.96997 20 3.96997 22 8.96997 22H14.97C19.97 22 21.97 20 21.97 15Z"
+                  stroke="var(--Icons-color)"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>{" "}
+                <path
+                  d="M7.96997 2V22"
+                  stroke="var(--Icons-color)"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>{" "}
+                <path
+                  d="M14.97 9.43994L12.41 11.9999L14.97 14.5599"
+                  stroke="var(--Icons-color)"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>{" "}
+              </g>
+            </svg>
+            <svg
+              onClick={ToggleNCoding}
+              id="hideSecNotCoding"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                {" "}
+                <path
+                  d="M21.97 15V9C21.97 4 19.97 2 14.97 2H8.96997C3.96997 2 1.96997 4 1.96997 9V15C1.96997 20 3.96997 22 8.96997 22H14.97C19.97 22 21.97 20 21.97 15Z"
+                  stroke="var(--Icons-color)"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>{" "}
+                <path
+                  d="M14.97 2V22"
+                  stroke="var(--Icons-color)"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>{" "}
+                <path
+                  d="M7.96997 9.43994L10.53 11.9999L7.96997 14.5599"
+                  stroke="var(--Icons-color)"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>{" "}
+              </g>
+            </svg>
+
+
+            <h4>When I am not Coding...</h4>
+            {/* LEFT ARROW */}
+            <svg
+              onClick={() => ScrollRight()}
+              id="leftArrow"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -261,10 +375,10 @@ function About() {
                 clipRule="evenodd"
               ></path>
             </svg>
-
+            {/* RIGHT ARROW */}
             <svg
-            onClick={()=> ScrollLeft()}
-            id="rightArrow"
+              onClick={() => ScrollLeft()}
+              id="rightArrow"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -279,20 +393,19 @@ function About() {
 
             <div className="contImg">
               <figure>
-                
-                <img src="./gym.jpg" alt="gym" />
+                <img src="./gym.jpg" alt="gym" loading="lazy" />
                 <figcaption>Going gym</figcaption>
               </figure>
               <figure>
-                <img src="./dog.jpg" alt="dog" />
+                <img src="./dog.jpg" alt="dog" loading="lazy" />
                 <figcaption>Take my dog</figcaption>
               </figure>
               <figure>
-                <img src="./trav.jpg" alt="trav" />
+                <img src="./travel.png" alt="trav" loading="lazy" />
                 <figcaption>Travel</figcaption>
               </figure>
               <figure>
-                <img src="./ice-skate.jpg" alt="iceSkate" />
+                <img src="./ice-skate.jpg" alt="iceSkate" loading="lazy" />
                 <figcaption>Ice Skate</figcaption>
               </figure>
             </div>

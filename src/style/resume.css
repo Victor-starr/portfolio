@@ -16,6 +16,7 @@
   --Icons-color:#000000d3;
   --navbg-color: #ffffff;
   --nav-color: #00000091;
+  --selector-color: #a688fa;
 }
 
 /* TODO: UPDATE THIS TO LOOK FOR DARKMODE after this go to darklight mode js */
@@ -37,6 +38,7 @@
   --Icons-color: #A688FA;
   --navbg-color: #353535;
   --nav-color: #FFFFFF;
+  --selector-color: #ffffff;
 }
 
 *::-moz-selection {
@@ -48,17 +50,18 @@
 }
 
 *::-webkit-scrollbar {
+  height: 1px;
   width: 1px;
   background-color: var(--bodybg-color);
 }
 
 span.HidenWords::-moz-selection {
-  background: #a688fa;
+  background: var(--selector-color);
   color: rgb(0, 0, 0);
 }
 
 span.HidenWords::selection {
-  background: #a688fa;
+  background: var(--selector-color);
   color: rgb(0, 0, 0);
 }
 
@@ -70,6 +73,24 @@ span.HidenWords::selection {
   font-family: "inter-italic";
   src: url("../fonts/Inter-Italic.ttf");
 }
+.container {
+  padding: 15px 0 20px 20px;
+  background-color: var(--containerbg-color);
+  border-radius: 35px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+}
+.container:hover {
+  -webkit-box-shadow: -6px 0px 15px var(--IconBg-color);
+          box-shadow: -6px 0px 15px var(--IconBg-color);
+  cursor: pointer;
+}
+
+.cetfHolder:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 body {
   height: 100vh;
   width: auto;
@@ -203,7 +224,7 @@ section.resumeCover div {
   bottom: -25%;
   left: auto;
   height: 80%;
-  width: 70%;
+  width: 80%;
   max-width: 550px;
   border: rgb(0, 0, 0) solid 2px;
   -webkit-box-shadow: 0px -5px 10px 0.5px rgba(0, 0, 0, 0.61);
@@ -212,17 +233,26 @@ section.resumeCover div {
 section.resumeCover div img {
   height: 100%;
   width: 100%;
+  -webkit-box-shadow: -1px 1px 15px 5px var(--IconBg-color);
+          box-shadow: -1px 1px 15px 5px var(--IconBg-color);
   -o-object-fit: fill;
      object-fit: fill;
+}
+
+button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 @media only screen and (max-width: 600px) {
   section.resumeCover {
     height: 100%;
     width: 100%;
-    -webkit-box-pack: star;
-        -ms-flex-pack: star;
-            justify-content: star;
   }
   section.resumeCover button {
     padding: 10px 15px 10px 15px;
@@ -241,7 +271,7 @@ section.resumeCover div img {
     margin: 0 0 0 10px;
   }
   section.resumeCover div {
-    height: 70%;
+    height: 50%;
     width: 83%;
   }
   section.resumeCover div img {
@@ -271,7 +301,7 @@ section.resumeCover div img {
     margin: 0 0 0 10px;
   }
   section.resumeCover div {
-    height: 90%;
+    height: 80%;
     width: 83%;
   }
   section.resumeCover div img {

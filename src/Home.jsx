@@ -5,7 +5,16 @@ import React, { useState,useEffect } from 'react';
 import './style/home.css';
 
 function Home() {
-const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const getInitialTheme = () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      return savedTheme;
+    }
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return prefersDarkScheme ? "dark" : "light";
+  };
+
+  const [theme, setTheme] = useState(getInitialTheme());
 useEffect(() => {
 document.documentElement.setAttribute('data-theme', theme);
 document.body.classList.toggle("alternate", theme !== 'light');
@@ -22,16 +31,16 @@ function toggleTheme() {
 
   return (
     <section className="homeHolder">
-      <img src='./3dDarkTailwind.png' alt="" id="tialDark" />
-      <img src='./3DVSMIRC.png' alt="" id="vsDark" />
-      <img src='./3DVSCODE.png' alt="" id="vsWhite" />
-      <img src='./3DAPICould.png' alt="" id="apicloud" />
-      <img src='./3DJS.png' alt="" id="js" />
+      <img src='./3dDarkTailwind.png' alt="" id="tialDark" loading="lazy" />
+      <img src='./3DVSMIRC.png' alt="" id="vsDark" loading="lazy"/>
+      <img src='./3DVSCODE.png' alt="" id="vsWhite" loading="lazy"/>
+      <img src='./3DAPICould.png' alt="" id="apicloud" loading="lazy"/>
+      <img src='./3DJS.png' alt="" id="js" loading="lazy"/>
       <header>
         <div className="pfp" onClick={toggleTheme}>
-          <img src='./3DHTML.png' alt="" id="html" />
-          <img src='./Memoji.png' alt="" id="PImg1" />
-          <img src='./3DCSS.png' alt="" id="css" />
+          <img src='./3DHTML.png' alt="" id="html" loading="lazy"/>
+          <img src='./Memoji.png' alt="" id="PImg1" loading="lazy"/>
+          <img src='./3DCSS.png' alt="" id="css" loading="lazy"/>
         </div>
         <article>
           <h1>Hi, I&apos;m Victor</h1>
@@ -46,7 +55,7 @@ function toggleTheme() {
         <div className="nav-btns">
           <Link to="/portfolio/about" className="abt-btn">About me</Link>
           <Link to="/portfolio/education" className="con-btn">Education</Link>
-          <img src='./3DGithub.png' alt="" id="github" />
+          <img src='./3DGithub.png' alt="" id="github" loading="lazy"/>
         </div>
         <span className="copyright">Victor-Starr © {
         new Date().toLocaleString('en-US', { month: 'long' })}-{new Date().getFullYear()}</span>

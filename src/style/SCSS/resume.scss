@@ -1,19 +1,5 @@
 @import "./_global.scss";
 
-*::selection {
-  background-color: transparent;
-}
-*::-webkit-scrollbar {
-  width: 1px;
-  background-color: $bodybg-color;
-}
-span.HidenWords::selection {
-  background: #a688fa;
-  color: rgb(0, 0, 0);
-}
-// Font-Face
-@include font-face("Alatsi", "../fonts/Alatsi-Regular.ttf");
-@include font-face("inter-italic", "../fonts/Inter-Italic.ttf");
 
 body {
   @include element-size(100vh);
@@ -65,23 +51,28 @@ section.resumeCover{
   }
   div{
     @include position(relative,auto,auto,-25%);
-    @include element-size(80%,70%);
+    @include element-size(80%,80%);
     max-width:550px;
    border: rgb(0, 0, 0) solid 2px;
     box-shadow: 0px -5px 10px 0.5px rgba(0, 0, 0, 0.61);
    img{
     @include element-size(100%,100%);
+    box-shadow: -1px 1px 15px 5px $IconBg-color;
     object-fit:fill;
   }
   }
 }
-
+button:hover{
+  transform: scale(1.1);
+}
+button:active{
+  transform: scale(0.9);
+}
 
 
 @media only screen and (max-width: 600px) {
   section.resumeCover{
     @include element-size(100%,100%);
-    justify-content: star;
     button{
       @include padding(10px,15px);
       @include margin(10px);
@@ -92,7 +83,7 @@ section.resumeCover{
       }
     }
     div{
-      @include element-size(70%,83%);
+      @include element-size(50%,83%);
       img{
         @include element-size(100%,100%);
       }
@@ -112,7 +103,7 @@ section.resumeCover{
       }
     }
     div{
-      @include element-size(90%,83%);
+      @include element-size(80%,83%);
       img{
         @include element-size(100%,100%);
       }
