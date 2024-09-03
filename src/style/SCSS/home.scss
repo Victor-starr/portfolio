@@ -34,14 +34,14 @@ body {
     transform: rotate(-0.68deg);
   }
 
-  #vsDark {
+  #vsCode {
     @include position(absolute, auto, auto, 190px, 10px);
-    @include element-size(151.19px, 161.84px);
+    @include element-size(171.19px, 161.84px);
     transform: rotate(-11.37deg);
   }
 
-  #vsWhite {
-    @include position(absolute, auto, auto, 10px, 50px);
+  #react {
+    @include position(absolute, auto, auto, 22px, 50px);
     @include element-size(232px, 217px);
     transform: rotate(14.13deg);
   }
@@ -56,12 +56,6 @@ body {
     @include position(absolute, auto, 22px, 14px, auto);
     @include element-size(291px, 267px);
     transform: rotate(19.34deg);
-  }
-
-  #tailWhite {
-    @include position(absolute, 105px, -70px);
-    @include element-size(123.44px, 111.12px);
-    transform: rotate(40.88deg);
   }
 
   #github {
@@ -91,12 +85,12 @@ body.alternate {
     transform: rotate(-0.68deg);
   }
 
-  #vsDark {
+  #vsCode {
     @include position(absolute, 205.6px, 50px);
-    @include element-size(151.19px, 161.84px);
+    @include element-size(171.19px, 161.84px);
     transform: rotate(-11.37deg);
   }
-  #vsWhite {
+  #react {
     @include position(absolute, 30.62px, 50px);
     @include element-size(232px, 217px);
     transform: rotate(14.13deg);
@@ -132,11 +126,6 @@ body.alternate {
     transform: rotate(-50.41deg);
   }
 
-  #tailWhite {
-    @include position(absolute, 105px, -70px, auto, auto);
-    @include element-size(123.44px, 111.12px);
-    transform: rotate(40.88deg);
-  }
 }
 header {
   @include position(relative);
@@ -247,11 +236,10 @@ a.abt-btn:active {
 body,
 body.alternate {
 #tialDark,
-#vsDark,
-#vsWhite,
+#vsCode,
+#react,
 #apicloud,
 #js,
-#tailWhite,
 #github,
 #html,
 #css {
@@ -348,18 +336,13 @@ img#PImg1:active {
     @include element-size(80px, 79.78px);
     right: 10px;
   }
-  #vsWhite {
+  #react {
     @include element-size(81.09px, 75.21px);
     left: 40px;
   }
-  #vsDark {
+  #vsCode {
     @include element-size(81.09px, 75.21px);
     bottom: 70px;
-  }
-  #tailWhite {
-    @include element-size(60px, 54.01px);
-    top: 50px;
-    right: -25px;
   }
   #github {
     @include element-size(40px, 40px);
@@ -397,19 +380,15 @@ img#PImg1:active {
       @include position(absolute, 110.9px, auto, auto, 10px);
       transform: rotate(19.34deg);
     }
-    #vsWhite {
-      @include element-size(81.09px, 75.21px);
+    #react {
+      @include element-size(71.09px, 65.21px);
       @include position(absolute, 30.62px, 27px);
       transform: rotate(14.13deg);
     }
-    #vsDark {
-      @include element-size(81.09px, 75.21px);
-      @include position(absolute, 70.6px, 14px);
+    #vsCode {
+      @include element-size(71.09px, 65.21px);
+      @include position(absolute, 78.6px, 14px);
       transform: rotate(-11.37deg);
-    }
-    #tailWhite {
-      @include element-size(60px, 54.01px);
-      @include position(absolute, 50px, auto, auto, -25px);
     }
     #github {
       @include element-size(40px, 40px);
@@ -495,18 +474,13 @@ img#PImg1:active {
     @include element-size(130px, 129.78px);
     right: 15px;
   }
-  #vsWhite {
+  #react {
     @include element-size(131.09px, 125.21px);
     left: 45px;
   }
-  #vsDark {
+  #vsCode {
     @include element-size(121.09px, 115.21px);
     bottom: 100px;
-  }
-  #tailWhite {
-    @include element-size(90px, 84.01px);
-    top: 55px;
-    right: -60px;
   }
   #github {
     @include element-size(70px, 70px);
@@ -545,19 +519,15 @@ img#PImg1:active {
       @include position(absolute, 12.9px, auto, auto, 20px);
       transform: rotate(19.34deg);
     }
-    #vsWhite {
+    #react {
       @include element-size(131.09px, 125.21px);
       @include position(absolute, 30.62px, 27px);
       transform: rotate(14.13deg);
     }
-    #vsDark {
+    #vsCode {
       @include element-size(121.09px, 115.21px);
       @include position(absolute, 105.6px, 10px);
       transform: rotate(-11.37deg);
-    }
-    #tailWhite {
-      @include element-size(90px, 84.01px);
-      @include position(absolute, 50px, auto, auto, -50px);
     }
     #github {
       @include element-size(70px, 70px);

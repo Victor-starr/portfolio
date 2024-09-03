@@ -161,22 +161,22 @@ body #tialDark {
   -webkit-transform: rotate(-0.68deg);
           transform: rotate(-0.68deg);
 }
-body #vsDark {
+body #vsCode {
   position: absolute;
   top: auto;
   right: auto;
   bottom: 190px;
   left: 10px;
-  height: 151.19px;
+  height: 171.19px;
   width: 161.84px;
   -webkit-transform: rotate(-11.37deg);
           transform: rotate(-11.37deg);
 }
-body #vsWhite {
+body #react {
   position: absolute;
   top: auto;
   right: auto;
-  bottom: 10px;
+  bottom: 22px;
   left: 50px;
   height: 232px;
   width: 217px;
@@ -204,17 +204,6 @@ body #js {
   width: 267px;
   -webkit-transform: rotate(19.34deg);
           transform: rotate(19.34deg);
-}
-body #tailWhite {
-  position: absolute;
-  top: 105px;
-  right: -70px;
-  bottom: auto;
-  left: auto;
-  height: 123.44px;
-  width: 111.12px;
-  -webkit-transform: rotate(40.88deg);
-          transform: rotate(40.88deg);
 }
 body #github {
   position: absolute;
@@ -261,18 +250,18 @@ body.alternate #tialDark {
   -webkit-transform: rotate(-0.68deg);
           transform: rotate(-0.68deg);
 }
-body.alternate #vsDark {
+body.alternate #vsCode {
   position: absolute;
   top: 205.6px;
   right: 50px;
   bottom: auto;
   left: auto;
-  height: 151.19px;
+  height: 171.19px;
   width: 161.84px;
   -webkit-transform: rotate(-11.37deg);
           transform: rotate(-11.37deg);
 }
-body.alternate #vsWhite {
+body.alternate #react {
   position: absolute;
   top: 30.62px;
   right: 50px;
@@ -337,17 +326,6 @@ body.alternate #css {
   width: 109px;
   -webkit-transform: rotate(-50.41deg);
           transform: rotate(-50.41deg);
-}
-body.alternate #tailWhite {
-  position: absolute;
-  top: 105px;
-  right: -70px;
-  bottom: auto;
-  left: auto;
-  height: 123.44px;
-  width: 111.12px;
-  -webkit-transform: rotate(40.88deg);
-          transform: rotate(40.88deg);
 }
 
 header {
@@ -596,20 +574,18 @@ a.abt-btn:active {
   }
 }
 body #tialDark:hover,
-body #vsDark:hover,
-body #vsWhite:hover,
+body #vsCode:hover,
+body #react:hover,
 body #apicloud:hover,
 body #js:hover,
-body #tailWhite:hover,
 body #github:hover,
 body #html:hover,
 body #css:hover,
 body.alternate #tialDark:hover,
-body.alternate #vsDark:hover,
-body.alternate #vsWhite:hover,
+body.alternate #vsCode:hover,
+body.alternate #react:hover,
 body.alternate #apicloud:hover,
 body.alternate #js:hover,
-body.alternate #tailWhite:hover,
 body.alternate #github:hover,
 body.alternate #html:hover,
 body.alternate #css:hover {
@@ -719,21 +695,15 @@ img#PImg1:active {
     width: 79.78px;
     right: 10px;
   }
-  body #vsWhite {
+  body #react {
     height: 81.09px;
     width: 75.21px;
     left: 40px;
   }
-  body #vsDark {
+  body #vsCode {
     height: 81.09px;
     width: 75.21px;
     bottom: 70px;
-  }
-  body #tailWhite {
-    height: 60px;
-    width: 54.01px;
-    top: 50px;
-    right: -25px;
   }
   body #github {
     height: 40px;
@@ -798,9 +768,9 @@ img#PImg1:active {
     -webkit-transform: rotate(19.34deg);
             transform: rotate(19.34deg);
   }
-  body.alternate #vsWhite {
-    height: 81.09px;
-    width: 75.21px;
+  body.alternate #react {
+    height: 71.09px;
+    width: 65.21px;
     position: absolute;
     top: 30.62px;
     right: 27px;
@@ -809,25 +779,16 @@ img#PImg1:active {
     -webkit-transform: rotate(14.13deg);
             transform: rotate(14.13deg);
   }
-  body.alternate #vsDark {
-    height: 81.09px;
-    width: 75.21px;
+  body.alternate #vsCode {
+    height: 71.09px;
+    width: 65.21px;
     position: absolute;
-    top: 70.6px;
+    top: 78.6px;
     right: 14px;
     bottom: auto;
     left: auto;
     -webkit-transform: rotate(-11.37deg);
             transform: rotate(-11.37deg);
-  }
-  body.alternate #tailWhite {
-    height: 60px;
-    width: 54.01px;
-    position: absolute;
-    top: 50px;
-    right: auto;
-    bottom: auto;
-    left: -25px;
   }
   body.alternate #github {
     height: 40px;
@@ -928,21 +889,15 @@ img#PImg1:active {
     width: 129.78px;
     right: 15px;
   }
-  body #vsWhite {
+  body #react {
     height: 131.09px;
     width: 125.21px;
     left: 45px;
   }
-  body #vsDark {
+  body #vsCode {
     height: 121.09px;
     width: 115.21px;
     bottom: 100px;
-  }
-  body #tailWhite {
-    height: 90px;
-    width: 84.01px;
-    top: 55px;
-    right: -60px;
   }
   body #github {
     height: 70px;
@@ -1007,7 +962,7 @@ img#PImg1:active {
     -webkit-transform: rotate(19.34deg);
             transform: rotate(19.34deg);
   }
-  body.alternate #vsWhite {
+  body.alternate #react {
     height: 131.09px;
     width: 125.21px;
     position: absolute;
@@ -1018,7 +973,7 @@ img#PImg1:active {
     -webkit-transform: rotate(14.13deg);
             transform: rotate(14.13deg);
   }
-  body.alternate #vsDark {
+  body.alternate #vsCode {
     height: 121.09px;
     width: 115.21px;
     position: absolute;
@@ -1028,15 +983,6 @@ img#PImg1:active {
     left: auto;
     -webkit-transform: rotate(-11.37deg);
             transform: rotate(-11.37deg);
-  }
-  body.alternate #tailWhite {
-    height: 90px;
-    width: 84.01px;
-    position: absolute;
-    top: 50px;
-    right: auto;
-    bottom: auto;
-    left: -50px;
   }
   body.alternate #github {
     height: 70px;

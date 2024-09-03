@@ -32,8 +32,8 @@ function toggleTheme() {
   return (
     <section className="homeHolder">
       <img src='./3dDarkTailwind.png' alt="" id="tialDark" loading="lazy" />
-      <img src='./3DVSMIRC.png' alt="" id="vsDark" loading="lazy"/>
-      <img src='./3DVSCODE.png' alt="" id="vsWhite" loading="lazy"/>
+      <img src='./3DVSCODE.png' alt="" id="vsCode" loading="lazy"/>
+      <img src='./3DReact.png' alt="" id="react" loading="lazy"/>
       <img src='./3DAPICould.png' alt="" id="apicloud" loading="lazy"/>
       <img src='./3DJS.png' alt="" id="js" loading="lazy"/>
       <header>
@@ -50,7 +50,6 @@ function toggleTheme() {
             Most people hate <span className="HidenWords">Javascript</span>... <br />
             I am one of them.
           </p>
-          {/* <img src='./3DTailwind.png' alt="" id="tailWhite" /> */}
         </article>
         <div className="nav-btns">
           <Link to="/portfolio/about" className="abt-btn">About me</Link>
