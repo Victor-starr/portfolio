@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-
 export let FinalTyp = 'None';
 
 function CetfContent({ type = 'None', title1 = 'JS CETF',title2 = 'DaysAgo',description = 'No description' }) {
