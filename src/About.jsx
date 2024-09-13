@@ -97,7 +97,7 @@ function About() {
             <article>
               <h2>My Story</h2>
               <p>
-                My name is Victor, and I&apos;m from the beautiful city of
+               My name is Victor, and I&apos;m from the beautiful city of
                 Plovdiv, Bulgaria. I am currently a student at Software
                 University (SoftUni), specializing in front-end web
                 development. My journey into programming began in mid-high
