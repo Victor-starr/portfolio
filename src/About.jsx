@@ -77,7 +77,7 @@ function About() {
   function ToggleNCoding() {
     secNotCoding.classList.toggle("secNotCodingHiden");
     setSecNCoding(!secNCoding);
-    if (secNCoding) {
+    if (!secNCoding) {
       showBtn.style.display = "block";
       hideBtn.style.display = "none";
     } else {

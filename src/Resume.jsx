@@ -27,7 +27,7 @@ function Resume() {
 
   
   function download(){
-    window.open('./cv-bg-26.pdf'); // PATH TO THE PDF CV FILE 
+    window.open('./cv.docx'); 
   }
   return (
     <>
