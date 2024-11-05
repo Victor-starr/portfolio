@@ -2,26 +2,26 @@
 @import "./_global.scss";
 
 
-body {
-  @include element-size(100vh);
-  @include padding(0px);
-  @include margin(0px);
-  @include flex(row, center, center);
-  overflow: hidden;
-  background: $bodybg-color;
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
+// body {
+//   @include element-size(100vh);
+//   @include padding(0px);
+//   @include margin(0px);
+//   @include flex(row, center, center);
+//   overflow: hidden;
+//   background: $bodybg-color;
+//   transition: background-color 0.5s ease, color 0.5s ease;
+// }
 
-main {
-  @include position(relative);
-  @include element-size(90vh, 70vw);
-  @include padding(15px);
-  overflow: hidden;
-  box-sizing: border-box;
-  background-color: $mainbg2-color;
-  border-radius: 60px;
-  border: 1px solid rgba(0, 0, 0, 0.24);
-}
+// main {
+//   @include position(relative);
+//   @include element-size(90vh, 70vw);
+//   @include padding(15px);
+//   overflow: hidden;
+//   box-sizing: border-box;
+//   background-color: $mainbg2-color;
+//   border-radius: 60px;
+//   border: 1px solid rgba(0, 0, 0, 0.24);
+// }
 section.pageHolder{
   @include position(relative);
   @include element-size(100%, 100%);
@@ -45,7 +45,7 @@ div.leftSide {
 
 
 section.myStory {
-  @include position(relative, auto, auto, auto, 50px);
+  @include position(relative);
   @include element-size(auto, 52%);
   img {
     @include element-size(70px, 70px);
@@ -69,7 +69,7 @@ section.myStory {
 }
 
 section.links {
-  @include position(relative, auto, auto, auto, 50px);
+  @include position(relative);
   @include element-size(auto, 40%);
   @include padding(15px, 20px);
   h3 {
@@ -354,9 +354,9 @@ div.contImg figure img:hover {
     }
   }
   section.myStory {
-    @include position(relative, auto, auto, auto, 25px);
+    @include position(relative);
     @include element-size(auto, 80%);
-    left: 25px;
+    // left: 25px;
     article {
       h2 {
         font-size: 15px;
@@ -371,7 +371,7 @@ div.contImg figure img:hover {
   }
   section.links {
     @include element-size(auto, 75%);
-    left: 25px;
+    // left: 25px;
     h3 {
       font-size: 20px;
     }
@@ -402,7 +402,7 @@ div.contImg figure img:hover {
   }
   section.content {
     @include element-size(500px, 90%);
-    left: 20px;
+    // left: 20px;
     border-bottom: solid 0.5px rgb(110, 110, 110);
     article.container {
       h2 {
@@ -415,7 +415,7 @@ div.contImg figure img:hover {
   }
   section.secNotCoding {
     @include element-size(50%, 80%);
-    left: 30px;
+    // left: 30px;
     border-bottom: solid 0.5px rgb(110, 110, 110);
   }
   #showSecNotCoding{
@@ -475,13 +475,13 @@ div.contImg figure img:hover {
     align-items: center;
     h1 {
       @include margin(15px, 0, 6px);
-      left: 0;
+      // left: 0;
       font-size: 24px;
     }
   }
   section.myStory {
     @include element-size(auto, 70%);
-    left: 0;
+    // left: 0;
     article {
       h2 {
         font-size: 17px;
@@ -496,7 +496,7 @@ div.contImg figure img:hover {
   }
   section.links {
     @include element-size(auto, 60%);
-    left: 0.01%;
+    // left: 0.01%;
     h3 {
       font-size: 22px;
     }

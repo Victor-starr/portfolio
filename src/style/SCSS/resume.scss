@@ -1,26 +1,26 @@
 @import "./_global.scss";
 
 
-body {
-  @include element-size(100vh);
-  @include padding(0px);
-  @include margin(0px);
-  @include flex(row, center, center);
-  overflow: hidden;
-  background: $bodybg-color;
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
+// body {
+//   @include element-size(100vh);
+//   @include padding(0px);
+//   @include margin(0px);
+//   @include flex(row, center, center);
+//   overflow: hidden;
+//   background: $bodybg-color;
+//   transition: background-color 0.5s ease, color 0.5s ease;
+// }
 
-main {
-  @include position(relative);
-  @include element-size(90vh, 70vw);
-  @include padding(15px);
-  overflow: hidden;
-  box-sizing: border-box;
-  background-color: $mainbg2-color;
-  border-radius: 60px;
-  border: 1px solid rgba(0, 0, 0, 0.24);
-}
+// main {
+//   @include position(relative);
+//   @include element-size(90vh, 70vw);
+//   @include padding(15px);
+//   overflow: hidden;
+//   box-sizing: border-box;
+//   background-color: $mainbg2-color;
+//   border-radius: 60px;
+//   border: 1px solid rgba(0, 0, 0, 0.24);
+// }
 section.pageHolderRES{
   @include position(relative);
   @include element-size(100%, 100%);

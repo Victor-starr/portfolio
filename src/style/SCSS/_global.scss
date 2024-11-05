@@ -1,43 +1,53 @@
 :root {
-    --bodybg-color: #fffffff2;
-    --mainbg-color:#ececec;
-    --homeHolderbg-color: linear-gradient(99.54deg, #2F0EC5 -15.69%, #0EAAC5 42.16%, #0EC554 100%);
-    --pfpbg-color:#ffffff;
-    --h1-color:#000000;
-    --p-color: #000000ad;
-    --con-btnBg-color: #000000;
-    --con-btn-color: #ffffff;
-    --abt-btnBg-color: #ffffff;
-    --abt-btn-color: #000000;
-    --mainbg2-color: #ffffff;
-    --homeHolderbg2-color:#dededea6;
-    --containerbg-color:#ffffff;
-    --IconBg-color: #f3f3f3;
-    --Icons-color:#000000d3;
-    --navbg-color: #ffffff;
-    --nav-color: #00000091;
-    --selector-color: #a688fa;
+  --bodybg-color: #fffffff2;
+  --mainbg-color: #ececec;
+  --homeHolderbg-color: linear-gradient(
+    99.54deg,
+    #2f0ec5 -15.69%,
+    #0eaac5 42.16%,
+    #0ec554 100%
+  );
+  --pfpbg-color: #ffffff;
+  --h1-color: #000000;
+  --p-color: #000000ad;
+  --con-btnBg-color: #000000;
+  --con-btn-color: #ffffff;
+  --abt-btnBg-color: #ffffff;
+  --abt-btn-color: #000000;
+  --mainbg2-color: #ffffff;
+  --homeHolderbg2-color: #dededea6;
+  --containerbg-color: #ffffff;
+  --IconBg-color: #f3f3f3;
+  --Icons-color: #000000d3;
+  --navbg-color: #ffffff;
+  --nav-color: #00000091;
+  --selector-color: #a688fa;
 }
 /* TODO: UPDATE THIS TO LOOK FOR DARKMODE after this go to darklight mode js */
 [data-theme="dark"] {
-    --bodybg-color: #121212f2;
-    --mainbg-color:#353535f2;
-    --homeHolderbg-color: linear-gradient(102.41deg, #DB3223 1.23%, #A723DB 51.6%, #2363DB 100%);
-    --pfpbg-color:#262230;
-    --h1-color:#ffffff;
-    --p-color: #ffffffc5;
-    --con-btnBg-color: #ffffff;
-    --con-btn-color: #000000;
-    --abt-btnBg-color: #000000;
-    --abt-btn-color: #ffffff;
-    --mainbg2-color: #353535f2;
-    --homeHolderbg2-color:#000000;
-    --containerbg-color:#1E1E1E;  
-    --IconBg-color: #A688FA;   
-    --Icons-color: #A688FA; 
-    --navbg-color: #353535;
-    --nav-color: #FFFFFF;
-    --selector-color: #ffffff;
+  --bodybg-color: #121212f2;
+  --mainbg-color: #353535f2;
+  --homeHolderbg-color: linear-gradient(
+    102.41deg,
+    #db3223 1.23%,
+    #a723db 51.6%,
+    #2363db 100%
+  );
+  --pfpbg-color: #262230;
+  --h1-color: #ffffff;
+  --p-color: #ffffffc5;
+  --con-btnBg-color: #ffffff;
+  --con-btn-color: #000000;
+  --abt-btnBg-color: #000000;
+  --abt-btn-color: #ffffff;
+  --mainbg2-color: #353535f2;
+  --homeHolderbg2-color: #000000;
+  --containerbg-color: #1e1e1e;
+  --IconBg-color: #a688fa;
+  --Icons-color: #a688fa;
+  --navbg-color: #353535;
+  --nav-color: #ffffff;
+  --selector-color: #ffffff;
 }
 
 $bodybg-color: var(--bodybg-color);
@@ -59,104 +69,235 @@ $navbg-color: var(--navbg-color);
 $nav-color: var(--nav-color);
 $selecter-color: var(--selector-color);
 
-
 // MixIn
 
 // animation Mixin
 @mixin animation($name, $duration, $timing-function) {
-    animation: $name $duration $timing-function;
-  }
-  
-  // Font-Face Mixin
-  @mixin font-face($family, $src) {
-    @font-face {
-      font-family: $family;
-      src: url($src);
-      
-    }
-  }
-  
-  // Element Size Mixin
-  @mixin element-size($height: auto, $width: auto) {
-    height: $height;
-    width: $width;
-  }
-  // Text Mixin
-  @mixin text(
-    $color: inherit,
-    $family: inherit,
-    $style: normal,
-    $weight: normal,
-    $size: inherit,
-    $line-height: normal
-  ) {
-    color: $color;
-    font-family: $family;
-    font-style: $style;
-    font-weight: $weight;
-    font-size: $size;
-    line-height: $line-height;
-    text-decoration: none;
-  }
-  // Padding Mixin
-  @mixin padding($top, $right: $top, $bottom: $top, $left: $right) {
-    padding: $top $right $bottom $left;
-  }
-  
-  // Margin Mixin
-  @mixin margin($top, $right: $top, $bottom: $top, $left: $right) {
-    margin: $top $right $bottom $left;
-  }
-  
-  // Flexbox Mixin
-  @mixin flex($direction: row, $justify: start, $align: start) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-  }
-  
-  // Position Mixin
-  @mixin position(
-    $position: relative,
-    $top: auto,
-    $right: auto,
-    $bottom: auto,
-    $left: auto
-  ) {
-    position: $position;
-    top: $top;
-    right: $right;
-    bottom: $bottom;
-    left: $left;
-  }
-  
-  *::selection {
-    background-color: transparent;
-  }
-  *::-webkit-scrollbar {
-    height: 1px;
-    width: 1px;
-    background-color: $bodybg-color;
-  }
-  span.HidenWords::selection {
-    background: $selecter-color;
-    color: rgb(0, 0, 0);
-  }
-  // Font-Face
-  @include font-face("Alatsi", "../fonts/Alatsi-Regular.ttf");
-  @include font-face("inter-italic", "../fonts/Inter-Italic.ttf");
+  animation: $name $duration $timing-function;
+}
 
-  .container {
-    @include padding(15px, 0, 20px, 20px);
-    background-color: $containerbg-color;
-    border-radius: 35px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
-    &:hover{
-        box-shadow: -6px 0px 15px $IconBg-color;
-        cursor: pointer;
-    }
+// Font-Face Mixin
+@mixin font-face($family, $src) {
+  @font-face {
+    font-family: $family;
+    src: url($src);
   }
-  .cetfHolder:hover {
-    box-shadow: none;
+}
+
+// Element Size Mixin
+@mixin element-size($height: auto, $width: auto) {
+  height: $height;
+  width: $width;
+}
+// Text Mixin
+@mixin text(
+  $color: inherit,
+  $family: inherit,
+  $style: normal,
+  $weight: normal,
+  $size: inherit,
+  $line-height: normal
+) {
+  color: $color;
+  font-family: $family;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  text-decoration: none;
+}
+// Padding Mixin
+@mixin padding($top, $right: $top, $bottom: $top, $left: $right) {
+  padding: $top $right $bottom $left;
+}
+
+// Margin Mixin
+@mixin margin($top, $right: $top, $bottom: $top, $left: $right) {
+  margin: $top $right $bottom $left;
+}
+
+// Flexbox Mixin
+@mixin flex($direction: row, $justify: start, $align: start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Position Mixin
+@mixin position(
+  $position: relative,
+  $top: auto,
+  $right: auto,
+  $bottom: auto,
+  $left: auto
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+*::selection {
+  background-color: transparent;
+}
+*::-webkit-scrollbar {
+  height: 1px;
+  width: 1px;
+  background-color: $bodybg-color;
+}
+span.HidenWords::selection {
+  background: $selecter-color;
+  color: rgb(0, 0, 0);
+}
+// Font-Face
+@include font-face("Alatsi", "../fonts/Alatsi-Regular.ttf");
+@include font-face("inter-italic", "../fonts/Inter-Italic.ttf");
+
+.container {
+  @include padding(15px, 0, 20px, 20px);
+  background-color: $containerbg-color;
+  border-radius: 35px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
+  &:hover {
+    box-shadow: -6px 0px 15px $IconBg-color;
+    cursor: pointer;
   }
+}
+.cetfHolder:hover {
+  box-shadow: none;
+}
+
+body {
+  @include element-size(100vh);
+  @include padding(0px);
+  @include margin(0px);
+  @include flex(row, center, center);
+  overflow: hidden;
+  background-color: $bodybg-color;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+main {
+  @include position(relative);
+  @include element-size(8vh, 70vw);
+  @include padding(15px);
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: $mainbg2-color;
+  border-radius: 60px;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  transition: height 1s ease-in-out;
+}
+
+
+.slide-in-blurred-top {
+  animation: slide-in-blurred-top 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+@keyframes slide-in-blurred-top {
+  0% {
+            transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+            transform-origin: 50% 0%;
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+            transform: translateY(0) scaleY(1) scaleX(1);
+            transform-origin: 50% 50%;
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+.slide-in-blurred-left {
+	        animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+@keyframes slide-in-blurred-left {
+  0% {
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform-origin: 100% 50%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+.slide-in-blurred-right {
+  animation: slide-in-blurred-right 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+@keyframes slide-in-blurred-right {
+  0% {
+    transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    transform-origin: 0% 50%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+.slide-in-blurred-bottom {
+	        animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+@keyframes slide-in-blurred-bottom {
+  0% {
+            transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+            transform-origin: 50% 100%;
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+            transform: translateY(0) scaleY(1) scaleX(1);
+            transform-origin: 50% 50%;
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+.slide-in-right {
+	        animation: slide-in-right 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-right {
+  0% {
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+	        animation: slide-in-left 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+  0% {
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+

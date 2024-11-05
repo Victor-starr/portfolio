@@ -1,7 +1,6 @@
-
 import { Link } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style/home.css';
 
 function Home() {
@@ -18,8 +17,32 @@ function Home() {
 useEffect(() => {
 document.documentElement.setAttribute('data-theme', theme);
 document.body.classList.toggle("alternate", theme !== 'light');
+
 }, [theme]);
 
+const pageHolder = document.querySelector('main > section');
+useEffect(() => {
+  const tailwind3d = document.getElementById('tialDark');
+  const vsCode = document.getElementById('vsCode');
+  const react = document.getElementById('react');
+  const apicloud = document.getElementById('apicloud');
+  const js = document.getElementById('js');
+
+  setTimeout(() => {
+    tailwind3d.classList.add('slide-in-blurred-right');
+    vsCode.classList.add('slide-in-blurred-top');
+    react.classList.add('slide-in-blurred-bottom');
+    apicloud.classList.add('slide-in-blurred-left');
+    js.classList.add('slide-in-blurred-left');
+  }, 1000);
+  setTimeout(() => {
+    tailwind3d.classList.remove('slide-in-blurred-right');
+    vsCode.classList.remove('slide-in-blurred-top');
+    react.classList.remove('slide-in-blurred-bottom');
+    apicloud.classList.remove('slide-in-blurred-left');
+    js.classList.remove('slide-in-blurred-left');
+  }, 2000);
+}, [pageHolder]);
 
 function toggleTheme() {
     setTheme((prevTheme) => {

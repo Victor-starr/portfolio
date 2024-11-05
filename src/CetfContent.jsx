@@ -1,9 +1,20 @@
 import PropTypes from 'prop-types';
 export let FinalTyp = 'None';
+// https://ibb.co/XDHBt4r html 1
+// https://ibb.co/tbFzTVd html 2
+// https://ibb.co/c815PKy adv 1
+// https://ibb.co/nLHx7h2 adv 2
+// https://ibb.co/qppfpLL app 1
+// https://ibb.co/0BS8rGd app 2
+// https://ibb.co/7jnzk6S bs 1
+// https://ibb.co/9wfWL86 bs 2
+// https://ibb.co/vBXrmpH fund 1
+// https://ibb.co/8NN7kyX fund 2
+function CetfContent({type = 'None', title1 = 'JS CETF',title2 = 'DaysAgo',description = 'No description', imgFront = 'N/A'}) {
 
-function CetfContent({ type = 'None', title1 = 'JS CETF',title2 = 'DaysAgo',description = 'No description' }) {
-  function showCetf(typ) {
-     FinalTyp = type;
+
+  function showCetf() {
+    FinalTyp = type;
     const certImg = document.querySelector('#certImg');
     const cetfHolder = document.querySelector('section.cetfHolder');
     cetfHolder.style.display = 'block';
@@ -11,10 +22,8 @@ function CetfContent({ type = 'None', title1 = 'JS CETF',title2 = 'DaysAgo',desc
       cetfHolder.classList.add('show');
     }, 100);
     cetfHolder.classList.remove('show');
-    let version = 1;
-    certImg.src = `./Soft_${typ}_v${version}.png`;
+    certImg.src = imgFront;
   }
-
   return (
     <article className="container" onClick={() => showCetf(type)}>
       <h2>{title1}</h2>
@@ -29,6 +38,7 @@ CetfContent.propTypes = {
   title1: PropTypes.string,
   title2: PropTypes.string,
   description: PropTypes.string,
+  imgFront: PropTypes.string,
 };
 
 

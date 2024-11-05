@@ -2,29 +2,30 @@
 @import "./global.scss";
 
 
-body {
-  @include element-size(100vh);
-  @include padding(0px);
-  @include margin(0px);
-  @include flex(row, center, center);
-  overflow: hidden;
-  background: $bodybg-color;
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
+// body {
+//   @include element-size(100vh);
+//   @include padding(0px);
+//   @include margin(0px);
+//   @include flex(row, center, center);
+//   overflow: hidden;
+//   background: $bodybg-color;
+//   transition: background-color 0.5s ease, color 0.5s ease;
+// }
 
-main {
-  @include padding(15px);
-  @include element-size(90vh, 70vw);
-  background-color: $mainbg-color;
-  border-radius: 60px;
-  box-sizing: border-box;
-}
+// main {
+//   @include padding(15px);
+//   @include element-size(90vh, 70vw);
+//   background-color: $mainbg-color;
+//   border-radius: 60px;
+//   box-sizing: border-box;
+// }
 section.homeHolder {
   @include flex(row, center, center);
   @include element-size(100%, 100%);
   @include position(relative);
   background: $homeHolderbg-color;
   border-radius: 60px;
+  overflow: hidden;
 }
 // Toggled light icon positions
 body {
@@ -194,6 +195,7 @@ div.nav-btns {
   }
 }
 span.copyright {
+  // display: none;
   @include position(absolute, auto, auto, 10px, auto);
   @include text(innherit, "Alatsi", normal, 400, 24px, 31px);
 }
