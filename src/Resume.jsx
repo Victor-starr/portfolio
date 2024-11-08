@@ -27,7 +27,8 @@ function Resume() {
 
   
   function download(){
-    window.open('./cv.docx'); 
+    // window.open('./cv.docx'); 
+  window.open('https://docs.google.com/document/d/1gEctcECGR8qkWDh-NEGy6SqeWQAqz-EG/edit?usp=sharing&ouid=112263069503224360007&rtpof=true&sd=true', '_blank');
   }
   return (
     <>
