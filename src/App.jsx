@@ -28,17 +28,17 @@ function Main() {
 
   return (
     <Routes>
-      <Route path="/portfolio/" element={<Home />} />
-      <Route path="/portfolio/about" element={<About />} />
-      <Route path="/portfolio/education" element={<Education />} />
-      <Route path="/portfolio/resume" element={<Resume />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/education" element={<Education />} />
+      <Route path="/resume" element={<Resume />} />
     </Routes>
   );
 }
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <Main />
     </Router>
   );
