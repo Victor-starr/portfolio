@@ -122,22 +122,22 @@ function toggleTheme() {
       </svg>
       <ul>
         <li>
-          <Link to="/portfolio/">
+          <Link to="//">
             Home
           </Link>
         </li>
         <li>
-          <Link to="/portfolio/about">
+          <Link to="/about">
             About me
           </Link>
         </li>
         <li>
-          <Link to="/portfolio/education">
+          <Link to="/education">
           Education
           </Link>
         </li>
         <li>
-          <Link to="/portfolio/resume">
+          <Link to="/resume">
             Resume
           </Link>
         </li>

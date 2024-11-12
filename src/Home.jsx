@@ -75,8 +75,8 @@ function toggleTheme() {
           </p>
         </article>
         <div className="nav-btns">
-          <Link to="/portfolio/about" className="abt-btn">About me</Link>
-          <Link to="/portfolio/education" className="con-btn">Education</Link>
+          <Link to="/about" className="abt-btn">About me</Link>
+          <Link to="/education" className="con-btn">Education</Link>
           <img src='./3DGithub.png' alt="" id="github" loading="lazy"/>
         </div>
         <span className="copyright">Victor-Starr © {
