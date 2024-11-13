@@ -148,53 +148,7 @@ article.container{
  }
 }
 
-nav {
-  @include position(absolute, 0, auto, auto, 0);
-  @include element-size(50px,100%);
-  @include flex(row,space-between,center);
-  @include padding(15px,0);
-  z-index: 2;
-  border-radius: 60px 60px 0 0;
-  background-color: $navbg-color;
-  padding: 15px 0 15px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
-  
-}
-g#Dribbble-Light-Preview,
-g#Icon-Set-Filled,
-path#Icon-Set-Filled{
-fill: $Icons-color;
-}
-path#Icon-Set-Filled{
-  stroke: $Icons-color;
-}
-#toggleMode {
-  margin-left: 80px;
-}
-svg#menubar{
-  display: none;
-  margin-right: 50px;
-  z-index: 1;
-}
-svg#exitbar{
-  display: none;
-  margin-right: 50px;
-  z-index: 1;
-}
-nav ul {
-  display: flex;
-  column-gap: 25px;
-  margin-right: 60px;
-  
-}
-nav ul li {
-  list-style: none;
-  
-}
-nav ul li a {
-  @include text($h1-color,"Alatsi",normal,300,25px);
-  text-decoration: none;;
-}
+
 /* ANIMATIONS */
 nav ul li a:hover{
   animation: colorAnimation 0.6s;

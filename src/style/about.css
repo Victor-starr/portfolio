@@ -488,8 +488,19 @@ section.myStory article p {
   font-size: 15px;
   line-height: normal;
   text-decoration: none;
-  margin-bottom: 0;
+  margin: 0;
   text-align: start;
+}
+section.myStory article p span {
+  display: block;
+  color: var(--h1-color);
+  font-family: "Alatsi";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: normal;
+  text-decoration: none;
+  padding: 0 0 5px 0;
 }
 
 section.links {
@@ -500,6 +511,7 @@ section.links {
   left: auto;
   height: auto;
   width: 40%;
+  max-width: 60%;
   padding: 15px 20px 15px 20px;
 }
 section.links h3 {
@@ -527,8 +539,11 @@ section.links div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
 }
-section.links div a {
+section.links div span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -554,6 +569,10 @@ g#Dribbble-Light-Preview,
 g#Icon-Set-Filled,
 path#Icon-Set-Filled {
   fill: var(--Icons-color);
+}
+
+path#Icon-Set-Filled {
+  stroke: var(--Icons-color);
 }
 
 div.rightSide {
@@ -831,12 +850,12 @@ nav ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 60px 0 60px;
   -webkit-column-gap: 25px;
      -moz-column-gap: 25px;
@@ -853,6 +872,14 @@ nav ul li a {
   font-size: 25px;
   line-height: normal;
   text-decoration: none;
+}
+nav ul li a.fa {
+  padding: 10px 15px;
+  font-size: 28px;
+  color: var(--nav-color);
+}
+nav ul li a.fa-download {
+  font-size: 25px;
 }
 
 #toggleMode {

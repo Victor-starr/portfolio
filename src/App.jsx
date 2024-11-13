@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import Home from './Home.jsx';
 import About from './About.jsx';
 import Education from './Education.jsx';
-import Resume from './Resume.jsx';
 
 function Main() {
   const location = useLocation();
@@ -31,7 +30,6 @@ function Main() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/education" element={<Education />} />
-      <Route path="/resume" element={<Resume />} />
     </Routes>
   );
 }

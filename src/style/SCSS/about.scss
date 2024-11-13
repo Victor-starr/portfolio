@@ -62,8 +62,13 @@ section.myStory {
     }
     p {
       @include text($h1-color, "inter-italic", normal, 200, 15px);
-      margin-bottom: 0;
+      margin: 0;
       text-align: start;
+      span{
+        display: block;
+        @include text($h1-color, "Alatsi", normal, 200, 15px);
+        @include padding(0, 0, 5px, 0);
+      }
     }
   }
 }
@@ -71,6 +76,7 @@ section.myStory {
 section.links {
   @include position(relative);
   @include element-size(auto, 40%);
+  max-width: 60%;
   @include padding(15px, 20px);
   h3 {
     @include text($h1-color, "Alatsi", normal, 300, 25px);
@@ -79,7 +85,8 @@ section.links {
   }
   div {
     @include flex(row, space-between, center);
-    a {
+    column-gap: 10px;
+    span {
       @include flex(row, center, center);
       @include element-size(35px, 35px);
       @include padding(8px);
@@ -93,6 +100,9 @@ g#Dribbble-Light-Preview,
 g#Icon-Set-Filled,
 path#Icon-Set-Filled {
   fill: $Icons-color;
+}
+path#Icon-Set-Filled{
+  stroke: $Icons-color;
 }
 
 div.rightSide {
@@ -223,13 +233,21 @@ nav {
   border-bottom: 1px solid rgba(0, 0, 0, 0.24);
   z-index: 2;
   ul {
-    @include flex(row);
+    @include flex(row,center,center);
     @include margin(0, 60px);
     column-gap: 25px;
     li {
       list-style: none;
       a {
         @include text($nav-color, "Alatsi", normal, 350, 25px);
+      }
+      a.fa{
+          padding: 10px 15px;
+         font-size: 28px;
+         color:  $nav-color;
+      }
+      a.fa-download{
+        font-size: 25px;
       }
     }
   }
