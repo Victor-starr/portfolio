@@ -564,6 +564,10 @@ section.links div span {
   -webkit-box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.34);
           box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.34);
 }
+section.links div span img {
+  height: 100%;
+  width: 100%;
+}
 
 g#Dribbble-Light-Preview,
 g#Icon-Set-Filled,
