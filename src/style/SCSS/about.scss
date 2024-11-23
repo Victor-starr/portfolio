@@ -75,7 +75,6 @@ section.myStory {
 
 section.links {
   @include position(relative);
-  @include element-size(auto, 40%);
   max-width: 60%;
   @include padding(15px, 20px);
   h3 {
