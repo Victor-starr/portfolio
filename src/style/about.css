@@ -485,7 +485,7 @@ section.myStory article p {
   font-family: "inter-italic";
   font-style: normal;
   font-weight: 200;
-  font-size: 15px;
+  font-size: 15.5px;
   line-height: normal;
   text-decoration: none;
   margin: 0;
@@ -1116,6 +1116,9 @@ div.contImg figure img:hover {
   section.links h3 {
     font-size: 20px;
   }
+  section.links div span {
+    padding: 0px;
+  }
   section.links div a {
     height: 30px;
     width: 30px;
@@ -1297,6 +1300,9 @@ div.contImg figure img:hover {
     -webkit-column-gap: 15%;
        -moz-column-gap: 15%;
             column-gap: 15%;
+  }
+  section.links div span {
+    padding: 0px;
   }
   section.links div a {
     height: 45px;

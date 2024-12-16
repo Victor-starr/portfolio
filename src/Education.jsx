@@ -9,8 +9,6 @@ function Education() {
   const [imgFace, setImgFace] = useState('imgfront');
   const previousFinalTypRef = useRef(FinalTyp); 
 
-
-
   function turnCetf() {
     const certImg = document.querySelector("#certImg");
     const currentCert = jsonData.find(cert => cert.key === FinalTyp);
@@ -101,6 +99,10 @@ function Education() {
   function SoftUniWeb() {
     window.open("https://softuni.bg/diplomas-and-certificates");
   }
+  function showCetfUrl(){
+    const moreInfo = document.querySelector('.moreInfo');
+    window.open(moreInfo.dataset.url);
+  }
 
   return (
     <>
@@ -144,11 +146,11 @@ function Education() {
             </h2>
           </section>
           <section className="container cetfHolder">
-            <div onClick={turnCetf} className="moreInfo">
+            <div onClick={showCetfUrl} className="moreInfo">
               <p>More</p>
               <svg id="infoBtn" fill="#000000" height="30px" width="30px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 48.296 48.257" xmlSpace="preserve" > <g id="SVGRepo_bgCarrier" strokeWidth="0"></g> <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" ></g> <g id="SVGRepo_iconCarrier"> {" "} <path d="M24.149,0C10.812,0,0,10.8,0,24.125c0,13.326,10.812,24.132,24.149,24.132c13.334,0,24.147-10.807,24.147-24.132 C48.296,10.8,37.483,0,24.149,0z M26.171,35.919c0,1.115-0.907,2.021-2.022,2.021c-1.12,0-2.025-0.908-2.025-2.021V22.507 c0-1.114,0.905-2.022,2.025-2.022c1.115,0,2.022,0.908,2.022,2.022V35.919z M26.171,15.101c0,1.119-0.907,2.022-2.022,2.022 c-1.12,0-2.025-0.903-2.025-2.022v-0.633c0-1.119,0.905-2.022,2.025-2.022c1.115,0,2.022,0.903,2.022,2.022V15.101z"></path>{" "} </g> </svg>
             </div>
-            <img id="certImg"  src='' alt="cetf" loading="lazy" />
+            <img onClick={turnCetf} id="certImg"  src='' alt="cetf" loading="lazy" />
           </section>
         </div>
 
@@ -162,8 +164,9 @@ function Education() {
                 title2={value.dateAgo}
                 description={value.description}
                 imgFront = {value.imgfront}
-              />
-            ))}
+                Cetfurl = {value.url}
+                />
+              ))}
           </section>
         </div>
       </section>

@@ -61,7 +61,7 @@ section.myStory {
       @include margin(5px);
     }
     p {
-      @include text($h1-color, "inter-italic", normal, 200, 15px);
+      @include text($h1-color, "inter-italic", normal, 200, 15.5px);
       margin: 0;
       text-align: start;
       span{
@@ -396,12 +396,16 @@ div.contImg figure img:hover {
       font-size: 20px;
     }
     div {
+      span{
+        padding: 0px;
+      }
       a {
         @include element-size(30px, 30px);
         @include padding(5px);
       }
     }
   }
+
   svg#linkedSVG {
     @include element-size(25px, 25px);
   }
@@ -523,6 +527,9 @@ div.contImg figure img:hover {
     div {
       @include flex(row, center, center);
       column-gap: 15%;
+      span{
+        padding: 0px
+      }
       a {
         @include element-size(45px, 45px);
         @include padding(5px);

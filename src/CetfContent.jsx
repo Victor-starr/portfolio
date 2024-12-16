@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 export let FinalTyp = 'None';
+// https://ibb.co/NYLqqb7 F-end 1
+// https://ibb.co/kGvfRpG F-end 2
 // https://ibb.co/XDHBt4r html 1
 // https://ibb.co/tbFzTVd html 2
 // https://ibb.co/c815PKy adv 1
@@ -10,10 +12,12 @@ export let FinalTyp = 'None';
 // https://ibb.co/9wfWL86 bs 2
 // https://ibb.co/vBXrmpH fund 1
 // https://ibb.co/8NN7kyX fund 2
-function CetfContent({type = 'None', title1 = 'JS CETF',title2 = 'DaysAgo',description = 'No description', imgFront = 'N/A'}) {
 
+function CetfContent({type = 'None', title1 = 'JS CETF',title2 = 'DaysAgo',description = 'No description', imgFront = 'N/A', Cetfurl}) {
 
   function showCetf() {
+    const moreInfo = document.querySelector('.moreInfo');
+    moreInfo.dataset.url = Cetfurl;
     FinalTyp = type;
     const certImg = document.querySelector('#certImg');
     const cetfHolder = document.querySelector('section.cetfHolder');
@@ -25,7 +29,7 @@ function CetfContent({type = 'None', title1 = 'JS CETF',title2 = 'DaysAgo',descr
     certImg.src = imgFront;
   }
   return (
-    <article className="container" onClick={() => showCetf(type)}>
+    <article className="container" onClick={() => showCetf()}>
       <h2>{title1}</h2>
       <span>{title2}</span>
       <p dangerouslySetInnerHTML={{ __html: description }}></p>
@@ -39,6 +43,7 @@ CetfContent.propTypes = {
   title2: PropTypes.string,
   description: PropTypes.string,
   imgFront: PropTypes.string,
+  Cetfurl: PropTypes.string
 };
 
 
