@@ -269,7 +269,7 @@ img#PImg1:active {
     height: 100vh;
     main {
       @include element-size(95%, 85%);
-      @include position(absolute, 25px, auto, auto, auto);
+      @include position(absolute, 15px);
     }
   }
   // Home text Article
@@ -406,7 +406,7 @@ img#PImg1:active {
     height: 100vh;
     main {
       @include element-size(95%, 85%);
-      @include position(absolute, 25px, auto, auto, auto);
+      @include position(absolute, 25px);
     }
   }
   // Home text Article

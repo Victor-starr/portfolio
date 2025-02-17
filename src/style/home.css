@@ -24,7 +24,6 @@
   --selector-color: #a688fa;
 }
 
-/* TODO: UPDATE THIS TO LOOK FOR DARKMODE after this go to darklight mode js */
 [data-theme=dark] {
   --bodybg-color: #121212f2;
   --mainbg-color: #353535f2;
@@ -884,7 +883,7 @@ img#PImg1:active {
     height: 95%;
     width: 85%;
     position: absolute;
-    top: 25px;
+    top: 15px;
     right: auto;
     bottom: auto;
     left: auto;

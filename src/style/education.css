@@ -24,7 +24,6 @@
   --selector-color: #a688fa;
 }
 
-/* TODO: UPDATE THIS TO LOOK FOR DARKMODE after this go to darklight mode js */
 [data-theme=dark] {
   --bodybg-color: #121212f2;
   --mainbg-color: #353535f2;
@@ -409,13 +408,13 @@ section.pageHolder {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: var(--homeHolderbg2-color);
   border-radius: 60px;
 }
 
 div.leftSide {
-  height: 92%;
+  height: 93%;
   width: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -574,7 +573,7 @@ div.moreInfo #infoBtn {
 }
 
 div.rightSide {
-  height: 92%;
+  height: 93%;
   width: 48%;
   position: relative;
   top: auto;
@@ -646,9 +645,9 @@ article.container h2 {
 }
 article.container span {
   position: absolute;
-  top: auto;
+  top: 15px;
   right: 20px;
-  bottom: 15px;
+  bottom: auto;
   left: auto;
   color: #200079;
   font-family: "inter-italic";
@@ -671,8 +670,9 @@ article.container p {
   font-size: 16px;
   line-height: normal;
   text-decoration: none;
-  margin: 5px 5px 5px 5px;
+  margin: 5px 10px 5px 10px;
   text-align: start;
+  max-width: 350px;
 }
 
 /* ANIMATIONS */
@@ -798,7 +798,7 @@ div.moreInfo:active {
   }
   main {
     position: absolute;
-    top: 25px;
+    top: 15px;
     right: auto;
     bottom: auto;
     left: auto;
@@ -928,14 +928,14 @@ div.moreInfo:active {
     border-bottom: solid 0.5px rgb(110, 110, 110);
   }
   article.container h2 {
-    font-size: 15px;
+    font-size: 17px;
+    font-weight: bolder;
   }
   article.container p {
-    font-size: 13px;
+    font-size: 14px;
   }
   article.container span {
-    top: auto;
-    bottom: 15px;
+    display: none;
   }
 }
 @media only screen and (max-width: 1300px) and (min-width: 601px) {

@@ -26,13 +26,13 @@ section.pageHolder{
   @include position(relative);
   @include element-size(100%, 100%);
   @include flex(row, center, end);
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: $homeHolderbg2-color;
   border-radius: 60px;
 }
 
 div.leftSide{
-  @include element-size(92%, 45%);
+  @include element-size(93%, 45%);
   @include flex(column);
   row-gap: 20px;
   border-radius: 60px;
@@ -108,7 +108,7 @@ div.moreInfo{
 
 
 div.rightSide{
-  @include element-size(92%,48%);
+  @include element-size(93%,48%);
   @include position(relative);
   @include flex(column,space-around,center);
   border-radius: 60px;
@@ -133,7 +133,7 @@ article.container{
    @include margin(8px);
   }
   span{
-    @include position(absolute, auto,20px,15px);
+    @include position(absolute, 15px,20px);
     @include text(#200079,"inter-italic",normal,550,12px);
     @include padding(6px);
    text-align: start ;
@@ -143,8 +143,9 @@ article.container{
   }
  p{
   @include text($h1-color,"inter-italic",normal,250,16px);
-  @include margin(5px);
+  @include margin(5px,10px);
   text-align: start ;
+  max-width: 350px;
  }
 }
 
@@ -223,7 +224,7 @@ div.moreInfo:active{
     height: 100vh;
   }
   main {
-    @include position(absolute, 25px);
+    @include position(absolute, 15px);
     @include element-size(95%, 85%);
   }
   section.pageHolder{
@@ -310,15 +311,16 @@ div.moreInfo:active{
   }
   article.container{
     h2{
-     font-size: 15px;
+     font-size: 17px;
+     font-weight: bolder;
    }
    p{
-      font-size: 13px;
+      font-size: 14px;
     }
     span{
-      top: auto;
-      bottom: 15px;
+      display: none;
     }
+
   }
 
 }

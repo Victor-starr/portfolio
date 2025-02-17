@@ -1,4 +1,3 @@
-
 // Import dependencies and components
 import Nav from "./_Nav";
 // eslint-disable-next-line no-unused-vars
@@ -7,50 +6,79 @@ import "./style/about.css";
 import javaSkill from "./assets/javascript-svgrepo-com.svg";
 import reactSkill from "./assets/react-svgrepo-com.svg";
 import sassSkill from "./assets/sass-svgrepo-com.svg";
-import Figma from "./assets/figma-svgrepo-com.svg";
-import GitT from "./assets/git-svgrepo-com.svg";
+import MongoDb from "./assets/mongodb-svg.svg";
+import ExpressJS from "./assets/express-js.svg";
+import NodeJs from "./assets/node-js.svg";
 
+/**
+ * About component renders the "About Me" section of the portfolio.
+ * 
+ * This component includes information about the user, their skills, and activities outside of coding.
+ * 
+ * @component
+ * @example
+ * return (
+ *   <About />
+ * )
+ * 
+ * @returns {JSX.Element} The rendered component.
+ * 
+ * @description
+ * The About component is responsible for displaying the user's personal information, skills, and hobbies.
+ * It also handles animations and visibility toggles for different sections.
+ * 
+ * @function About
+ * 
+ * @property {Object} state - The state object containing:
+ * @property {HTMLElement} state.contImg - Reference to the container image element.
+ * @property {HTMLElement} state.leftArrow - Reference to the left arrow element.
+ * @property {HTMLElement} state.rightArrow - Reference to the right arrow element.
+ * @property {boolean} state.secNCoding - Boolean to toggle the visibility of the "Not Coding" section.
+ * 
+ * @useEffect - Initializes references to DOM elements on component mount.
+ * @useEffect - Adds animation classes to elements after a delay.
+ * @useEffect - Updates arrow visibility based on container scroll and window resize events.
+ * 
+ * @function ScrollRight - Scrolls the container image to the right.
+ * @function ScrollLeft - Scrolls the container image to the left.
+ * @function ToggleNCoding - Toggles the visibility of the "Not Coding" section and updates button visibility.
+ */
 function About() {
-  // State for interactive elements
-  const [contImg, setContImg] = useState(null);  // Holds reference to content image container
-  const [leftArrow, setLeftArrow] = useState(null);  // Reference to the left navigation arrow
-  const [rightArrow, setRightArrow] = useState(null);  // Reference to the right navigation arrow
-  const [secNCoding, setSecNCoding] = useState(true);  // Controls visibility of "Not Coding" section
+  const [contImg, setContImg] = useState(null);
+  const [leftArrow, setLeftArrow] = useState(null); 
+  const [rightArrow, setRightArrow] = useState(null);
+  const [secNCoding, setSecNCoding] = useState(true); 
 
-  // DOM elements for show/hide buttons
   const hideBtn = document.getElementById("hideSecNotCoding");
   const showBtn = document.getElementById("showSecNotCoding");
   const secNotCoding = document.querySelector(".secNotCoding");
 
-  // Set references for the interactive elements after the component mounts
   useEffect(() => {
     setContImg(document.querySelector(".contImg"));
     setLeftArrow(document.getElementById("leftArrow"));
     setRightArrow(document.getElementById("rightArrow"));
   }, []);
 
-  // For animation effect on content sections within main page structure
-  const pageHolder = document.querySelector('main > section');
+  const pageHolder = document.querySelector("main > section");
   useEffect(() => {
-    const myStory = document.querySelector('.myStory');
-    const sectionLinks = document.querySelector('section.links');
-    const contentsSliper = document.querySelectorAll('article.container');
-    const secnNotCoding = document.querySelector('.secNotCoding');
+    const myStory = document.querySelector(".myStory");
+    const sectionLinks = document.querySelector("section.links");
+    const contentsSliper = document.querySelectorAll("article.container");
+    const secnNotCoding = document.querySelector(".secNotCoding");
 
-    // Apply CSS animations to sections on load
     setTimeout(() => {
-      myStory.classList.add('slide-in-blurred-left');
-      sectionLinks.classList.add('slide-in-blurred-bottom');
-      contentsSliper.forEach((x) => { x.classList.add('slide-in-blurred-right'); });
-      secnNotCoding.classList.add('slide-in-blurred-top');
+      myStory.classList.add("slide-in-blurred-left");
+      sectionLinks.classList.add("slide-in-blurred-bottom");
+      contentsSliper.forEach((x) => {
+        x.classList.add("slide-in-blurred-right");
+      });
+      secnNotCoding.classList.add("slide-in-blurred-top");
     }, 1000);
   }, [pageHolder]);
 
-  // Update arrow display based on window size and scroll position
   useEffect(() => {
     if (contImg && leftArrow && rightArrow) {
       function updateArrows() {
-        // If window is narrow, hide arrows and the "Not Coding" section
         if (window.innerWidth < 1300) {
           leftArrow.style.display = "none";
           rightArrow.style.display = "none";
@@ -58,7 +86,6 @@ function About() {
           showBtn.style.display = "none";
           hideBtn.style.display = "none";
         } else {
-          // Show or hide arrows based on scroll position within the image container
           if (contImg.scrollLeft === 0) {
             leftArrow.style.opacity = "0";
             setTimeout(() => (leftArrow.style.display = "none"), 300);
@@ -66,7 +93,10 @@ function About() {
             leftArrow.style.display = "block";
             setTimeout(() => (leftArrow.style.opacity = "1"), 10);
           }
-          if (contImg.scrollWidth - contImg.clientWidth === contImg.scrollLeft) {
+          if (
+            contImg.scrollWidth - contImg.clientWidth ===
+            contImg.scrollLeft
+          ) {
             rightArrow.style.opacity = "0";
             setTimeout(() => (rightArrow.style.display = "none"), 300);
           } else {
@@ -76,21 +106,18 @@ function About() {
         }
       }
 
-      // Add listeners to update arrow visibility on scroll or resize
       contImg.addEventListener("scroll", updateArrows);
       window.addEventListener("resize", updateArrows);
 
       updateArrows();
 
       return () => {
-        // Cleanup listeners on unmount
         contImg.removeEventListener("scroll", updateArrows);
         window.removeEventListener("resize", updateArrows);
       };
     }
   });
 
-  // Scroll functions for left and right arrows
   function ScrollRight() {
     contImg.scrollBy({ left: -160, behavior: "smooth" });
   }
@@ -99,12 +126,10 @@ function About() {
     contImg.scrollBy({ left: 160, behavior: "smooth" });
   }
 
-  // Toggles visibility of "Not Coding" section
   function ToggleNCoding() {
     secNotCoding.classList.toggle("secNotCodingHiden");
     setSecNCoding(!secNCoding);
 
-    // Update button visibility based on toggle state
     if (!secNCoding) {
       showBtn.style.display = "block";
       hideBtn.style.display = "none";
@@ -126,31 +151,25 @@ function About() {
         <div className="leftSide">
           <h1>About Me</h1>
           <section className="container myStory">
-            <img src="./Memoji.png" alt="" id="GoHome" loading="lazy"/>
+            <img src="./Memoji.png" alt="" id="GoHome" loading="lazy" />
             <article>
               <h2>My Story</h2>
               <p>
-                <span>
-                📍Plovdiv/Bulgaria
-                </span>
-               My name is Victor, and I&apos;m from the beautiful city of Plovdiv, Bulgaria.
-                I am currently a student at Software
-                University (SoftUni), specializing in front-end web
-                development. My journey into programming began in mid-high
-                school, and it has been a fascinating adventure ever since. I
-                primarily work with JavaScript that many might
-                dislike, but I genuinely love for its versatility and power. As
-                the second child in a family of three, I have always been driven
-                to carve my unique path. With only three months left until I
-                graduate, I&apos;m excited to continue my journey into the world
-                of Computer Science at a university in Europe.
+                <span>📍Plovdiv, Bulgaria</span>
+                I’m Victor, a front-end development student at Software
+                University (SoftUni). My programming journey started in high
+                school and quickly became a passion. I primarily work with
+                JavaScript — a language many dislike but one I appreciate for its
+                versatility. As the second of three siblings, I’ve always sought
+                to carve my own path. With graduation just months away, I’m
+                excited to take the next step in my Computer Science studies in
+                Europe.
               </p>
             </article>
           </section>
           <section className="container links">
             <h3>Skills</h3>
             <div>
-
               <span>
                 <img src={javaSkill} alt="JavaScript" loading="lazy" />
               </span>
@@ -160,13 +179,18 @@ function About() {
               <span>
                 <img src={sassSkill} alt="Sass" loading="lazy" />
               </span>
+            </div>
+            <div>
               <span>
-                <img src={Figma} alt="Figma" loading="lazy" />
+                <img src={MongoDb} alt="MongoDb" loading="lazy" />
               </span>
               <span>
-                <img src={GitT} alt="GitT" loading="lazy" />
+                <img src={ExpressJS} alt="ExpressJS" loading="lazy" />
               </span>
-              
+              <span>
+                <img src={NodeJs} alt="NodeJs" loading="lazy" />
+              </span>
+
             </div>
           </section>
         </div>
@@ -174,43 +198,52 @@ function About() {
         <div className="rightSide">
           <section className="content">
             <article className="container">
-              <h2>Creative Innovator</h2>
+              <h2>Creative Technologist</h2>
               <p>
-                As a front-end developer, I am driven by a passion for
-                innovation. I enjoy the challenge of transforming ideas into
-                functional, visually appealing web applications. JavaScript is
-                my primary tool, and I approach each project with curiosity and
-                a desire to learn.
+                As a front-end developer, I enjoy turning ideas into functional,
+                engaging experiences. While JavaScript is my primary tool, I’m
+                always learning and adapting to new technologies. I thrive on
+                challenges that push my skills and help me grow.
               </p>
             </article>
 
             <article className="container">
-              <h2>Designing Engaging Experiences</h2>
+              <h2>Building with Purpose</h2>
               <p>
-                I strive to create digital experiences that are both efficient
-                and meaningful for users. With an eye for detail, I aim to push
-                the boundaries of what&apos;s possible in web development, as I
-                prepare for my next step in studying Computer Science in Europe.
+                Every project is an opportunity to refine my approach and find
+                the best possible solution. Whether it’s optimizing performance,
+                enhancing usability, or experimenting with new techniques, I
+                focus on creating meaningful and efficient solutions.
               </p>
             </article>
 
             <article className="container">
-              <h2>Process Enthusiast</h2>
+              <h2>Driven by Curiosity</h2>
               <p>
-                I love the process of building from scratch. From my first lines
-                of code in my high school years, I knew programming was my path.
-                Exploring new frameworks and experimenting with JavaScript to
-                solve problems excites me.
+                From my first lines of code, I was hooked on the endless
+                possibilities of technology. I’m always exploring new
+                frameworks, tools, and methodologies to improve the way I build
+                and solve problems.
               </p>
             </article>
 
             <article className="container">
-              <h2>Passionate Problem Solver</h2>
+              <h2>Practical Problem Solver</h2>
               <p>
-                Whether developing a new feature or refining a user interface, I
-                find joy in every step of the process. The thrill of solving
-                complex challenges keeps me motivated to continue creating and
-                learning.
+                Bugs and errors are just part of the process—I see them as
+                challenges to overcome. Rather than getting stuck, I focus on
+                finding clear, effective solutions that keep projects moving
+                forward.
+              </p>
+            </article>
+
+            <article className="container">
+              <h2>Always Learning, Always Improving</h2>
+              <p>
+                Technology is constantly evolving, and I embrace the challenge
+                of keeping up. Whether it’s exploring new frameworks, refining
+                my development process, or expanding into backend technologies,
+                I’m always looking for ways to improve and grow as a developer.
               </p>
             </article>
           </section>
@@ -293,7 +326,6 @@ function About() {
               </g>
             </svg>
 
-
             <h4>When I am not Coding...</h4>
             {/* LEFT ARROW */}
             <svg
@@ -333,7 +365,7 @@ function About() {
               </figure>
               <figure>
                 <img src="./dog.jpg" alt="dog" loading="lazy" />
-                <figcaption>Take my dog</figcaption>
+                <figcaption>Dog walks</figcaption>
               </figure>
               <figure>
                 <img src="./travel.png" alt="trav" loading="lazy" />

@@ -24,7 +24,6 @@
   --selector-color: #a688fa;
 }
 
-/* TODO: UPDATE THIS TO LOOK FOR DARKMODE after this go to darklight mode js */
 [data-theme=dark] {
   --bodybg-color: #121212f2;
   --mainbg-color: #353535f2;
@@ -409,7 +408,7 @@ section.pageHolder {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: var(--homeHolderbg2-color);
   border-radius: 60px;
 }
@@ -428,7 +427,7 @@ div.leftSide {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  height: 92%;
+  height: 93%;
   width: 48%;
   row-gap: 20px;
   border-radius: 60px;
@@ -510,7 +509,7 @@ section.links {
   bottom: auto;
   left: auto;
   max-width: 60%;
-  padding: 15px 20px 15px 20px;
+  padding: 15px 50px 15px 50px;
 }
 section.links h3 {
   color: var(--h1-color);
@@ -531,15 +530,13 @@ section.links div {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 10px;
-     -moz-column-gap: 10px;
-          column-gap: 10px;
+  padding: 10px 10px 10px 10px;
 }
 section.links div span {
   display: -webkit-box;
@@ -558,6 +555,7 @@ section.links div span {
   height: 35px;
   width: 35px;
   padding: 8px 8px 8px 8px;
+  margin: 0 10px 0 10px;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.34);
           box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.34);
@@ -595,7 +593,7 @@ div.rightSide {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 92%;
+  height: 93%;
   width: 48%;
   border-radius: 60px;
 }
@@ -1006,7 +1004,7 @@ div.contImg figure img:hover {
   }
   main {
     position: absolute;
-    top: 25px;
+    top: 15px;
     right: auto;
     bottom: auto;
     left: auto;
@@ -1112,6 +1110,7 @@ div.contImg figure img:hover {
   section.links {
     height: auto;
     width: 75%;
+    left: 0px;
   }
   section.links h3 {
     font-size: 20px;
@@ -1279,6 +1278,7 @@ div.contImg figure img:hover {
   section.links {
     height: auto;
     width: 60%;
+    left: 0px;
   }
   section.links h3 {
     font-size: 22px;
@@ -1297,12 +1297,9 @@ div.contImg figure img:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-column-gap: 15%;
-       -moz-column-gap: 15%;
-            column-gap: 15%;
   }
   section.links div span {
-    padding: 0px;
+    padding: 8px;
   }
   section.links div a {
     height: 45px;

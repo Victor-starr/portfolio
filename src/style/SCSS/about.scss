@@ -26,14 +26,14 @@ section.pageHolder{
   @include position(relative);
   @include element-size(100%, 100%);
   @include flex(row, center, end);
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: $homeHolderbg2-color;
   border-radius: 60px;
 }
 
 div.leftSide {
   @include flex(column);
-  @include element-size(92%, 48%);
+  @include element-size(93%, 48%);
   row-gap: 20px;
   border-radius: 60px;
   h1 {
@@ -76,19 +76,21 @@ section.myStory {
 section.links {
   @include position(relative);
   max-width: 60%;
-  @include padding(15px, 20px);
+  @include padding(15px, 50px);
   h3 {
     @include text($h1-color, "Alatsi", normal, 300, 25px);
     @include margin(0, 0, 15px, 0);
     text-align: center;
   }
   div {
-    @include flex(row, space-between, center);
-    column-gap: 10px;
+    @include flex(row, center, center);
+    
+    @include padding(10px);
     span {
       @include flex(row, center, center);
       @include element-size(35px, 35px);
       @include padding(8px);
+      @include margin(0,10px);
       border-radius: 50%;
       box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.34);
       img{
@@ -110,7 +112,7 @@ path#Icon-Set-Filled{
 div.rightSide {
   @include position(relative);
   @include flex(column, space-around, center);
-  @include element-size(92%, 48%);
+  @include element-size(93%, 48%);
   border-radius: 60px;
 }
 section.content {
@@ -325,7 +327,7 @@ div.contImg figure img:hover {
     height: 100vh;
   }
   main {
-    @include position(absolute, 25px);
+    @include position(absolute, 15px);
     @include element-size(95%, 85%);
   }
   section.pageHolder{
@@ -391,7 +393,7 @@ div.contImg figure img:hover {
   }
   section.links {
     @include element-size(auto, 75%);
-    // left: 25px;
+    left: 0px;
     h3 {
       font-size: 20px;
     }
@@ -520,15 +522,15 @@ div.contImg figure img:hover {
   }
   section.links {
     @include element-size(auto, 60%);
-    // left: 0.01%;
+    left: 0px;
     h3 {
       font-size: 22px;
     }
     div {
       @include flex(row, center, center);
-      column-gap: 15%;
+      // column-gap: 7%;
       span{
-        padding: 0px
+        padding: 8px;
       }
       a {
         @include element-size(45px, 45px);

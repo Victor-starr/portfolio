@@ -1,6 +1,8 @@
-##
 
-![Victor-starr Portfolio](https://private-user-images.githubusercontent.com/175503024/355920742-4715bbc7-58fe-4359-8c70-168f4c4c96d1.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjUzMDA0MjQsIm5iZiI6MTcyNTMwMDEyNCwicGF0aCI6Ii8xNzU1MDMwMjQvMzU1OTIwNzQyLTQ3MTViYmM3LTU4ZmUtNDM1OS04YzcwLTE2OGY0YzRjOTZkMS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwOTAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDkwMlQxODAyMDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01OTg0NTlhMTI0MDM2MGFlY2ZiOThhOGQ5MGUwYjEwOWQ2OWFjNGYwNTY0YzE5MjdhY2M3ODk1MjEwYTJhZTlhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.MV64wmxODm7p14spDZ_xtjgMhXc3v-B3aC3CC2OFxmk)
+<div align="center">
+    <h1>Victor-starr Portfolio</h1>
+    <img src="./public/github-header-image.png" alt="Victor-starr Portfolio" />
+</div>
 
 ## Overview
 
@@ -8,46 +10,21 @@ This project is a modern web application built using `React` and `Vite`. It prov
 
 ## Features
 
-- `Fast Development with Vite`: Instant server start and fast HMR for seamless development experience.
-- `Hot Module Replacement (HMR)`: Instantly update modules without a full page reload.
-- `Linting with ESLint`: Ensures code quality and consistency.
-- `Fast Refresh using Babel or SWC`: Fast and reliable module updates during development.
-- `Styling with SASS`: Use advanced CSS features through SASS preprocessing.
+- **Fast Development with Vite**: Instant server start and fast HMR for seamless development experience.
+- **Hot Module Replacement (HMR)**: Instantly update modules without a full page reload.
+- **Linting with ESLint**: Ensures code quality and consistency.
+- **Fast Refresh using Babel or SWC**: Fast and reliable module updates during development.
+- **Styling with SASS**: Use advanced CSS features through SASS preprocessing.
 
 ## Languages and Technologies Used
 
-- `JavaScript`: Primary programming language.
-- `React`: A JavaScript library for building user interfaces.
-- `Vite`: A fast build tool and development server.
-- `ESLint`: A tool for identifying and fixing JavaScript issues.
-- `Babel`: A JavaScript compiler for transpiling and optimizing code.
-- `SWC`: A super-fast JavaScript and TypeScript compiler.
-- `SASS`: A CSS preprocessor that allows for variables, nested rules, and more.
-
-## Getting Started
-
-### Prerequisites
-## Overview
-
-This project is a modern web application built using `React` and `Vite`. It provides a minimal and efficient setup for developing React applications with Hot Module Replacement (HMR), SASS for styling, and ESLint for code quality assurance.
-
-## Features
-
-- `Fast Development with Vite`: Instant server start and fast HMR for seamless development experience.
-- `Hot Module Replacement (HMR)`: Instantly update modules without a full page reload.
-- `Linting with ESLint`: Ensures code quality and consistency.
-- `Fast Refresh using Babel or SWC`: Fast and reliable module updates during development.
-- `Styling with SASS`: Use advanced CSS features through SASS preprocessing.
-
-## Languages and Technologies Used
-
-- `JavaScript`: Primary programming language.
-- `React`: A JavaScript library for building user interfaces.
-- `Vite`: A fast build tool and development server.
-- `ESLint`: A tool for identifying and fixing JavaScript issues.
-- `Babel`: A JavaScript compiler for transpiling and optimizing code.
-- `SWC`: A super-fast JavaScript and TypeScript compiler.
-- `SASS`: A CSS preprocessor that allows for variables, nested rules, and more.
+- **JavaScript**: Primary programming language.
+- **React**: A JavaScript library for building user interfaces.
+- **Vite**: A fast build tool and development server.
+- **ESLint**: A tool for identifying and fixing JavaScript issues.
+- **Babel**: A JavaScript compiler for transpiling and optimizing code.
+- **SWC**: A super-fast JavaScript and TypeScript compiler.
+- **SASS**: A CSS preprocessor that allows for variables, nested rules, and more.
 
 ## Getting Started
 
@@ -110,7 +87,6 @@ The output will be in the `dist` directory.
 
 Contributions are welcome! Please open an issue or submit a pull request if you have ideas for improvements or bug fixes.
 
-
 ## Acknowledgements
 
 - [React](https://reactjs.org/)
@@ -121,4 +97,5 @@ Contributions are welcome! Please open an issue or submit a pull request if you 
 - [SASS](https://sass-lang.com/)
 
 ---
-@Victor-starr 2024
+
+@Victor-starr 2025

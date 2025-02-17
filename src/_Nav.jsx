@@ -1,88 +1,102 @@
 import { Link } from "react-router-dom";
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
-import sunSvg from "./assets/sun.svg"; // Image for light mode icon
-import moonSvg from "./assets/moon.svg"; // Image for dark mode icon
+import sunSvg from "./assets/sun.svg"; 
+import moonSvg from "./assets/moon.svg"; 
 
+/**
+ * Nav component that handles theme toggling and responsive navigation bar.
+ *
+ * @component
+ *
+ * @example
+ * return (
+ *   <Nav />
+ * )
+ *
+ * @returns {JSX.Element} The rendered navigation component.
+ *
+ * @description
+ * This component manages the navigation bar of the portfolio. It includes functionality for:
+ * - Toggling between dark and light themes based on system preferences or user selection.
+ * - Responsive design adjustments for different screen sizes.
+ * - Opening and closing a sidebar menu on smaller screens.
+ *
+ * @function getInitialTheme
+ * @returns {string} The initial theme based on system preferences or saved theme in localStorage.
+ *
+ * @function toggleTheme
+ * Toggles the theme between dark and light modes, and saves the selected theme in localStorage.
+ *
+ * @function openSideBar
+ * Opens the sidebar menu on smaller screens.
+ *
+ * @function exitSideBar
+ * Closes the sidebar menu on smaller screens.
+ *
+ * @listens window#resize
+ * Adjusts the navigation bar layout based on the window size.
+ */
 function Nav() {
-  // Get the initial theme based on system preferences or saved theme in localStorage
   const getInitialTheme = () => {
     const savedTheme = localStorage.getItem("theme");
-    // If a theme was saved in localStorage, use that theme
     if (savedTheme) {
       return savedTheme;
     }
-    // If no theme is saved, use the system preference (dark or light mode)
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return prefersDarkScheme ? "dark" : "light"; // Defaults to dark if system prefers dark
+    return prefersDarkScheme ? "dark" : "light"; 
   };
 
-  // State to keep track of the current theme, initialized with the result of getInitialTheme
   const [theme, setTheme] = useState(getInitialTheme());
 
-  // useEffect to apply the theme changes whenever the theme state is updated
   useEffect(() => {
-    // Set a data attribute on the document for theme-based styling
     document.documentElement.setAttribute('data-theme', theme);
-    // Toggle the 'alternate' class on the body if the theme is not light
     document.body.classList.toggle("alternate", theme !== 'light');
   }, [theme]);
 
-  // Function to toggle between light and dark themes
   function toggleTheme() {
     setTheme((prevTheme) => {
-      // Switch between 'dark' and 'light' themes
       const newTheme = prevTheme === 'dark' ? 'light' : 'dark';
-      // Save the selected theme in localStorage for persistence
       localStorage.setItem('theme', newTheme);
       return newTheme;
     });
   };
 
-  // Event listener for window resizing to adjust nav menu display based on screen size
   window.addEventListener('resize', () => {
     const navgig = document.querySelector("nav");
     const exitBtn = document.getElementById("exitbar");
     const menuBtn = document.getElementById("menubar");
-    // When the width is larger than 1300px, make sure the menu bar is expanded and buttons are hidden
     if (window.innerWidth > 1300) {
         navgig.classList.remove('phoneVrs');
         exitBtn.style.display = 'none';
         menuBtn.style.display = 'none';
     } else if (window.innerWidth <= 1300) {
-        // Show menu button and hide exit button on smaller screens
         navgig.classList.remove('phoneVrs');
         menuBtn.style.display = 'block';
         exitBtn.style.display = 'none';
     }
   });
 
-  // Function to open the sidebar menu in a phone-like view (for smaller screens)
   function openSideBar() {
     const navgig = document.querySelector("nav");
     const exitBtn = document.getElementById("exitbar");
     const menuBtn = document.getElementById("menubar");
-    // Add a class to transform the nav to a phone view and show the exit button
     navgig.classList.add("phoneVrs");
     exitBtn.style.display = "block";
     menuBtn.style.display = "none";
   }
 
-  // Function to close the sidebar menu in the phone-like view
   function exitSideBar() {
     const navgig = document.querySelector("nav");
     const exitBtn = document.getElementById("exitbar");
     const menuBtn = document.getElementById("menubar");
-    // Remove phone view class and adjust button visibility
     navgig.classList.remove("phoneVrs");
     exitBtn.style.display = "none";
     menuBtn.style.display = "block";
   }
 
-  // JSX for the Nav component: contains the theme toggle button, menu buttons, and navigation links
   return (
     <nav>
-      {/* Theme toggle button switches between light and dark modes */}
       <img
         id="toggleMode"
         onClick={toggleTheme}
@@ -91,7 +105,6 @@ function Nav() {
         loading="lazy"
       />
       
-      {/* Menu button for opening sidebar on smaller screens */}
       <svg
         id="menubar"
         onClick={openSideBar}
@@ -111,7 +124,6 @@ function Nav() {
         ></path>
       </svg>
       
-      {/* Exit button for closing the sidebar on smaller screens */}
       <svg
         id="exitbar"
         onClick={exitSideBar}
@@ -128,13 +140,11 @@ function Nav() {
         ></path>
       </svg>
       
-      {/* Navigation links to different sections/pages */}
       <ul>
         <li><Link to="//">Home</Link></li>
         <li><Link to="/about">About me</Link></li>
         <li><Link to="/education">Education</Link></li>
         <li>
-          {/* Social/Download icons */}
           <Link to='https://www.linkedin.com/in/victor-starr/' target="_blank" className="fa fa-linkedin"></Link>
           <Link to='https://github.com/Victor-starr' target="_blank" className="fa fa-github"></Link>
           <Link to='https://docs.google.com/document/d/1gEctcECGR8qkWDh-NEGy6SqeWQAqz-EG/edit?usp=sharing&ouid=112263069503224360007&rtpof=true&sd=true' target="_blank" className="fa fa-download"></Link>

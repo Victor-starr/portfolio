@@ -4,17 +4,46 @@ import { differenceInDays,differenceInMonths, differenceInYears } from "date-fns
 import Nav from "./_Nav";
 import "./style/education.css";
 import CetfContent, { FinalTyp } from "./CetfContent";
+/**
+ * Education component fetches and displays educational information and certificates.
+ * 
+ * @component
+ * @example
+ * return (
+ *   <Education />
+ * )
+ * 
+ * @returns {JSX.Element} The rendered component.
+ * 
+ * @description
+ * This component fetches educational data from a Google Sheets CSV, converts it to JSON, and displays it.
+ * It includes functionality to flip certificate images and open external links.
+ * 
+ * @function Education
+ * 
+ * @property {Array} jsonData - State to store JSON data fetched from the CSV.
+ * @property {string} imgFace - State to track the current face of the certificate image ('imgfront' or 'imgback').
+ * @property {Object} previousFinalTypRef - Ref to store the previous value of FinalTyp.
+ * 
+ * @function turnCetf - Flips the certificate image between front and back.
+ * @function SoftUniWeb - Opens the SoftUni diplomas and certificates webpage.
+ * @function showCetfUrl - Opens the URL of the selected certificate.
+ * 
+ * @function csvToJson - Converts CSV data to JSON format.
+ * 
+ * @useEffect - Fetches CSV data and sets up an interval to monitor changes in FinalTyp.
+ * @useEffect - Adds animation classes to elements after a delay.
+ */
 function Education() {
   const [jsonData, setJsonData] = useState([]);
   const [imgFace, setImgFace] = useState('imgfront');
   const previousFinalTypRef = useRef(FinalTyp); 
-
   function turnCetf() {
     const certImg = document.querySelector("#certImg");
     const currentCert = jsonData.find(cert => cert.key === FinalTyp);
     if (!currentCert) return;
     
-
+    
     certImg.classList.add("flip");
     setTimeout(() => {
       setImgFace((v) => v === 'imgfront' ? 'imgback' : 'imgfront');
@@ -27,24 +56,24 @@ function Education() {
   useEffect(() => {
     const softuniInfo = document.querySelector('.softuniInfo');
     const contentsSliper = document.querySelectorAll('article.container');
-
+    
     setTimeout(() => {
       softuniInfo.classList.add('slide-in-blurred-left');
       contentsSliper.forEach((x) => {x.classList.add('slide-in-blurred-right');});
     }, 1000);
   }, [pageHolder]);
-
+  
   for (const cetf of jsonData) {
     const today = new Date();
     const date = new Date(cetf.dateAgo); 
-
+    
     if (isNaN(date.getTime())) {
       continue;
     }
     const daysDiff = differenceInDays(today, date);
     const monthsDiff = differenceInMonths(today, date);
     const yearsDiff = differenceInYears(today, date);
-
+    
     if (daysDiff < 30) {
       cetf.dateAgo = `${daysDiff} days ago`;
     }else if (monthsDiff < 12) {
@@ -53,45 +82,66 @@ function Education() {
       cetf.dateAgo = `${yearsDiff} years ago`;
     }
   }
-
-  useEffect(() => {
-    const url = "https://docs.google.com/spreadsheets/d/1DcQ9CjLcPL-vgxm4oIIpKzV5vQEZMsZa0xyYvq2WypA/export?format=csv";
   
-    function csvToJson(csv) {
+  function csvToJson(csv) {
+    return new Promise((resolve) => {
       const lines = csv.trim().split("\n");
       const headers = lines[0].split(",");
       const result = [];
+      let currentLine = [];
+      let insideQuotes = false;
+      let currentField = '';
   
       for (let i = 1; i < lines.length; i++) {
-        const obj = {};
-        const currentLine = lines[i].split(",");
-  
-        headers.forEach((header, index) => {
-          obj[header.trim()] = currentLine[index] ? currentLine[index].trim() : "";
-        });
-  
-        result.push(obj);
+        const line = lines[i];
+        for (let j = 0; j < line.length; j++) {
+          const char = line[j];
+          if (char === '"' && (j === 0 || line[j - 1] !== '\\')) {
+            insideQuotes = !insideQuotes;
+          } else if (char === ',' && !insideQuotes) {
+            currentLine.push(currentField);
+            currentField = '';
+          } else {
+            currentField += char;
+          }
+        }
+        if (!insideQuotes) {
+          currentLine.push(currentField);
+          const obj = {};
+          headers.forEach((header, index) => {
+            obj[header.trim()] = currentLine[index] ? currentLine[index].trim().replace(/(^"|"$)/g, '') : "";
+          });
+          result.push(obj);
+          currentLine = [];
+          currentField = '';
+        } else {
+          currentField += '\n';
+        }
       }
+      resolve(result);
+    });
+  }
   
-      return result;
-    }
+  useEffect(() => {
+    const url = "https://docs.google.com/spreadsheets/d/1DcQ9CjLcPL-vgxm4oIIpKzV5vQEZMsZa0xyYvq2WypA/export?format=csv";
   
     fetch(url)
       .then(response => response.text())
       .then(csvData => {
-        const jsonDataTemp = csvToJson(csvData); 
-        setJsonData(jsonDataTemp);
+        csvToJson(csvData).then(jsonDataTemp => {
+          setJsonData(jsonDataTemp);
+        });
       })
       .catch(error => console.error("Error fetching or parsing data:", error));
-
-      const interval = setInterval(() => {
-        if (previousFinalTypRef.current !== FinalTyp) {
-          previousFinalTypRef.current = FinalTyp; 
-          setImgFace('imgfront'); 
-        }
-      });
   
-      return () => clearInterval(interval);
+    const interval = setInterval(() => {
+      if (previousFinalTypRef.current !== FinalTyp) {
+        previousFinalTypRef.current = FinalTyp;
+        setImgFace('imgfront');
+      }
+    });
+  
+    return () => clearInterval(interval);
   
   }, []); 
   
