@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
-import sunSvg from "./assets/sun.svg"; 
-import moonSvg from "./assets/moon.svg"; 
+import sunSvg from "./assets/sun.svg";
+import moonSvg from "./assets/moon.svg";
 
 /**
  * Nav component that handles theme toggling and responsive navigation bar.
@@ -43,37 +43,39 @@ function Nav() {
     if (savedTheme) {
       return savedTheme;
     }
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return prefersDarkScheme ? "dark" : "light"; 
+    const prefersDarkScheme = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    return prefersDarkScheme ? "dark" : "light";
   };
 
   const [theme, setTheme] = useState(getInitialTheme());
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-    document.body.classList.toggle("alternate", theme !== 'light');
+    document.documentElement.setAttribute("data-theme", theme);
+    document.body.classList.toggle("alternate", theme !== "light");
   }, [theme]);
 
   function toggleTheme() {
     setTheme((prevTheme) => {
-      const newTheme = prevTheme === 'dark' ? 'light' : 'dark';
-      localStorage.setItem('theme', newTheme);
+      const newTheme = prevTheme === "dark" ? "light" : "dark";
+      localStorage.setItem("theme", newTheme);
       return newTheme;
     });
-  };
+  }
 
-  window.addEventListener('resize', () => {
+  window.addEventListener("resize", () => {
     const navgig = document.querySelector("nav");
     const exitBtn = document.getElementById("exitbar");
     const menuBtn = document.getElementById("menubar");
     if (window.innerWidth > 1300) {
-        navgig.classList.remove('phoneVrs');
-        exitBtn.style.display = 'none';
-        menuBtn.style.display = 'none';
+      navgig.classList.remove("phoneVrs");
+      exitBtn.style.display = "none";
+      menuBtn.style.display = "none";
     } else if (window.innerWidth <= 1300) {
-        navgig.classList.remove('phoneVrs');
-        menuBtn.style.display = 'block';
-        exitBtn.style.display = 'none';
+      navgig.classList.remove("phoneVrs");
+      menuBtn.style.display = "block";
+      exitBtn.style.display = "none";
     }
   });
 
@@ -104,7 +106,7 @@ function Nav() {
         alt="Dark/Light"
         loading="lazy"
       />
-      
+
       <svg
         id="menubar"
         onClick={openSideBar}
@@ -123,7 +125,7 @@ function Nav() {
           strokeLinejoin="round"
         ></path>
       </svg>
-      
+
       <svg
         id="exitbar"
         onClick={exitSideBar}
@@ -139,15 +141,33 @@ function Nav() {
           fill="#0F0F0F"
         ></path>
       </svg>
-      
+
       <ul>
-        <li><Link to="//">Home</Link></li>
-        <li><Link to="/about">About me</Link></li>
-        <li><Link to="/education">Education</Link></li>
         <li>
-          <Link to='https://www.linkedin.com/in/victor-starr/' target="_blank" className="fa fa-linkedin"></Link>
-          <Link to='https://github.com/Victor-starr' target="_blank" className="fa fa-github"></Link>
-          <Link to='https://docs.google.com/document/d/1gEctcECGR8qkWDh-NEGy6SqeWQAqz-EG/edit?usp=sharing&ouid=112263069503224360007&rtpof=true&sd=true' target="_blank" className="fa fa-download"></Link>
+          <Link to="//">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About me</Link>
+        </li>
+        <li>
+          <Link to="/education">Education</Link>
+        </li>
+        <li>
+          <Link
+            to="https://www.linkedin.com/in/victor-starr/"
+            target="_blank"
+            className="fa fa-linkedin"
+          ></Link>
+          <Link
+            to="https://github.com/Victor-starr"
+            target="_blank"
+            className="fa fa-github"
+          ></Link>
+          <Link
+            to="https://docs.google.com/document/d/1LwT5Euo_Cm-4FEXrGvKCbd0Lgr05lKPSiewBdSlkoXk/edit?tab=t.0"
+            target="_blank"
+            className="fa fa-download"
+          ></Link>
         </li>
       </ul>
     </nav>
