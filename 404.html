@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting...</title>
     <script>
-      // Only redirect if necessary
+      // Redirect only if necessary
       var pathname = window.location.pathname;
 
-      // Prevent infinite looping by checking if the path is already prefixed
-      if (!pathname.startsWith("/portfolio")) {
-        window.location.replace("/portfolio" + pathname);
+      // Check if the path is not already the root or a valid file
+      if (!pathname.startsWith("/portfolio/") || pathname === "/portfolio/") {
+        window.location.replace("/portfolio/");
       }
     </script>
   </head>
