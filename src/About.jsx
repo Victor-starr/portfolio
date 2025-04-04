@@ -3,51 +3,51 @@ import Nav from "./_Nav";
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import "./style/about.css";
-import javaSkill from "./assets/javascript-svgrepo-com.svg";
+import typeScript from "./assets/typescript.svg";
 import reactSkill from "./assets/react-svgrepo-com.svg";
 import sassSkill from "./assets/sass-svgrepo-com.svg";
 import MongoDb from "./assets/mongodb-svg.svg";
-import ExpressJS from "./assets/express-js.svg";
+import TailwindCss from "./assets/tailwindcss.svg";
 import NodeJs from "./assets/node-js.svg";
 
 /**
  * About component renders the "About Me" section of the portfolio.
- * 
+ *
  * This component includes information about the user, their skills, and activities outside of coding.
- * 
+ *
  * @component
  * @example
  * return (
  *   <About />
  * )
- * 
+ *
  * @returns {JSX.Element} The rendered component.
- * 
+ *
  * @description
  * The About component is responsible for displaying the user's personal information, skills, and hobbies.
  * It also handles animations and visibility toggles for different sections.
- * 
+ *
  * @function About
- * 
+ *
  * @property {Object} state - The state object containing:
  * @property {HTMLElement} state.contImg - Reference to the container image element.
  * @property {HTMLElement} state.leftArrow - Reference to the left arrow element.
  * @property {HTMLElement} state.rightArrow - Reference to the right arrow element.
  * @property {boolean} state.secNCoding - Boolean to toggle the visibility of the "Not Coding" section.
- * 
+ *
  * @useEffect - Initializes references to DOM elements on component mount.
  * @useEffect - Adds animation classes to elements after a delay.
  * @useEffect - Updates arrow visibility based on container scroll and window resize events.
- * 
+ *
  * @function ScrollRight - Scrolls the container image to the right.
  * @function ScrollLeft - Scrolls the container image to the left.
  * @function ToggleNCoding - Toggles the visibility of the "Not Coding" section and updates button visibility.
  */
 function About() {
   const [contImg, setContImg] = useState(null);
-  const [leftArrow, setLeftArrow] = useState(null); 
+  const [leftArrow, setLeftArrow] = useState(null);
   const [rightArrow, setRightArrow] = useState(null);
-  const [secNCoding, setSecNCoding] = useState(true); 
+  const [secNCoding, setSecNCoding] = useState(true);
 
   const hideBtn = document.getElementById("hideSecNotCoding");
   const showBtn = document.getElementById("showSecNotCoding");
@@ -159,11 +159,11 @@ function About() {
                 I’m Victor, a front-end development student at Software
                 University (SoftUni). My programming journey started in high
                 school and quickly became a passion. I primarily work with
-                JavaScript — a language many dislike but one I appreciate for its
-                versatility. As the second of three siblings, I’ve always sought
-                to carve my own path. With graduation just months away, I’m
-                excited to take the next step in my Computer Science studies in
-                Europe.
+                JavaScript — a language many dislike but one I appreciate for
+                its versatility. As the second of three siblings, I’ve always
+                sought to carve my own path. With graduation just months away,
+                I’m excited to take the next step in my Computer Science studies
+                in Europe.
               </p>
             </article>
           </section>
@@ -171,7 +171,7 @@ function About() {
             <h3>Skills</h3>
             <div>
               <span>
-                <img src={javaSkill} alt="JavaScript" loading="lazy" />
+                <img src={typeScript} alt="Typescript" loading="lazy" />
               </span>
               <span>
                 <img src={reactSkill} alt="React" loading="lazy" />
@@ -185,12 +185,11 @@ function About() {
                 <img src={MongoDb} alt="MongoDb" loading="lazy" />
               </span>
               <span>
-                <img src={ExpressJS} alt="ExpressJS" loading="lazy" />
+                <img src={TailwindCss} alt="TailwindCss" loading="lazy" />
               </span>
               <span>
                 <img src={NodeJs} alt="NodeJs" loading="lazy" />
               </span>
-
             </div>
           </section>
         </div>
