@@ -84,7 +84,7 @@ function Main() {
 
 function App() {
   return (
-    <Router basename="/portfolio">
+    <Router>
       <Main />
     </Router>
   );
