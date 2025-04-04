@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting...</title>
     <script>
-      // Preserve the path and redirect correctly
-      var path = window.location.pathname;
-      window.location.replace("/portfolio" + path);
+      // Only redirect if necessary
+      var pathname = window.location.pathname;
+
+      // Prevent infinite looping by checking if the path is already prefixed
+      if (!pathname.startsWith("/portfolio")) {
+        window.location.replace("/portfolio" + pathname);
+      }
     </script>
   </head>
   <body></body>
