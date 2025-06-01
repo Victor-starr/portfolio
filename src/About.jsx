@@ -10,39 +10,6 @@ import MongoDb from "./assets/mongodb-svg.svg";
 import TailwindCss from "./assets/tailwindcss.svg";
 import NodeJs from "./assets/node-js.svg";
 
-/**
- * About component renders the "About Me" section of the portfolio.
- *
- * This component includes information about the user, their skills, and activities outside of coding.
- *
- * @component
- * @example
- * return (
- *   <About />
- * )
- *
- * @returns {JSX.Element} The rendered component.
- *
- * @description
- * The About component is responsible for displaying the user's personal information, skills, and hobbies.
- * It also handles animations and visibility toggles for different sections.
- *
- * @function About
- *
- * @property {Object} state - The state object containing:
- * @property {HTMLElement} state.contImg - Reference to the container image element.
- * @property {HTMLElement} state.leftArrow - Reference to the left arrow element.
- * @property {HTMLElement} state.rightArrow - Reference to the right arrow element.
- * @property {boolean} state.secNCoding - Boolean to toggle the visibility of the "Not Coding" section.
- *
- * @useEffect - Initializes references to DOM elements on component mount.
- * @useEffect - Adds animation classes to elements after a delay.
- * @useEffect - Updates arrow visibility based on container scroll and window resize events.
- *
- * @function ScrollRight - Scrolls the container image to the right.
- * @function ScrollLeft - Scrolls the container image to the left.
- * @function ToggleNCoding - Toggles the visibility of the "Not Coding" section and updates button visibility.
- */
 function About() {
   const [contImg, setContImg] = useState(null);
   const [leftArrow, setLeftArrow] = useState(null);

@@ -1,37 +1,7 @@
 import { Link } from "react-router-dom";
-// eslint-disable-next-line no-unused-vars
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./style/home.css";
 
-/**
- * Home component that manages theme and animations for the homepage.
- *
- * This component initializes the theme based on user preference or system settings,
- * and performs the following tasks:
- *
- * 1. Sets the theme attribute on the document element and toggles a class on the body element.
- * 2. Applies and removes animation classes to elements with specific IDs.
- *
- * @component
- * @example
- * return (
- *   <Home />
- * )
- *
- * @returns {JSX.Element} The rendered component.
- *
- * @description
- * This component is responsible for managing the theme and applying animations to various
- * elements on the homepage. It also provides a toggle function to switch between light and dark themes.
- *
- * @function Home
- *
- * @function getInitialTheme - Returns the initial theme, either 'light' or 'dark'.
- * @function toggleTheme - Toggles the theme between 'light' and 'dark' and saves the preference in localStorage.
- *
- * @useEffect - Sets the theme attribute on the document element and toggles a class on the body element.
- * @useEffect - Applies and removes animation classes to elements with specific IDs.
- */
 function Home() {
   const getInitialTheme = () => {
     const savedTheme = localStorage.getItem("theme");

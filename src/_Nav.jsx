@@ -153,6 +153,9 @@ function Nav() {
           <Link to="/education">Education</Link>
         </li>
         <li>
+          <Link to="/projects">Projects</Link>
+        </li>
+        <li>
           <Link
             to="https://www.linkedin.com/in/victor-starr/"
             target="_blank"

@@ -90,8 +90,8 @@ span.HidenWords::selection {
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
 }
 .container:hover {
-  -webkit-box-shadow: -6px 0px 15px var(--IconBg-color);
-          box-shadow: -6px 0px 15px var(--IconBg-color);
+  -webkit-box-shadow: 0px 0px 16px 0px var(--IconBg-color);
+          box-shadow: 0px 0px 16px 0px var(--IconBg-color);
   cursor: pointer;
 }
 

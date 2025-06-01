@@ -1,0 +1,75 @@
+@import "./_global.scss";
+
+section.projectInformation {
+  @include element-size(82%, 50%);
+  @include flex(column, flex-start, center);
+  @include padding(20px, 30px);
+  background-color: $containerbg-color;
+  border-radius: 10px;
+  text-align: center;
+
+  img {
+    @include element-size(35%, 100%);
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    color: $h1-color;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1rem;
+    color: $p-color;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: start;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: $abt-btn-color;
+      background-color: $abt-btnBg-color;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $con-btnBg-color;
+        color: $con-btn-color;
+      }
+
+      &.fa-github {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+div.rightSide {
+  .content {
+    justify-content: center;
+  }
+  article {
+    @include padding(10px, 20px);
+    h2 {
+      font-size: 1.5rem;
+      color: $h1-color;
+    }
+    p {
+      font-size: 1rem;
+      color: $p-color;
+      line-height: 1.6;
+      text-align: start;
+    }
+  }
+}

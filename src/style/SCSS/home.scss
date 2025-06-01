@@ -1,7 +1,6 @@
 // global import
 @import "./global.scss";
 
-
 // body {
 //   @include element-size(100vh);
 //   @include padding(0px);
@@ -126,7 +125,6 @@ body.alternate {
     @include element-size(123px, 109px);
     transform: rotate(-50.41deg);
   }
-
 }
 header {
   @include position(relative);
@@ -237,21 +235,21 @@ a.abt-btn:active {
 }
 body,
 body.alternate {
-#tialDark,
-#vsCode,
-#react,
-#apicloud,
-#js,
-#github,
-#html,
-#css {
-  &:hover {
-    transform: scale(1.1) rotate(10deg);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
-      background-color 0.3s ease-in-out;
+  #tialDark,
+  #vsCode,
+  #react,
+  #apicloud,
+  #js,
+  #github,
+  #html,
+  #css {
+    &:hover {
+      transform: scale(1.1) rotate(10deg);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+        background-color 0.3s ease-in-out;
       cursor: pointer;
+    }
   }
-}
 }
 
 img#PImg1:hover {
@@ -291,7 +289,7 @@ img#PImg1:active {
     a.abt-btn {
       @include element-size(40px, 100px);
       font-size: 16px;
-    line-height: 35px;
+      line-height: 35px;
     }
     a.con-btn {
       @include element-size(40px, 100px);
@@ -308,50 +306,50 @@ img#PImg1:active {
     width: 70%;
   }
   // PFP
-  div.pfp{
-  img#PImg1 {
-    @include element-size(84px, 82px);
+  div.pfp {
+    img#PImg1 {
+      @include element-size(84px, 82px);
+    }
   }
-}
-// Toggled To Light icon positions
-  body{
-  #css {
-    @include element-size(54px, 52px);
-    top: -16.2px;
-    right: -20px;
+  // Toggled To Light icon positions
+  body {
+    #css {
+      @include element-size(54px, 52px);
+      top: -16.2px;
+      right: -20px;
+    }
+    #html {
+      @include element-size(54px, 52px);
+      left: -16.6px;
+      bottom: -16px;
+    }
+    #tialDark {
+      @include element-size(80.15px, 79.17px);
+      left: 10px;
+    }
+    #apicloud {
+      @include element-size(80px, 88.26px);
+      top: 100px;
+      right: 10px;
+    }
+    #js {
+      @include element-size(80px, 79.78px);
+      right: 10px;
+    }
+    #react {
+      @include element-size(81.09px, 75.21px);
+      left: 40px;
+    }
+    #vsCode {
+      @include element-size(81.09px, 75.21px);
+      bottom: 70px;
+    }
+    #github {
+      @include element-size(40px, 40px);
+      right: -5px;
+      bottom: 40px;
+    }
   }
-  #html {
-    @include element-size(54px, 52px);
-    left: -16.6px;
-    bottom:-16px;
-  }
-  #tialDark {
-    @include element-size(80.15px, 79.17px);
-    left: 10px;
-  }
-  #apicloud {
-    @include element-size(80px, 88.26px);
-    top: 100px;
-    right: 10px;
-  }
-  #js {
-    @include element-size(80px, 79.78px);
-    right: 10px;
-  }
-  #react {
-    @include element-size(81.09px, 75.21px);
-    left: 40px;
-  }
-  #vsCode {
-    @include element-size(81.09px, 75.21px);
-    bottom: 70px;
-  }
-  #github {
-    @include element-size(40px, 40px);
-    right: -5px;
-    bottom: 40px;
-  }
-}
 }
 // Phone Version Dark Mode Icon Only
 @media only screen and (max-width: 600px) {
@@ -401,7 +399,7 @@ img#PImg1:active {
 }
 
 // TABLET VERSION DEFAULT
-@media only screen and (max-width: 1300px) and (min-width: 601px) { 
+@media only screen and (max-width: 1300px) and (min-width: 601px) {
   body {
     height: 100vh;
     main {
@@ -447,49 +445,49 @@ img#PImg1:active {
     width: 60%;
   }
   // PFP
-  div.pfp{
-  img#PImg1 {
-    @include element-size(104px, 102px);
+  div.pfp {
+    img#PImg1 {
+      @include element-size(104px, 102px);
+    }
   }
-}
-// Toggled To Light icon positions
-  body{
-  #css {
-    @include element-size(84px, 82px);
-    top: -16.2px;
-    right: -35px;
+  // Toggled To Light icon positions
+  body {
+    #css {
+      @include element-size(84px, 82px);
+      top: -16.2px;
+      right: -35px;
+    }
+    #html {
+      @include element-size(74px, 72px);
+      bottom: -20px;
+      left: -32.6px;
+    }
+    #tialDark {
+      @include element-size(140.15px, 139.17px);
+      left: 15px;
+    }
+    #apicloud {
+      @include element-size(120px, 128.26px);
+      right: 15px;
+    }
+    #js {
+      @include element-size(130px, 129.78px);
+      right: 15px;
+    }
+    #react {
+      @include element-size(131.09px, 125.21px);
+      left: 45px;
+    }
+    #vsCode {
+      @include element-size(121.09px, 115.21px);
+      bottom: 100px;
+    }
+    #github {
+      @include element-size(70px, 70px);
+      right: -25px;
+      bottom: 50px;
+    }
   }
-  #html {
-    @include element-size(74px, 72px);
-    bottom:-20px;
-    left: -32.6px;
-  }
-  #tialDark {
-    @include element-size(140.15px, 139.17px);
-    left: 15px;
-  }
-  #apicloud {
-    @include element-size(120px, 128.26px);
-    right: 15px;
-  }
-  #js {
-    @include element-size(130px, 129.78px);
-    right: 15px;
-  }
-  #react {
-    @include element-size(131.09px, 125.21px);
-    left: 45px;
-  }
-  #vsCode {
-    @include element-size(121.09px, 115.21px);
-    bottom: 100px;
-  }
-  #github {
-    @include element-size(70px, 70px);
-    right: -25px;
-    bottom: 50px;
-  }
-}
 }
 
 // Tabled Version Dark Mode Icon Only
@@ -497,8 +495,8 @@ img#PImg1:active {
   // Toggled To Dark Mode icon positions
   body.alternate {
     #css {
-       @include element-size(84px, 82px);
-      @include position(absolute, auto, -42px,-23.8px, auto);
+      @include element-size(84px, 82px);
+      @include position(absolute, auto, -42px, -23.8px, auto);
       transform: rotate(-50.41deg);
     }
     #html {
@@ -538,4 +536,3 @@ img#PImg1:active {
     }
   }
 }
-
