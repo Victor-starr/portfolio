@@ -1,6 +1,4 @@
-
 @import "./_global.scss";
-
 
 // body {
 //   @include element-size(100vh);
@@ -22,7 +20,7 @@
 //   border-radius: 60px;
 //   border: 1px solid rgba(0, 0, 0, 0.24);
 // }
-section.pageHolder{
+section.pageHolder {
   @include position(relative);
   @include element-size(100%, 100%);
   @include flex(row, center, end);
@@ -31,45 +29,45 @@ section.pageHolder{
   border-radius: 60px;
 }
 
-div.leftSide{
+div.leftSide {
   @include element-size(93%, 45%);
   @include flex(column);
   row-gap: 20px;
   border-radius: 60px;
-  h1{
-   @include margin(15px,0,0);
-   @include position(relative, 0, 0, 0, 50px);
-   @include text($h1-color,"Alatsi",normal,300,22px);
- }
+  h1 {
+    @include margin(15px, 0, 0);
+    @include position(relative, 0, 0, 0, 50px);
+    @include text($h1-color, "Alatsi", normal, 300, 22px);
+  }
 }
 
-section.softuniInfo{
+section.softuniInfo {
   @include position(relative);
-  @include element-size(15%,65%);
+  @include element-size(15%, 65%);
   @include flex(row, center, center);
-  @include padding(5px,20px);
+  @include padding(5px, 20px);
   column-gap: 15px;
-  img{
-    @include element-size(65px,65px);
+  img {
+    @include element-size(65px, 65px);
     border-radius: 50%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
   }
-  h2{
-    @include text($h1-color,"Alatsi",normal,300,22px);
+  h2 {
+    @include text($h1-color, "Alatsi", normal, 300, 22px);
     @include margin(0px);
   }
-  path#Vector{
+  path#Vector {
     stroke: $Icons-color;
   }
 }
 
-section.cetfHolder{
+section.cetfHolder {
   @include position(relative);
-  @include element-size(67%,57%);
+  @include element-size(67%, 57%);
   @include padding(0px);
   display: none;
-  img#certImg{
-    @include element-size(100%,100%);
+  img#certImg {
+    @include element-size(100%, 100%);
     border-radius: 20px;
   }
 }
@@ -84,84 +82,77 @@ section.cetfHolder{
   transform: translateX(0);
 }
 
-
-
-div.moreInfo{
-  @include position(absolute, 0,0);
-  @include flex(row,start,center);
-  @include element-size(auto,20%);
-  @include padding(5px,10px);
+div.moreInfo {
+  @include position(absolute, 0, 0);
+  @include flex(row, start, center);
+  @include element-size(auto, 20%);
+  @include padding(5px, 10px);
   column-gap: 8px;
   background-color: $IconBg-color;
   border-radius: 0 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.692);
   z-index: 1;
-  p{
-   @include text($h1-color,"inter-italic",normal,600,16px);
- }
- #infoBtn{
-   fill: $h1-color;
- }
+  p {
+    @include text($h1-color, "inter-italic", normal, 600, 16px);
+  }
+  #infoBtn {
+    fill: $h1-color;
+  }
 }
 
-
-
-
-div.rightSide{
-  @include element-size(93%,48%);
+div.rightSide {
+  @include element-size(93%, 48%);
   @include position(relative);
-  @include flex(column,space-around,center);
+  @include flex(column, space-around, center);
   border-radius: 60px;
 }
 
-section.content{
+section.content {
   @include position(relative);
-  @include element-size(100%,85%);
-  @include flex(column,start,center);
+  @include element-size(100%, 85%);
+  @include flex(column);
   border-bottom: rgba(128, 128, 128, 0.572) 0.5px solid;
   overflow: hidden;
   overflow-y: scroll;
   row-gap: 20px;
   margin-top: 20px;
 }
-article.container{
+article.container {
   @include position(relative);
-  @include element-size(auto,90%);
-  @include padding(15px,10px);
-  h2{
-    @include text($h1-color,"Alatsi",normal,300,20px);
-   @include margin(8px);
+  @include element-size(auto, 90%);
+  @include padding(15px, 10px);
+  h2 {
+    @include text($h1-color, "Alatsi", normal, 300, 20px);
+    @include margin(8px);
   }
-  span{
-    @include position(absolute, 15px,20px);
-    @include text(#200079,"inter-italic",normal,550,12px);
+  span {
+    @include position(absolute, 15px, 20px);
+    @include text(#200079, "inter-italic", normal, 550, 12px);
     @include padding(6px);
-   text-align: start ;
-   background-color: #a688fa9c;
-   border-radius: 12px;
-   border: #714bd8 solid 2px;
+    text-align: start;
+    background-color: #a688fa9c;
+    border-radius: 12px;
+    border: #714bd8 solid 2px;
   }
- p{
-  @include text($h1-color,"inter-italic",normal,250,16px);
-  @include margin(5px,10px);
-  text-align: start ;
-  max-width: 350px;
- }
+  p {
+    @include text($h1-color, "inter-italic", normal, 250, 16px);
+    @include margin(5px, 10px);
+    text-align: start;
+    max-width: 350px;
+  }
 }
 
-
 /* ANIMATIONS */
-nav ul li a:hover{
+nav ul li a:hover {
   animation: colorAnimation 0.6s;
 }
 
-div.moreInfo:hover{
+div.moreInfo:hover {
   transform: scale(1.1);
 }
-div.moreInfo:active{
+div.moreInfo:active {
   transform: scale(0.9);
 }
-
 
 #toggleMode:hover {
   animation: circlesAnimation 3s infinite;
@@ -191,10 +182,7 @@ div.moreInfo:active{
   100% {
     transform: rotate(360deg);
   }
-
 }
-
-
 
 @keyframes bounceAnimation {
   0% {
@@ -217,8 +205,6 @@ div.moreInfo:active{
   }
 }
 
-
-
 @media only screen and (max-width: 600px) {
   body {
     height: 100vh;
@@ -227,102 +213,99 @@ div.moreInfo:active{
     @include position(absolute, 15px);
     @include element-size(95%, 85%);
   }
-  section.pageHolder{
+  section.pageHolder {
     @include flex(column, start, center);
     overflow-y: scroll;
     padding-top: 70px;
-    
   }
   #toggleMode {
     margin-left: 45px;
   }
-  svg#menubar{
+  svg#menubar {
     display: block;
   }
-  svg#exitbar{
+  svg#exitbar {
     display: none;
   }
-  nav ul{
+  nav ul {
     display: none;
   }
   nav.phoneVrs {
-    svg#exitbar{
+    svg#exitbar {
       @include position(relative, 50px);
-      @include element-size(60px,60px);
+      @include element-size(60px, 60px);
       display: none;
-  }
-  ul{
-    @include flex(column, center, center);
-    @include position(absolute, 0px,auto,auto, 0px);
-    @include element-size(100vh,100%);
-    @include padding(0px);
-    @include margin(0px);
-   background-color: $navbg-color;
-   row-gap: 25px;
-   text-align: center;
-   li a{
-   font-size:45px;
-   }
-}
-}
-    
-  div.leftSide{
-    @include element-size(auto,100%);
-    align-items: center;
-    h1{
-     @include margin(5px,0,6px);
-     font-size: 20px;
-     width: 100%;
-     text-align: start;
-   }
+    }
+    ul {
+      @include flex(column, center, center);
+      @include position(absolute, 0px, auto, auto, 0px);
+      @include element-size(100vh, 100%);
+      @include padding(0px);
+      @include margin(0px);
+      background-color: $navbg-color;
+      row-gap: 25px;
+      text-align: center;
+      li a {
+        font-size: 45px;
+      }
+    }
   }
 
-  section.softuniInfo{
+  div.leftSide {
+    @include element-size(auto, 100%);
+    align-items: center;
+    h1 {
+      @include margin(5px, 0, 6px);
+      font-size: 20px;
+      width: 100%;
+      text-align: start;
+    }
+  }
+
+  section.softuniInfo {
     width: 65%;
     padding: 25px;
-    img{
-     @include element-size(50px,50px);
-   }
-   h2{
-    font-size: 15px;
+    img {
+      @include element-size(50px, 50px);
+    }
+    h2 {
+      font-size: 15px;
+    }
   }
+  section.cetfHolder {
+    @include element-size(85%, 80%);
   }
-  section.cetfHolder{
-    @include element-size(85%,80%);
-  }
-  div.moreInfo{
-    @include element-size(auto,auto);
+  div.moreInfo {
+    @include element-size(auto, auto);
     padding: 10px;
-    svg{
-     @include element-size(25px,25px);
-   }
-   p{
-    display: none;
+    svg {
+      @include element-size(25px, 25px);
+    }
+    p {
+      display: none;
+    }
   }
-  }
-  div.rightSide{
-    @include element-size(auto,100%);
+  div.rightSide {
+    @include element-size(auto, 100%);
     margin: 20px 0 50px;
     align-items: center;
   }
-  section.content{
-    @include element-size(450px,90%);
+  section.content {
+    @include element-size(450px, 90%);
     border-bottom: solid 0.5px rgb(110, 110, 110);
   }
-  article.container{
-    h2{
-     font-size: 17px;
-     font-weight: bolder;
-   }
-   p{
+  article.container {
+    h2 {
+      font-size: 17px;
+      font-weight: bolder;
+    }
+    p {
       font-size: 14px;
     }
-    span{
+    span {
       display: none;
     }
-
   }
-
 }
 
 @media only screen and (max-width: 1300px) and (min-width: 601px) {
@@ -333,81 +316,79 @@ div.moreInfo:active{
     @include position(absolute, 25px);
     @include element-size(95%, 85%);
   }
-  section.pageHolder{
-    @include flex(column,start,center);
+  section.pageHolder {
+    @include flex(column, start, center);
     overflow-y: scroll;
     padding-top: 70px;
-    
   }
   #toggleMode {
     margin-left: 45px;
   }
-  svg#menubar{
+  svg#menubar {
     display: block;
   }
-  svg#exitbar{
+  svg#exitbar {
     display: none;
   }
-  nav ul{
+  nav ul {
     display: none;
   }
   nav.phoneVrs {
-    svg#exitbar{
+    svg#exitbar {
       @include position(relative, 50px);
-      @include element-size(60px,60px);
+      @include element-size(60px, 60px);
       display: none;
+    }
+    ul {
+      @include flex(column, center, center);
+      @include position(absolute, 0px, auto, auto, 0px);
+      @include element-size(100vh, 100%);
+      @include padding(0px);
+      @include margin(0px);
+      background-color: $navbg-color;
+      row-gap: 25px;
+      text-align: center;
+      li a {
+        font-size: 45px;
+      }
+    }
   }
-  ul{
-    @include flex(column, center, center);
-    @include position(absolute, 0px,auto,auto, 0px);
-    @include element-size(100vh,100%);
-    @include padding(0px);
-    @include margin(0px);
-   background-color: $navbg-color;
-   row-gap: 25px;
-   text-align: center;
-   li a{
-   font-size:45px;
-   }
-}
-}
-  div.leftSide{
+  div.leftSide {
     align-items: center;
     width: 100%;
-    h1{
-     left: 0px;
-     margin: 15px 0 6px;
-     font-size: 24px;
-   }
+    h1 {
+      left: 0px;
+      margin: 15px 0 6px;
+      font-size: 24px;
+    }
   }
-  
-  section.softuniInfo{
-    @include element-size(50%,35%);
-    @include padding(15px,25px);
+
+  section.softuniInfo {
+    @include element-size(50%, 35%);
+    @include padding(15px, 25px);
     column-gap: 15px;
-    h2{
-     font-size: 19px;
-   }
+    h2 {
+      font-size: 19px;
+    }
   }
-  section.cetfHolder{
+  section.cetfHolder {
     max-width: 500px;
     min-width: 50%;
     height: 90%;
   }
-  div.moreInfo{
-    @include element-size(auto,auto);
+  div.moreInfo {
+    @include element-size(auto, auto);
     padding: 10px;
-    svg{
-      @include element-size(25px,25px);
+    svg {
+      @include element-size(25px, 25px);
     }
-     p{
+    p {
       display: none;
     }
   }
 
-  div.rightSide{
+  div.rightSide {
     margin: 20px 0 100px;
     width: 100%;
   }
 }
-
