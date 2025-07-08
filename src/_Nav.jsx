@@ -169,7 +169,7 @@ function Nav() {
           <Link
             to="https://docs.google.com/document/d/1LwT5Euo_Cm-4FEXrGvKCbd0Lgr05lKPSiewBdSlkoXk/edit?tab=t.0"
             target="_blank"
-            className="fa fa-download"
+            className="fa fa-folder-open"
           ></Link>
         </li>
       </ul>

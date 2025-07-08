@@ -105,18 +105,18 @@ div.rightSide {
   @include position(relative);
   @include flex(column, space-around, center);
   border-radius: 60px;
+  section.content {
+    @include position(relative);
+    @include element-size(100%, 85%);
+    @include flex(column, flex-start);
+    border-bottom: rgba(128, 128, 128, 0.572) 0.5px solid;
+    overflow: hidden;
+    overflow-y: scroll;
+    row-gap: 20px;
+    margin-top: 20px;
+  }
 }
 
-section.content {
-  @include position(relative);
-  @include element-size(100%, 85%);
-  @include flex(column);
-  border-bottom: rgba(128, 128, 128, 0.572) 0.5px solid;
-  overflow: hidden;
-  overflow-y: scroll;
-  row-gap: 20px;
-  margin-top: 20px;
-}
 article.container {
   @include position(relative);
   @include element-size(auto, 90%);

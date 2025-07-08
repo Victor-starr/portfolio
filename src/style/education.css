@@ -594,8 +594,7 @@ div.rightSide {
           align-items: center;
   border-radius: 60px;
 }
-
-section.content {
+div.rightSide section.content {
   position: relative;
   top: auto;
   right: auto;
@@ -612,7 +611,7 @@ section.content {
           flex-direction: column;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
