@@ -123,7 +123,7 @@ function About() {
               <h2>My Story</h2>
               <p>
                 <span>📍Plovdiv, Bulgaria</span>
-                I’m Victor, a front-end development student at Software
+                I’m Victor, a Full-stack development student at Software
                 University (SoftUni). My programming journey started in high
                 school and quickly became a passion. I primarily work with
                 JavaScript — a language many dislike but one I appreciate for
