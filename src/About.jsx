@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import "./style/about.css";
 import typeScript from "./assets/typescript.svg";
 import reactSkill from "./assets/react-svgrepo-com.svg";
-import sassSkill from "./assets/sass-svgrepo-com.svg";
+import nextjs from "./assets/nextjs-com.svg";
 import MongoDb from "./assets/mongodb-svg.svg";
 import TailwindCss from "./assets/tailwindcss.svg";
 import NodeJs from "./assets/node-js.svg";
@@ -144,7 +144,7 @@ function About() {
                 <img src={reactSkill} alt="React" loading="lazy" />
               </span>
               <span>
-                <img src={sassSkill} alt="Sass" loading="lazy" />
+                <img src={nextjs} alt="nextjs" loading="lazy" />
               </span>
             </div>
             <div>
