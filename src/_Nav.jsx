@@ -167,7 +167,7 @@ function Nav() {
             className="fa fa-github"
           ></Link>
           <Link
-            to="https://docs.google.com/document/d/1LwT5Euo_Cm-4FEXrGvKCbd0Lgr05lKPSiewBdSlkoXk/edit?tab=t.0"
+            to="https://docs.google.com/document/d/158Jpyv43iFTKFgOz9A_2yvGTpWhUcZMLy2swnI6dC4I/edit?usp=sharing"
             target="_blank"
             className="fa fa-folder-open"
           ></Link>
