@@ -167,7 +167,7 @@ function Nav() {
             className="fa fa-github"
           ></Link>
           <Link
-            to="/public/resume.pdf"
+            to="/resume.pdf"
             target="_blank"
             className="fa fa-folder-open"
           ></Link>

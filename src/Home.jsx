@@ -54,16 +54,21 @@ function Home() {
 
   return (
     <section className="homeHolder">
-      <img src="./3dDarkTailwind.png" alt="" id="tialDark" loading="lazy" />
-      <img src="./3DVSCODE.png" alt="" id="vsCode" loading="lazy" />
-      <img src="./3DReact.png" alt="" id="react" loading="lazy" />
-      <img src="./3DAPICould.png" alt="" id="apicloud" loading="lazy" />
-      <img src="./3DJS.png" alt="" id="js" loading="lazy" />
+      <img
+        src="/public/3dDarkTailwind.png"
+        alt=""
+        id="tialDark"
+        loading="lazy"
+      />
+      <img src="/public/3DVSCODE.png" alt="" id="vsCode" loading="lazy" />
+      <img src="/public/3DReact.png" alt="" id="react" loading="lazy" />
+      <img src="/public/3DAPICould.png" alt="" id="apicloud" loading="lazy" />
+      <img src="/public/3DJS.png" alt="" id="js" loading="lazy" />
       <header>
         <div className="pfp" onClick={toggleTheme}>
-          <img src="./3DHTML.png" alt="" id="html" loading="lazy" />
-          <img src="./Memoji.png" alt="" id="PImg1" loading="lazy" />
-          <img src="./3DCSS.png" alt="" id="css" loading="lazy" />
+          <img src="/public/3DHTML.png" alt="" id="html" loading="lazy" />
+          <img src="/public/Memoji.png" alt="" id="PImg1" loading="lazy" />
+          <img src="/public/3DCSS.png" alt="" id="css" loading="lazy" />
         </div>
         <article>
           <h1>Hi, I&apos;m Victor</h1>
