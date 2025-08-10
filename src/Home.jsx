@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./style/home.css";
 
 function Home() {
-  const getInitialTheme = () => {
+  const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
       return savedTheme;
@@ -12,37 +12,12 @@ function Home() {
       "(prefers-color-scheme: dark)"
     ).matches;
     return prefersDarkScheme ? "dark" : "light";
-  };
+  });
 
-  const [theme, setTheme] = useState(getInitialTheme());
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     document.body.classList.toggle("alternate", theme !== "light");
   }, [theme]);
-
-  const pageHolder = document.querySelector("main > section");
-  useEffect(() => {
-    const tailwind3d = document.getElementById("tialDark");
-    const vsCode = document.getElementById("vsCode");
-    const react = document.getElementById("react");
-    const apicloud = document.getElementById("apicloud");
-    const js = document.getElementById("js");
-
-    setTimeout(() => {
-      tailwind3d.classList.add("slide-in-blurred-right");
-      vsCode.classList.add("slide-in-blurred-top");
-      react.classList.add("slide-in-blurred-bottom");
-      apicloud.classList.add("slide-in-blurred-left");
-      js.classList.add("slide-in-blurred-left");
-    }, 1000);
-    setTimeout(() => {
-      tailwind3d.classList.remove("slide-in-blurred-right");
-      vsCode.classList.remove("slide-in-blurred-top");
-      react.classList.remove("slide-in-blurred-bottom");
-      apicloud.classList.remove("slide-in-blurred-left");
-      js.classList.remove("slide-in-blurred-left");
-    }, 2000);
-  }, [pageHolder]);
 
   function toggleTheme() {
     setTheme((prevTheme) => {
@@ -54,11 +29,41 @@ function Home() {
 
   return (
     <section className="homeHolder">
-      <img src="./3dDarkTailwind.png" alt="" id="tialDark" loading="lazy" />
-      <img src="./3DVSCODE.png" alt="" id="vsCode" loading="lazy" />
-      <img src="./3DReact.png" alt="" id="react" loading="lazy" />
-      <img src="./3DAPICould.png" alt="" id="apicloud" loading="lazy" />
-      <img src="./3DJS.png" alt="" id="js" loading="lazy" />
+      <img
+        src="./3dDarkTailwind.png"
+        alt=""
+        id="tialDark"
+        className="slide-in-blurred-right"
+        loading="lazy"
+      />
+      <img
+        src="./3DVSCODE.png"
+        alt=""
+        id="vsCode"
+        className="slide-in-blurred-top"
+        loading="lazy"
+      />
+      <img
+        src="./3DReact.png"
+        alt=""
+        id="react"
+        className="slide-in-blurred-bottom"
+        loading="lazy"
+      />
+      <img
+        src="./3DAPICould.png"
+        alt=""
+        id="apicloud"
+        className="slide-in-blurred-left"
+        loading="lazy"
+      />
+      <img
+        src="./3DJS.png"
+        alt=""
+        id="js"
+        className="slide-in-blurred-left"
+        loading="lazy"
+      />
       <header>
         <div className="pfp" onClick={toggleTheme}>
           <img src="./3DHTML.png" alt="" id="html" loading="lazy" />

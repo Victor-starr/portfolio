@@ -26,22 +26,22 @@ function About() {
     setRightArrow(document.getElementById("rightArrow"));
   }, []);
 
-  const pageHolder = document.querySelector("main > section");
-  useEffect(() => {
-    const myStory = document.querySelector(".myStory");
-    const sectionLinks = document.querySelector("section.links");
-    const contentsSliper = document.querySelectorAll("article.container");
-    const secnNotCoding = document.querySelector(".secNotCoding");
+  // const pageHolder = document.querySelector("main > section");
+  // useEffect(() => {
+  //   const myStory = document.querySelector(".myStory");
+  //   const sectionLinks = document.querySelector("section.links");
+  //   const contentsSliper = document.querySelectorAll("article.container");
+  //   const secnNotCoding = document.querySelector(".secNotCoding");
 
-    setTimeout(() => {
-      myStory.classList.add("slide-in-blurred-left");
-      sectionLinks.classList.add("slide-in-blurred-bottom");
-      contentsSliper.forEach((x) => {
-        x.classList.add("slide-in-blurred-right");
-      });
-      secnNotCoding.classList.add("slide-in-blurred-top");
-    }, 1000);
-  }, [pageHolder]);
+  //   setTimeout(() => {
+  //     myStory.classList.add("slide-in-blurred-left");
+  //     sectionLinks.classList.add("slide-in-blurred-bottom");
+  //     contentsSliper.forEach((x) => {
+  //       x.classList.add("slide-in-blurred-right");
+  //     });
+  //     secnNotCoding.classList.add("slide-in-blurred-top");
+  //   }, 1000);
+  // }, [pageHolder]);
 
   useEffect(() => {
     if (contImg && leftArrow && rightArrow) {
@@ -117,7 +117,7 @@ function About() {
       <section className="pageHolder">
         <div className="leftSide">
           <h1>About Me</h1>
-          <section className="container myStory">
+          <section className="slide-in-blurred-left container myStory">
             <img src="./Memoji.png" alt="" id="GoHome" loading="lazy" />
             <article>
               <h2>My Story</h2>
@@ -134,7 +134,7 @@ function About() {
               </p>
             </article>
           </section>
-          <section className="container links">
+          <section className="slide-in-blurred-bottom container links">
             <h3>Skills</h3>
             <div>
               <span>
@@ -163,7 +163,7 @@ function About() {
 
         <div className="rightSide">
           <section className="content">
-            <article className="container">
+            <article className="slide-in-blurred-right container">
               <h2>Creative Technologist</h2>
               <p>
                 As a front-end developer, I enjoy turning ideas into functional,
@@ -173,7 +173,7 @@ function About() {
               </p>
             </article>
 
-            <article className="container">
+            <article className="slide-in-blurred-right container">
               <h2>Building with Purpose</h2>
               <p>
                 Every project is an opportunity to refine my approach and find
@@ -183,7 +183,7 @@ function About() {
               </p>
             </article>
 
-            <article className="container">
+            <article className="slide-in-blurred-right container">
               <h2>Driven by Curiosity</h2>
               <p>
                 From my first lines of code, I was hooked on the endless
@@ -193,7 +193,7 @@ function About() {
               </p>
             </article>
 
-            <article className="container">
+            <article className="slide-in-blurred-right container">
               <h2>Practical Problem Solver</h2>
               <p>
                 Bugs and errors are just part of the process—I see them as
@@ -203,7 +203,7 @@ function About() {
               </p>
             </article>
 
-            <article className="container">
+            <article className="slide-in-blurred-right container">
               <h2>Always Learning, Always Improving</h2>
               <p>
                 Technology is constantly evolving, and I embrace the challenge

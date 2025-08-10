@@ -601,7 +601,7 @@ div.rightSide section.content {
   bottom: auto;
   left: auto;
   height: 100%;
-  width: 85%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -612,9 +612,9 @@ div.rightSide section.content {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: rgba(128, 128, 128, 0.572) 0.5px solid;
   overflow: hidden;
   overflow-y: scroll;
@@ -629,7 +629,7 @@ article.container {
   bottom: auto;
   left: auto;
   height: auto;
-  width: 90%;
+  width: 85%;
   padding: 15px 10px 15px 10px;
 }
 article.container h2 {

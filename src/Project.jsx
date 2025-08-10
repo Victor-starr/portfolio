@@ -20,6 +20,14 @@ const project = {
     demo: "https://deezer-starr.vercel.app",
     github: "https://github.com/Victor-starr/deezer-starr",
   },
+  tableStarr: {
+    title: "Table-Starr",
+    description:
+      "Table-Starr helps you and your friends keep track of orders and split the bill easily—perfect for going out to eat or sharing expenses.",
+    demo: "https://table-starr.vercel.app/",
+    github: "https://github.com/Victor-starr/Table-Starr",
+    image: "./tableStarrBanner.png",
+  },
 };
 
 export default function Project() {
@@ -61,6 +69,16 @@ export default function Project() {
               <p>
                 A music streaming application that allows users to search and
                 play their favorite songs.
+              </p>
+            </article>
+            <article
+              className="slide-in-blurred-right container"
+              onClick={() => setProjectData(project.tableStarr)}
+            >
+              <h2>Table-Starr</h2>
+              <p>
+                A web application designed to help users keep track of their
+                orders and split the bill with friends.
               </p>
             </article>
           </section>

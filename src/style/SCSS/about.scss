@@ -1,6 +1,5 @@
 // global import
-@import "./_global.scss";
-
+@use "./_global.scss" as *;
 
 // body {
 //   @include element-size(100vh);
@@ -22,7 +21,7 @@
 //   border-radius: 60px;
 //   border: 1px solid rgba(0, 0, 0, 0.24);
 // }
-section.pageHolder{
+section.pageHolder {
   @include position(relative);
   @include element-size(100%, 100%);
   @include flex(row, center, end);
@@ -37,12 +36,11 @@ div.leftSide {
   row-gap: 20px;
   border-radius: 60px;
   h1 {
-   @include margin(15px, 0, 0, 0);
-   @include position(relative, auto, auto, auto, 50px);
-   @include text($h1-color, "Alatsi", normal, 300, 22px);
- }
+    @include margin(15px, 0, 0, 0);
+    @include position(relative, auto, auto, auto, 50px);
+    @include text($h1-color, "Alatsi", normal, 300, 22px);
+  }
 }
-
 
 section.myStory {
   @include position(relative);
@@ -64,7 +62,7 @@ section.myStory {
       @include text($h1-color, "inter-italic", normal, 200, 15.5px);
       margin: 0;
       text-align: start;
-      span{
+      span {
         display: block;
         @include text($h1-color, "Alatsi", normal, 200, 15px);
         @include padding(0, 0, 5px, 0);
@@ -84,17 +82,17 @@ section.links {
   }
   div {
     @include flex(row, center, center);
-    
+
     @include padding(10px);
     span {
       @include flex(row, center, center);
       @include element-size(35px, 35px);
       @include padding(8px);
-      @include margin(0,10px);
+      @include margin(0, 10px);
       border-radius: 50%;
       box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.34);
-      img{
-        @include element-size(100%,100%);
+      img {
+        @include element-size(100%, 100%);
       }
     }
   }
@@ -105,7 +103,7 @@ g#Icon-Set-Filled,
 path#Icon-Set-Filled {
   fill: $Icons-color;
 }
-path#Icon-Set-Filled{
+path#Icon-Set-Filled {
   stroke: $Icons-color;
 }
 
@@ -117,7 +115,7 @@ div.rightSide {
 }
 section.content {
   @include position(relative);
-  @include flex(column, start, center);
+  @include flex(column, flex-start, center);
   @include element-size(50%, 85%);
   @include margin(20px, 0, 0, 0);
   overflow: hidden;
@@ -125,9 +123,7 @@ section.content {
   row-gap: 20px;
   border-bottom: rgba(128, 128, 128, 0.572) 0.5px solid;
 }
-article.container {
-  @include element-size(250px, 90%);
-}
+
 section.content {
   h2 {
     @include text($h1-color, "Alatsi", normal, 300, 20px);
@@ -140,7 +136,7 @@ section.content {
 }
 
 section.secNotCoding {
-  @include position(relative,auto,0%);
+  @include position(relative, auto, 0%);
   @include element-size(40%, 85%);
   @include margin(20px, 0);
   h4 {
@@ -148,28 +144,26 @@ section.secNotCoding {
     @include margin(5px, 0);
   }
 }
-section.secNotCodingHiden{
+section.secNotCodingHiden {
   @include position(absolute, auto, -92%, 0);
 }
 #showSecNotCoding,
-#hideSecNotCoding{
-  @include element-size(45px,45px);
+#hideSecNotCoding {
+  @include element-size(45px, 45px);
   @include position(absolute, 50px, auto, auto, -40px);
   @include padding(5px);
   background-color: $containerbg-color;
   border-radius: 15px;
-  &:hover{
+  &:hover {
     box-shadow: -6px 0px 15px $IconBg-color;
   }
-  
 }
-#showSecNotCoding{
+#showSecNotCoding {
   display: block;
 }
-#hideSecNotCoding{
+#hideSecNotCoding {
   display: none;
 }
-
 
 div.contImg {
   @include flex(row, start, center);
@@ -237,7 +231,7 @@ nav {
   border-bottom: 1px solid rgba(0, 0, 0, 0.24);
   z-index: 2;
   ul {
-    @include flex(row,center,center);
+    @include flex(row, center, center);
     @include margin(0, 60px);
     column-gap: 25px;
     li {
@@ -245,12 +239,12 @@ nav {
       a {
         @include text($nav-color, "Alatsi", normal, 350, 25px);
       }
-      a.fa{
-          padding: 10px 15px;
-         font-size: 28px;
-         color:  $nav-color;
+      a.fa {
+        padding: 10px 15px;
+        font-size: 28px;
+        color: $nav-color;
       }
-      a.fa-download{
+      a.fa-download {
         font-size: 25px;
       }
     }
@@ -330,7 +324,7 @@ div.contImg figure img:hover {
     @include position(absolute, 15px);
     @include element-size(95%, 85%);
   }
-  section.pageHolder{
+  section.pageHolder {
     @include flex(column, start, center);
     @include padding(70px, 0, 0, 0);
     overflow-y: scroll;
@@ -392,18 +386,19 @@ div.contImg figure img:hover {
     }
   }
   section.links {
-    @include element-size(auto, 75%);
+    padding-left: 25px;
+    padding-right: 25px;
     left: 0px;
     h3 {
       font-size: 20px;
     }
     div {
-      span{
-        padding: 0px;
+      span {
+        @include element-size(45px, 45px);
       }
-      a {
-        @include element-size(30px, 30px);
-        @include padding(5px);
+      img {
+        @include element-size(45px, 45px);
+        @include padding(5px, 10px, 5px, 10px);
       }
     }
   }
@@ -424,7 +419,6 @@ div.contImg figure img:hover {
   div.rightSide {
     @include element-size(auto, 100%);
     @include margin(20px, 0, 100px);
-    align-items: start;
   }
   section.content {
     @include element-size(500px, 90%);
@@ -432,22 +426,22 @@ div.contImg figure img:hover {
     border-bottom: solid 0.5px rgb(110, 110, 110);
     article.container {
       h2 {
-        font-size: 15px;
+        font-size: clamp(13px, 2vw, 15px);
       }
     }
     p {
-      font-size: 13px;
+      font-size: clamp(11px, 1.5vw, 13px);
     }
   }
   section.secNotCoding {
-    @include element-size(50%, 80%);
+    @include element-size(25%, 80%);
     // left: 30px;
     border-bottom: solid 0.5px rgb(110, 110, 110);
   }
-  #showSecNotCoding{
+  #showSecNotCoding {
     display: none;
   }
-  #hideSecNotCoding{
+  #hideSecNotCoding {
     display: none;
   }
 }
@@ -459,7 +453,7 @@ div.contImg figure img:hover {
   main {
     @include position(absolute, 25px);
   }
-  section.pageHolder{
+  section.pageHolder {
     @include flex(column, start, center);
     @include padding(70px, 0, 0, 0);
     overflow-y: scroll;
@@ -529,7 +523,7 @@ div.contImg figure img:hover {
     div {
       @include flex(row, center, center);
       // column-gap: 7%;
-      span{
+      span {
         padding: 8px;
       }
       a {
@@ -559,10 +553,10 @@ div.contImg figure img:hover {
     @include element-size(auto, 80%);
     border-bottom: solid 0.5px rgb(110, 110, 110);
   }
-  #showSecNotCoding{
+  #showSecNotCoding {
     display: none;
   }
-  #hideSecNotCoding{
+  #hideSecNotCoding {
     display: none;
   }
 }

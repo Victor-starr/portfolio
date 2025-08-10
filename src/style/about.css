@@ -613,7 +613,7 @@ section.content {
           flex-direction: column;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -624,11 +624,6 @@ section.content {
   overflow-y: scroll;
   row-gap: 20px;
   border-bottom: rgba(128, 128, 128, 0.572) 0.5px solid;
-}
-
-article.container {
-  height: 250px;
-  width: 90%;
 }
 
 section.content h2 {
@@ -1108,20 +1103,21 @@ div.contImg figure img:hover {
     width: 45px;
   }
   section.links {
-    height: auto;
-    width: 75%;
+    padding-left: 25px;
+    padding-right: 25px;
     left: 0px;
   }
   section.links h3 {
     font-size: 20px;
   }
   section.links div span {
-    padding: 0px;
+    height: 45px;
+    width: 45px;
   }
-  section.links div a {
-    height: 30px;
-    width: 30px;
-    padding: 5px 5px 5px 5px;
+  section.links div img {
+    height: 45px;
+    width: 45px;
+    padding: 5px 10px 5px 10px;
   }
   svg#linkedSVG {
     height: 25px;
@@ -1143,9 +1139,6 @@ div.contImg figure img:hover {
     height: auto;
     width: 100%;
     margin: 20px 0 100px 0;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
   }
   section.content {
     height: 500px;
@@ -1153,13 +1146,13 @@ div.contImg figure img:hover {
     border-bottom: solid 0.5px rgb(110, 110, 110);
   }
   section.content article.container h2 {
-    font-size: 15px;
+    font-size: clamp(13px, 2vw, 15px);
   }
   section.content p {
-    font-size: 13px;
+    font-size: clamp(11px, 1.5vw, 13px);
   }
   section.secNotCoding {
-    height: 50%;
+    height: 25%;
     width: 80%;
     border-bottom: solid 0.5px rgb(110, 110, 110);
   }
