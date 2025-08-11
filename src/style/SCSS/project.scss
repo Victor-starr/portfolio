@@ -1,261 +1,76 @@
-@use "./_global.scss" as *;
+@import "./_global.scss";
 
 section.projectInformation {
+  @include element-size(75%, 75%);
   @include flex(column, flex-start, center);
-  @include padding(30px, 20px);
+  @include padding(20px, 30px);
   background-color: $containerbg-color;
-  border-radius: 15px;
+  border-radius: 10px;
   text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-  }
 
   img {
-    @include element-size(100%, auto);
-    max-width: 400px;
+    @include element-size(35%, 100%);
     border-radius: 15px;
     object-fit: cover;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-
-    &:hover {
-      transform: scale(1.02);
-    }
+    margin-bottom: 15px;
   }
 
   h2 {
-    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-size: 1.8rem;
     color: $h1-color;
-    margin-bottom: 15px;
-    font-weight: 600;
+    margin-bottom: 10px;
   }
 
   p {
-    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    font-size: 1rem;
     color: $p-color;
-    line-height: 1.7;
-    margin-bottom: 25px;
-    text-align: left;
-    max-width: 100%;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: start;
   }
 
   div {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
 
     a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 24px;
+      display: inline-block;
+      padding: 10px 20px;
       text-decoration: none;
       color: $abt-btn-color;
       background-color: $abt-btnBg-color;
       font-size: 1rem;
-      font-weight: 500;
-      border-radius: 8px;
-      min-width: 120px;
+      border-radius: 5px;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 
       &:hover {
         background-color: $con-btnBg-color;
         color: $con-btn-color;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
       }
 
       &.fa-github {
-        font-size: 1.8rem;
-        min-width: 60px;
-        padding: 12px;
+        font-size: 1.5rem;
       }
     }
   }
 }
-
 div.rightSide {
   .content {
-    @include flex(column, flex-start, stretch);
-    gap: 20px;
-    padding: 20px 0;
+    justify-content: center;
   }
-
   article {
-    @include padding(20px, 25px);
-    background-color: $containerbg-color;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-
-    &:hover {
-      transform: translateX(10px);
-      border-color: $abt-btnBg-color;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-    }
-
+    @include padding(10px, 20px);
     h2 {
-      font-size: clamp(1.3rem, 3vw, 1.6rem);
+      font-size: 1.5rem;
       color: $h1-color;
-      margin-bottom: 10px;
-      font-weight: 600;
     }
-
     p {
-      font-size: clamp(0.85rem, 2vw, 1rem);
+      font-size: 1rem;
       color: $p-color;
       line-height: 1.6;
-      text-align: left;
-      margin: 0;
-    }
-  }
-}
-
-.pageHolder {
-  @include flex(row, flex-start, flex-start);
-  gap: 40px;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 40px 20px;
-
-  .leftSide {
-    flex: 1;
-    min-width: 0;
-
-    h1 {
-      @include margin(5px, 0, 6px);
-      font-size: 20px;
-      width: 100%;
       text-align: start;
-    }
-  }
-
-  .rightSide {
-    flex: 1;
-    min-width: 300px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .pageHolder {
-    gap: 30px;
-    padding: 30px 15px;
-
-    .leftSide {
-      flex: 1.5;
-    }
-  }
-
-  section.projectInformation {
-    @include padding(25px, 15px);
-
-    img {
-      max-width: 350px;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .pageHolder {
-    @include flex(column, flex-start, stretch);
-    gap: 30px;
-    padding: 20px 10px;
-
-    .leftSide,
-    .rightSide {
-      flex: 1;
-      width: 100%;
-    }
-
-    .rightSide {
-      order: -1;
-
-      .content {
-        @include flex(row, flex-start, stretch);
-        gap: 15px;
-        overflow-x: auto;
-        padding: 10px 0;
-
-        article {
-          min-width: 250px;
-          flex-shrink: 0;
-
-          &:hover {
-            transform: translateY(-5px);
-          }
-        }
-      }
-    }
-  }
-
-  section.projectInformation {
-    @include padding(20px, 15px);
-
-    img {
-      max-width: 300px;
-    }
-
-    div {
-      gap: 15px;
-
-      a {
-        padding: 10px 20px;
-        min-width: 100px;
-        font-size: 0.9rem;
-
-        &.fa-github {
-          font-size: 1.6rem;
-          min-width: 50px;
-          padding: 10px;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .pageHolder {
-    padding: 15px 5px;
-  }
-
-  section.projectInformation {
-    @include padding(15px, 10px);
-
-    img {
-      max-width: 280px;
-    }
-
-    div {
-      gap: 10px;
-
-      a {
-        padding: 8px 16px;
-        font-size: 0.85rem;
-
-        &.fa-github {
-          font-size: 1.4rem;
-          padding: 8px;
-        }
-      }
-    }
-  }
-
-  div.rightSide {
-    .content {
-      gap: 10px;
-
-      article {
-        min-width: 200px;
-        @include padding(15px, 20px);
-      }
     }
   }
 }
