@@ -67,36 +67,18 @@ export default function Project() {
         </div>
         <div className="rightSide">
           <section className="content">
-            <article
-              className="slide-in-blurred-right container"
-              onClick={() => setProjectData(project.tastylist)}
-            >
-              <h2>Tasty-List</h2>
-              <p>
-                A web application that allows users to create, manage, and share
-                their favorite recipes.
-              </p>
-            </article>
-            <article
-              className="slide-in-blurred-right container"
-              onClick={() => setProjectData(project.deezerStarr)}
-            >
-              <h2>Deezer-Starr</h2>
-              <p>
-                A music streaming application that allows users to search and
-                play their favorite songs.
-              </p>
-            </article>
-            <article
-              className="slide-in-blurred-right container"
-              onClick={() => setProjectData(project.tableStarr)}
-            >
-              <h2>Table-Starr</h2>
-              <p>
-                A web application designed to help users keep track of their
-                orders and split the bill with friends.
-              </p>
-            </article>
+            {Object.entries(project).map(([key, value]) => {
+              return (
+                <article
+                  key={key}
+                  className="slide-in-blurred-right container"
+                  onClick={() => setProjectData(value)}
+                >
+                  <h2>{value.title}</h2>
+                  <p>{value.short_description}</p>
+                </article>
+              );
+            })}
           </section>
         </div>
       </section>
