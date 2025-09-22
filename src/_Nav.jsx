@@ -167,7 +167,7 @@ function Nav() {
             className="fa fa-github"
           ></Link>
           <Link
-            to="/resume.pdf"
+            to="/Victor-Dimitrov-Resume.pdf"
             target="_blank"
             className="fa fa-folder-open"
           ></Link>

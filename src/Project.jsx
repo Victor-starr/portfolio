@@ -29,7 +29,7 @@ const project = {
     short_description:
       "A web application designed to help users keep track of their orders and split the bill with friends.",
     description:
-      "Table-Starr helps you and your friends keep track of orders and split the bill easily—perfect for going out to eat or sharing expenses.",
+      "Table-Starr is a web app for tracking orders and splitting bills with friends. Easily manage expenses, keep tabs on what everyone ordered, and settle up quickly. Ideal for group outings and shared meals.",
     demo: "https://table-starr.vercel.app/",
     github: "https://github.com/Victor-starr/Table-Starr",
     image: "./tableStarrBanner.png",
@@ -39,7 +39,7 @@ const project = {
     short_description:
       "A fun website for taking, customizing, and sharing photos in themed sessions.",
     description:
-      "Photo Booth is a fun website for taking, customizing, and sharing photos in themed sessions. Great for parties, events, or just for fun with friends.",
+      "Photo-Starr is a web app for taking, customizing, and sharing photos in themed sessions. Add effects, create albums, and share with friends. Perfect for parties, events, or just having fun together.",
     image: "./photo-starr-banner.png",
     demo: "https://photo-starr.vercel.app",
     github: "https://github.com/Victor-starr/photo-booth",
