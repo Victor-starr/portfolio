@@ -4,6 +4,26 @@ import ProjectDisplay from "./ProjectDisplay.jsx";
 import { useState } from "react";
 
 const project = {
+  outfitX: {
+    title: "Outfit-X",
+    description:
+      "Outfit-X is a wardrobe management that stores and organizes your clothing at the same time it helps you create outfits that you can save for later, so you never run out of ideas on what to wear.",
+    short_description:
+      "A wardrobe management app that helps you organize your clothes and create outfits.",
+    image: "./outfitx_banner.png",
+    demo: "https://outfit-x.vercel.app/",
+    github: "https://github.com/Victor-starr/OutfitX",
+  },
+  photoStarr: {
+    title: "Photo-Starr",
+    short_description:
+      "A fun website for taking, customizing, and sharing photos in themed sessions.",
+    description:
+      "Photo-Starr is a web app for taking, customizing, and sharing photos in themed sessions. Add effects, create albums, and share with friends. Perfect for parties, events, or just having fun together.",
+    image: "./photo-starr-banner.png",
+    demo: "https://photo-starr.vercel.app",
+    github: "https://github.com/Victor-starr/photo-booth",
+  },
   tastylist: {
     title: "Tasty-List",
     short_description:
@@ -33,16 +53,6 @@ const project = {
     demo: "https://table-starr.vercel.app/",
     github: "https://github.com/Victor-starr/Table-Starr",
     image: "./tableStarrBanner.png",
-  },
-  photoStarr: {
-    title: "Photo-Starr",
-    short_description:
-      "A fun website for taking, customizing, and sharing photos in themed sessions.",
-    description:
-      "Photo-Starr is a web app for taking, customizing, and sharing photos in themed sessions. Add effects, create albums, and share with friends. Perfect for parties, events, or just having fun together.",
-    image: "./photo-starr-banner.png",
-    demo: "https://photo-starr.vercel.app",
-    github: "https://github.com/Victor-starr/photo-booth",
   },
 };
 
