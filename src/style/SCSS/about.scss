@@ -1,4 +1,3 @@
-// global import
 @use "./_global.scss" as *;
 
 // body {
@@ -182,7 +181,9 @@ div.contImg {
       @include element-size(100%, 100%);
       object-fit: cover;
       border-radius: 25px;
-      transition: filter 0.5s ease, transform 0.5s ease;
+      transition:
+        filter 0.5s ease,
+        transform 0.5s ease;
     }
     figcaption {
       @include position(absolute, 12px, auto, auto, 8px);
@@ -203,7 +204,9 @@ svg#leftArrow {
   border: 1px solid rgba(0, 0, 0, 0.24);
   border-radius: 50%;
   z-index: 1;
-  transition: opacity 0.3s ease-in-out, display 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    display 0.3s ease-in-out;
 }
 svg#rightArrow {
   @include position(absolute, 50%, 5px);
@@ -213,7 +216,9 @@ svg#rightArrow {
   border: 1px solid rgba(0, 0, 0, 0.24);
   border-radius: 50%;
   z-index: 1;
-  transition: opacity 0.3s ease-in-out, display 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    display 0.3s ease-in-out;
 }
 
 svg#leftArrow path,

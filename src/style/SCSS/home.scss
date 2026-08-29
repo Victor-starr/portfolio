@@ -136,6 +136,7 @@ div.pfp {
   @include position(relative);
   @include margin(50px, 0, 0, 0);
   @include flex(row, center, center);
+  cursor: pointer;
 
   img#PImg1 {
     @include element-size(150px, 150px);
@@ -143,11 +144,57 @@ div.pfp {
     background-color: $pfpbg-color;
     border-radius: 50%;
     z-index: 1;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
-      background-color 0.5s ease, color 0.5s ease;
+    display: block;
+    transform-origin: center;
+    animation: pfpAttention 2s ease-in-out infinite;
+    transition:
+      box-shadow 0.3s ease-in-out,
+      filter 0.3s ease-in-out,
+      background-color 0.5s ease,
+      color 0.5s ease;
   }
 }
-//  DEFAULT Home text Article
+
+@keyframes pfpAttention {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  12% {
+    transform: scale(1.04) rotate(-2deg);
+  }
+  24% {
+    transform: scale(1.12) rotate(2deg);
+  }
+  36% {
+    transform: scale(1.08) rotate(-1deg);
+  }
+  48% {
+    transform: scale(1.15) rotate(0deg);
+  }
+  60% {
+    transform: scale(1.1) rotate(1deg);
+  }
+  76% {
+    transform: scale(1.04) rotate(-1deg);
+  }
+  90% {
+    transform: scale(1.08) rotate(0deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  }
+}
+
+img#PImg1:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+img#PImg1:active {
+  filter: brightness(0.96);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+// DEFAULT Home text Article
 article {
   @include position(relative);
   @include element-size(auto, 100%);
@@ -155,14 +202,18 @@ article {
     @include text($h1-color, "Alatsi", normal, 400, 48px);
     @include margin(30px, 0, 15px);
     text-align: center;
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition:
+      background-color 0.5s ease,
+      color 0.5s ease;
   }
   p {
     @include position(relative);
     @include text($p-color, "inter-italic", normal, 400, 32px);
     text-align: center;
     z-index: 1;
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition:
+      background-color 0.5s ease,
+      color 0.5s ease;
   }
 }
 // DEFAULT NAV BUTTONS
@@ -178,7 +229,9 @@ div.nav-btns {
     text-align: center;
     border-radius: 20px;
     z-index: 1;
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition:
+      background-color 0.5s ease,
+      color 0.5s ease;
   }
   a.abt-btn {
     @include text($abt-btn-color, "Alatsi", normal, normal, 24px, 53px);
@@ -189,7 +242,9 @@ div.nav-btns {
     text-align: center;
     border-radius: 20px;
     z-index: 1;
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition:
+      background-color 0.5s ease,
+      color 0.5s ease;
   }
 }
 span.copyright {
@@ -245,7 +300,9 @@ body.alternate {
   #css {
     &:hover {
       transform: scale(1.1) rotate(10deg);
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+      transition:
+        transform 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out,
         background-color 0.3s ease-in-out;
       cursor: pointer;
     }

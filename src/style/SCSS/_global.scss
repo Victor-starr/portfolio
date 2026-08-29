@@ -176,11 +176,38 @@ body {
   @include flex(row, center, center);
   overflow: hidden;
   background-color: $bodybg-color;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
 }
+
+div#loading {
+  @include position(fixed, 0px, 0px, 0px, 0px);
+  @include element-size(100vh, 100vw);
+  @include flex(row, center, center);
+  background-color: $bodybg-color;
+  z-index: 9999;
+}
+div#loading span {
+  @include element-size(50px, 50px);
+  border: 5px solid $IconBg-color;
+  border-top: 5px solid $Icons-color;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 main {
   @include position(relative);
-  @include element-size(8vh, 70vw);
+  @include element-size(90vh, 70vw);
   @include padding(15px);
   overflow: hidden;
   box-sizing: border-box;

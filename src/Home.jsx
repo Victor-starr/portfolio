@@ -9,7 +9,7 @@ function Home() {
       return savedTheme;
     }
     const prefersDarkScheme = window.matchMedia(
-      "(prefers-color-scheme: dark)"
+      "(prefers-color-scheme: dark)",
     ).matches;
     return prefersDarkScheme ? "dark" : "light";
   });
@@ -73,11 +73,11 @@ function Home() {
         <article>
           <h1>Hi, I&apos;m Victor</h1>
           <p>
-            I&apos;m a <span className="HidenWords">front-end</span> web
-            developer. Currently still a{" "}
-            <span className="HidenWords">student in Softuni</span>. Most people
-            hate <span className="HidenWords">Javascript</span>... <br />I am
-            one of them.
+            I&apos;m a <span className="HidenWords">Full-stack</span>
+            developer. Graduaged full Road-map of a{" "}
+            <span className="HidenWords">Software University</span> . Most
+            people hate <span className="HidenWords">Javascript</span>... <br />
+            I am one of them.
           </p>
         </article>
         <div className="nav-btns">
